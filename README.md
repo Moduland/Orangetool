@@ -51,7 +51,10 @@ status=orangetool.internet() #this function check internet connection and return
 
 ```
 
-All of the functions in error state return `Error` String
+
+
+- All of the functions in error state return `Error` String
+- local_ip() and global_ip() originally are available in ipz package [Link](http://github.com/sepandhaghighi/ipz)
 
 			
 
