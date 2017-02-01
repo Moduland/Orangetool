@@ -73,7 +73,7 @@ def global_ip(DEBUG=False):
             print(str(e))
         return "Error"
 
-def get_temp(DEBUG=False,Zone=0):
+def get_temp(Zone=0,DEBUG=False):
     '''
     This Function Wrote for Orangepi to read cpu temperature
     :param DEBUG : Flag for using Debug mode
