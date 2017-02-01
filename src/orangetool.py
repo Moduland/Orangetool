@@ -32,6 +32,8 @@ def internet(host="8.8.8.8", port=53, timeout=3):
 def local_ip(DEBUG=False):
     '''
     return local ip of computer in windows by socket module and in unix with hostname command in shell
+    :param DEBUG:Flag for using Debug Mode
+    :type DEBUG:bool
     :return: local ip as string
     '''
     try:
@@ -55,7 +57,9 @@ def local_ip(DEBUG=False):
 
 def global_ip(DEBUG=False):
     '''
-    retur ip with by http://ipinfo.io/ip api
+    return ip with by http://ipinfo.io/ip api
+    :param DEBUG:Flag for using Debug mode
+    :type DEBUG:bool
     :return: global ip as string
     '''
     try:
@@ -69,16 +73,20 @@ def global_ip(DEBUG=False):
             print(str(e))
         return "Error"
 
-def get_temp(DEBUG=False):
+def get_temp(DEBUG=False,Zone=0):
     '''
     This Function Wrote for Orangepi to read cpu temperature
-    :return:
+    :param DEBUG : Flag for using Debug mode
+    :param Zone : Thermal Zone Index
+    :type DEBUG:bool
+    :type Zone:int
+    :return: Board Temp as string in celsius
     '''
     try:
-        command=sub.Popen(["cat","/sys/class/thermal/thermal_zone0/temp"],stderr=sub.PIPE,stdin=sub.PIPE,stdout=sub.PIPE)
+        command=sub.Popen(["cat","/sys/class/thermal/thermal_zone"+str(Zone)+"/temp"],stderr=sub.PIPE,stdin=sub.PIPE,stdout=sub.PIPE)
         response=list(command.communicate())
         if len(response[0])!=0:
-            return str(response[0])[2:-3]+" C"
+            return str(response[0])[2:-3]
         else:
             return "Error"
     except Exception as e:
