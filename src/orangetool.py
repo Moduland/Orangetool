@@ -5,6 +5,30 @@ import re
 import platform
 ip_pattern=r"(?:[0-9]{1,3}\.){3}[0-9]{1,3}"
 api_1="http://ipinfo.io/ip"
+
+def internet(host="8.8.8.8", port=53, timeout=3):
+    """
+    Check Internet Connections.
+    :param  host: the host that check connection to
+    :param  port: port that check connection with
+    :param  timeout: times that check the connnection
+    :type host:str
+    :type port:int
+    :type timeout:int
+    :return bool: True if Connection is Stable
+    >>> internet() # if there is stable internet connection
+    True
+    >>> internet() # if there is no stable internet connection
+    False
+    """
+    try:
+        socket.setdefaulttimeout(timeout)
+        socket.socket(socket.AF_INET, socket.SOCK_STREAM).connect((host, port))
+        return True
+    except Exception as ex:
+        error_log(str(ex))
+        return False
+
 def local_ip(DEBUG=False):
     '''
     return local ip of computer in windows by socket module and in unix with hostname command in shell
