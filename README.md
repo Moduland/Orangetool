@@ -14,7 +14,7 @@
 
 # Orangetool
 	
-Consist of some useful script for Orangepi/Raspberrypi boards 
+Consist of some useful script for Orangepi/Raspberrypi boards (Under Development)
 
 ----------
 	
@@ -34,15 +34,15 @@ import orangetool
 
 #1- local_ip
 
-local_ip=orange_tool.local_ip() # this function return local ip of board
+local_ip=orange_tool.local_ip() # this function return local ip of board as string
 
 #2- global_ip
 
-global_ip=orange_tool.global_ip() # this function return global ip of board
-
+global_ip=orange_tool.global_ip() # this function return global ip of board as string
+ 
 #3- get_temp
 
-temp=orangetool.get_temp() # this function return cpu temperature
+temp=orangetool.get_temp() # this function return cpu temperature as string
 
 #4- internet 
 
