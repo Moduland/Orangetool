@@ -111,17 +111,48 @@ def convert_bytes(num):
         if num < 1024.0:
             return "%3.1f %s" % (num, x)
         num /= 1024.0
-def ram_total():
+def ram_total(convert=True):
+    '''
+    Return total ram of board
+    :param convert: Flag for convert mode (using of convert_byte function)
+    :type convert:bool
+    :return: total ram of board as string
+    '''
     response=list(psutil.virtual_memory())
-    return convert_bytes(response[0])
-def ram_used():
+    if convert==True:
+        return convert_bytes(response[0])
+    else:
+        return str(response[0])
+def ram_used(convert=True):
+    '''
+    Return how much ram is using
+    :param convert: Flag for convert mode (using of convert_byte function)
+    :type convert:bool
+    :return: how much ram is using as string
+    '''
     response=list(psutil.virtual_memory())
-    return convert_bytes(response[3])
-def ram_available():
+    if convert == True:
+        return convert_bytes(response[3])
+    else:
+        return str(response[3])
+def ram_available(convert=True):
+    '''
+    Return how much ram is available
+    :param convert: Flag for convert mode (using of convert_byte function)
+    :type convert : bool
+    :return: how much ram is available
+    '''
     response=list(psutil.virtual_memory())
-    return convert_bytes(response[1])
+    if convert==True:
+        return convert_bytes(response[1])
+    else:
+        return str(response[1])
 def ram_percent():
+    '''
+    Return available ram percentage
+    :return: availabe ram percentage as string with %
+    '''
     response=list(psutil.virtual_memory())
-    return convert_bytes(response[2])
+    return str(response[2])+" %"
 
 
