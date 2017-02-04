@@ -3,6 +3,7 @@ import socket
 import requests
 import re
 import platform
+import psutil
 ip_pattern=r"(?:[0-9]{1,3}\.){3}[0-9]{1,3}"
 api_1="http://ipinfo.io/ip"
 
@@ -93,3 +94,34 @@ def get_temp(Zone=0,DEBUG=False):
         if DEBUG==True:
             print(str(e))
         return "Error"
+def convert_bytes(num):
+    """
+    convert num to idiomatic byte unit
+    :param num: the input number.
+    :type num:int
+    :return: str
+    >>> convert_bytes(200)
+    '200.0 bytes'
+    >>> convert_bytes(6000)
+    '5.9 KB'
+    >>> convert_bytes(80000)
+    '78.1 KB'
+    """
+    for x in ['bytes', 'KB', 'MB', 'GB', 'TB']:
+        if num < 1024.0:
+            return "%3.1f %s" % (num, x)
+        num /= 1024.0
+def ram_total():
+    response=list(psutil.virtual_memory())
+    return convert_bytes(response[0])
+def ram_used():
+    response=list(psutil.virtual_memory())
+    return convert_bytes(response[3])
+def ram_available():
+    response=list(psutil.virtual_memory())
+    return convert_bytes(response[1])
+def ram_percent():
+    response=list(psutil.virtual_memory())
+    return convert_bytes(response[2])
+
+
