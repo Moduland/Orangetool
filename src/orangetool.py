@@ -135,7 +135,7 @@ def ram_used(convert=True):
         return convert_bytes(response[3])
     else:
         return str(response[3])
-def ram_available(convert=True):
+def ram_free(convert=True):
     '''
     Return how much ram is available
     :param convert: Flag for convert mode (using of convert_byte function)
@@ -154,5 +154,41 @@ def ram_percent():
     '''
     response=list(psutil.virtual_memory())
     return str(response[2])+" %"
+def time_convert(input_string):
+    '''
+    This function convert input_string from uptime from sec to DD,HH,MM,SS Format
+    :param input_string: input time string  in sec
+    :type input_string:str
+    :return: converted time as string
+    '''
+    input_sec=float(input_string)
+    input_minute=input_sec//60
+    input_sec=int(input_sec-input_minute*60)
+    input_hour=input_minute//60
+    input_minute=int(input_minute-input_hour*60)
+    input_day=int(input_hour//24)
+    input_hour=int(input_hour-input_hour*24)
+    return str(input_day)+" days, "+str(input_hour)+" hour, "+str(input_minute)+" minutes, "+str(input_sec)+" seconds"
+
+def uptime(DEBUG=False):
+    '''
+    This function return system uptime
+    :param DEBUG: Flag for using Debug mode
+    :type DEBUG:bool
+    :return: system uptime as string
+    '''
+    try:
+        command=sub.Popen(["cat","/proc/uptime"],stderr=sub.PIPE,stdin=sub.PIPE,stdout=sub.PIPE)
+        response=list(command.communicate())
+        if len(response[0])!=0:
+            return time_convert(list(str(response[0])[2:-3].split(" "))[0])
+        else:
+            return "Error"
+    except Exception as e:
+        if DEBUG==True:
+            print(str(e))
+        return "Error"
+
+
 
 
