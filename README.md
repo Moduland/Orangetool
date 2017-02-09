@@ -45,6 +45,10 @@ global_ip=orange_tool.global_ip() # this function return global ip of board as s
 
 status=orangetool.internet() #this function check internet connection and return True if internet connection is stable
 
+#4- ping
+
+ip_status=orangetool.ping(ip_address) #this function check ip and return True if this ip is available in network and False otherwise
+
 ```
 
 ## RAM Functions ##			

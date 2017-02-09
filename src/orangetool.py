@@ -212,5 +212,26 @@ def ping(ip,packet_number=3,DEBUG=False):
         if DEBUG==True:
             print(str(e))
         return "Error"
+def freeup(DEBUG=False):
+    '''
+    To free pagecache, dentries and inodes:
+    :param DEBUG: Flag for using Debug mode
+    :type DEBUG:bool
+    :return: Amount of freeuped ram as string and converted by convert_bytes()
+    '''
+    try:
+        RAM_before=int(ram_free(convert=False))
+        output = sub.Popen(["sync", ";", "echo", "3", ">", "/proc/sys/vm/drop_caches"], stdout=sub.PIPE,stderr=sub.PIPE)
+        RAM_after=int(ram_free(convert=False))
+        freeuped_ram=RAM_after - RAM_before
+        if freeuped_ram>0:
+            return convert_bytes(freeuped_ram)
+        else:
+            return convert_bytes(0)
+    except Exception as e:
+        if DEBUG==True:
+            print(str(e))
+        return "Error"
+
 
 
