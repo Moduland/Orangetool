@@ -55,17 +55,21 @@ ip_status=orangetool.ping(ip_address) #this function check ip and return True if
 
 ```python
  
-#4- total ram
+#5- total ram
 
 ram=orangetool.ram_total() #this function return total ram of the board
 
-#5- free ram
+#6- free ram
 
 ram=orangetool.ram_free() # this function return how much ram is available in the board
 
-#6- ram percentage
+#7- ram percentage
 
 ram=orangetool.ram_percent() # this function return available ram percentage
+
+#8- freeup
+
+orangetool.freeup() # To free pagecache, dentries and inodes and return freeuped amount
 
 ```
 
@@ -73,11 +77,11 @@ ram=orangetool.ram_percent() # this function return available ram percentage
 
 ```python
 
-#7- get_temp
+#9- get_temp
 
 temp=orangetool.get_temp() # this function return cpu temperature as string
 
-#8- uptime
+#10- uptime
 
 time=orangetool.uptime() # this function return uptime of system
 
