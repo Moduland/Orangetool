@@ -1,0 +1,5 @@
+psutil
+subprocess
+platform
+requests
+

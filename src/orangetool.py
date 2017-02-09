@@ -4,6 +4,7 @@ import requests
 import re
 import platform
 import psutil
+import multiprocessing as mu
 ip_pattern=r"(?:[0-9]{1,3}\.){3}[0-9]{1,3}"
 api_1="http://ipinfo.io/ip"
 
@@ -188,7 +189,28 @@ def uptime(DEBUG=False):
         if DEBUG==True:
             print(str(e))
         return "Error"
-
-
+def ping(ip,packet_number=3,DEBUG=False):
+    '''
+    This function ping ip and return True if this ip is available and False otherwise
+    :param ip: target ip
+    :param packet_number: numer of packet to size
+    :param DEBUG: Flag for using Debug mode
+    :type ip :str
+    :type packet_number:int
+    :type DEBUG:bool
+    :return: a boolean value (True if ip is available and False otherwise)
+    '''
+    try:
+        if re.match(ip_pattern,ip)==False:
+            raise Exception
+        output=str(list(sub.Popen(["ping",ip,"-c",str(packet_number)],stdout=sub.PIPE,stderr=sub.PIPE).communicate())[0])
+        if output.find("Unreachable")==-1:
+            return True
+        else:
+            return False
+    except Exception as e:
+        if DEBUG==True:
+            print(str(e))
+        return "Error"
 
 
