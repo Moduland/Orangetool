@@ -35,11 +35,11 @@ import orangetool
 
 #1- local_ip
 
-local_ip=orange_tool.local_ip() # this function return local ip of board as string
+local_ip=orangetool.local_ip() # this function return local ip of board as string
 
 #2- global_ip
 
-global_ip=orange_tool.global_ip() # this function return global ip of board as string
+global_ip=orangetool.global_ip() # this function return global ip of board as string
 
 #3- internet 
 

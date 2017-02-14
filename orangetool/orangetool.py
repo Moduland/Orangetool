@@ -168,7 +168,7 @@ def time_convert(input_string):
     input_hour=input_minute//60
     input_minute=int(input_minute-input_hour*60)
     input_day=int(input_hour//24)
-    input_hour=int(input_hour-input_hour*24)
+    input_hour=int(input_hour-input_day*24)
     return str(input_day)+" days, "+str(input_hour)+" hour, "+str(input_minute)+" minutes, "+str(input_sec)+" seconds"
 
 def uptime(DEBUG=False):
