@@ -15,7 +15,7 @@
 # Orangetool
 	
 Consist of some useful script for Orangepi/Raspberrypi boards (Under Development)
-Tested on Lubuntu
+Tested on Lubuntu 14.04
 
 ----------
 	
