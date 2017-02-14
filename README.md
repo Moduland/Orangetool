@@ -28,7 +28,7 @@ By [Moduland Co](http://www.moduland.ir)
 
 - [Download](https://github.com/Moduland/Orangetool/archive/master.zip) source from github
 
-## IP Functions ##
+## IP Functions
 
 ```python
 import orangetool
@@ -51,7 +51,7 @@ ip_status=orangetool.ping(ip_address) #this function check ip and return True if
 
 ```
 
-## RAM Functions ##			
+## RAM Functions		
 
 ```python
  
@@ -73,7 +73,7 @@ orangetool.freeup() # To free pagecache, dentries and inodes and return freeuped
 
 ```
 
-## Other Functions ##				
+## Other Functions			
 
 ```python
 
