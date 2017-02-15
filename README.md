@@ -65,7 +65,7 @@ ram=orangetool.ram_free() # this function return how much ram is available in th
 
 #7- ram percentage
 
-ram=orangetool.ram_percent() # this function return available ram percentage
+ram=orangetool.ram_percent() # this function return used ram percentage
 
 #8- freeup
 
