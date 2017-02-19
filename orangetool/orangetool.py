@@ -4,6 +4,8 @@ import requests
 import re
 import platform
 import psutil
+import os
+import string
 import multiprocessing as mu
 ip_pattern=r"(?:[0-9]{1,3}\.){3}[0-9]{1,3}"
 api_1="http://ipinfo.io/ip"
@@ -28,7 +30,7 @@ def internet(host="8.8.8.8", port=53, timeout=3):
         socket.socket(socket.AF_INET, socket.SOCK_STREAM).connect((host, port))
         return True
     except Exception as ex:
-        error_log(str(ex))
+        print(str(ex))
         return False
 
 def local_ip(DEBUG=False):
@@ -232,6 +234,83 @@ def freeup(DEBUG=False):
         if DEBUG==True:
             print(str(e))
         return "Error"
+
+def mount_status(DEBUG=False):
+    '''
+    This function return addresses of mounted memory devices in dev
+    :param DEBUG: Flag for using Debug mode
+    :type DEBUG:bool
+    :return: list of memory devices
+    '''
+    try:
+        file = open("/proc/mounts")
+        output=file.readlines()
+        memory_list=[]
+        for item in output:
+            temp=item.split(" ")
+            if temp[0].find("/dev/")!=-1:
+                memory_list.append(temp[1])
+        return memory_list
+    except Exception as e:
+        if DEBUG==True:
+            print(str(e))
+        return "Error"
+
+def origin_status(DEBUG=False):
+    '''
+    This function return all of the inserted memory and their status
+    :param DEBUG: Flag for using Debug mode
+    :type DEBUG:bool
+    :return: All of the inserted memory and their status as dictionary ( device name as keys and mount status (m --> mounted and u --> unmounted) as values
+    '''
+    try:
+        folder_items=os.listdir("/dev/")
+        memory_items=[]
+        memory_status=[]
+        for i in string.ascii_lowercase:
+            if "sd"+i+"1" in folder_items:
+                memory_items.append("sd"+i+"1")
+        file = open("/proc/mounts")
+        mounts = file.read()
+        for item in memory_items:
+            if mounts.find(item)!=-1:
+                memory_status.append("m")
+            else:
+                memory_status.append("u")
+        return dict(zip(memory_items,memory_status))
+    except Exception as e:
+        if DEBUG==True:
+            print(str(e))
+        return "Error"
+
+def unmount(ADDRESS,DEBUG=False):
+    '''
+    This function unmount memory devices
+    :param ADDRESS: address of that device mount on
+    :type ADDRESS:str
+    :param DEBUG: Flag for using Debug mode
+    :type DEBUG:bool
+    :return: True if device unmount correctly and False other wise
+    '''
+    try:
+        command = sub.Popen(["umount",ADDRESS], stdout=sub.PIPE, stderr=sub.PIPE)
+        output=list(command.communicate())
+        if len(output[0])==0 and len(output[1])==0:
+            return True
+        else:
+            return False
+    except Exception as e:
+        if DEBUG==True:
+            print(str(e))
+        return "Error"
+
+
+
+
+
+
+
+
 
 
 

@@ -4,7 +4,7 @@
 
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/Moduland/Orangetool/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/Moduland/Orangetool/?branch=master)
 [![Build Status](https://scrutinizer-ci.com/g/Moduland/Orangetool/badges/build.png?b=master)](https://scrutinizer-ci.com/g/Moduland/Orangetool/build-status/master)
-[![Python](https://img.shields.io/badge/python-3.3%2C3.4%2C3.5%2C3.6-blue.svg)](http://www.python.org)			
+[![Python](https://img.shields.io/badge/python-3.3%2C3.4%2C3.5%2C3.6-blue.svg)](http://www.python.org)
 [![PyPI version](https://badge.fury.io/py/orangetool.svg)](https://badge.fury.io/py/orangetool)	
 
 
@@ -15,7 +15,8 @@
 
 # Orangetool
 	
-Consist of some useful script for Orangepi/Raspberrypi boards (Under Development)
+Consist of some useful script for Orange Pi/Raspberry Pi boards (Under Development)					
+
 Tested on Lubuntu 14.04
 
 ----------
