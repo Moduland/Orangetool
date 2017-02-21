@@ -235,9 +235,9 @@ def freeup(DEBUG=False):
             print(str(e))
         return "Error"
 
-def mount_status(DEBUG=False):
+def mount_status(device_name,DEBUG=False):
     '''
-    This function return addresses of mounted memory devices in dev
+    This function return addresses of mounted memory devices in dev by device name
     :param DEBUG: Flag for using Debug mode
     :type DEBUG:bool
     :return: list of memory devices
@@ -248,9 +248,9 @@ def mount_status(DEBUG=False):
         memory_list=[]
         for item in output:
             temp=item.split(" ")
-            if temp[0].find("/dev/")!=-1:
-                memory_list.append(temp[1])
-        return memory_list
+            if temp[0].find(device_name)!=-1:
+                return temp[1]
+        return "u"
     except Exception as e:
         if DEBUG==True:
             print(str(e))
@@ -261,7 +261,7 @@ def storage_status(DEBUG=False):
     This function return all of the inserted memory and their status
     :param DEBUG: Flag for using Debug mode
     :type DEBUG:bool
-    :return: All of the inserted memory and their status as dictionary ( device name as keys and mount status (m --> mounted and u --> unmounted) as values
+    :return: All of the inserted memory and their status as dictionary ( device name as keys and mount status (mounted_addresses and u --> unmounted) as values
     '''
     try:
         folder_items=os.listdir("/dev/")
@@ -270,13 +270,8 @@ def storage_status(DEBUG=False):
         for i in string.ascii_lowercase:
             if "sd"+i+"1" in folder_items:
                 memory_items.append("sd"+i+"1")
-        file = open("/proc/mounts")
-        mounts = file.read()
         for item in memory_items:
-            if mounts.find(item)!=-1:
-                memory_status.append("m")
-            else:
-                memory_status.append("u")
+            memory_status.append(mount_status(item))
         return dict(zip(memory_items,memory_status))
     except Exception as e:
         if DEBUG==True:
@@ -285,7 +280,7 @@ def storage_status(DEBUG=False):
 
 def unmount(ADDRESS,DEBUG=False):
     '''
-    This function unmount memory devices
+    This function unmount memory devices by addresses
     :param ADDRESS: address of that device mount on
     :type ADDRESS:str
     :param DEBUG: Flag for using Debug mode
@@ -303,6 +298,48 @@ def unmount(ADDRESS,DEBUG=False):
         if DEBUG==True:
             print(str(e))
         return "Error"
+
+def unmount_all(DEBUG=False):
+    '''
+    This function unmount all of the mounted devices
+    :param DEBUG: Flag for using Debug mode
+    :type DEBUG:bool
+    :return: return True if all of the mounted devices unmount correctly
+    '''
+    try:
+        storage_output=storage_status()
+        storage_keys=list(storage_output.keys())
+        storage_values=list(storage_output.values())
+        for i,item in enumerate(storage_keys):
+            if storage_values[i]!="u":
+                unmount(item)
+        return True
+    except Exception as e:
+        if DEBUG==True:
+            print(str(e))
+        return "Error"
+def mount(device_name,mount_address,DEBUG=False):
+    '''
+    :param device_name: name of device for mounted example = sda1
+    :param mount_address: address for mounting device example = /mnt/usb
+    :param DEBUG: Flag for using Debug mode
+    :type device_name:str
+    :type mount_address:str
+    :type DEBUG:bool
+    :return: True if device mount correctly and False other wise
+    '''
+    try:
+        command = sub.Popen(["mount","/dev/"+device_name,mount_address], stdout=sub.PIPE, stderr=sub.PIPE)
+        output=list(command.communicate())
+        if len(output[0])==0 and len(output[1])==0:
+            return True
+        else:
+            return False
+    except Exception as e:
+        if DEBUG==True:
+            print(str(e))
+        return "Error"
+
 
 
 
