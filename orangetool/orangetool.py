@@ -6,6 +6,7 @@ import platform
 import psutil
 import os
 import string
+import random
 import multiprocessing as mu
 ip_pattern=r"(?:[0-9]{1,3}\.){3}[0-9]{1,3}"
 api_1="http://ipinfo.io/ip"
@@ -318,7 +319,14 @@ def unmount_all(DEBUG=False):
         if DEBUG==True:
             print(str(e))
         return "Error"
-def mount(device_name,mount_address,DEBUG=False):
+def random_generator(number):
+    response=""
+    i=0
+    while(i<number):
+        i+=1
+        response+=str(random.randint(0,10))
+    return response
+def mount(device_name,mount_address=None,DEBUG=False):
     '''
     :param device_name: name of device for mounted example = sda1
     :param mount_address: address for mounting device example = /mnt/usb
@@ -329,6 +337,11 @@ def mount(device_name,mount_address,DEBUG=False):
     :return: True if device mount correctly and False other wise
     '''
     try:
+        if mount_status(device_name)!="u":
+            raise Exception
+        if mount_address==None:
+            mount_address="/mnt/"+random_generator(5)
+            command=sub.Popen(["mkdir",mount_address], stdout=sub.PIPE, stderr=sub.PIPE)
         command = sub.Popen(["mount","/dev/"+device_name,mount_address], stdout=sub.PIPE, stderr=sub.PIPE)
         output=list(command.communicate())
         if len(output[0])==0 and len(output[1])==0:
