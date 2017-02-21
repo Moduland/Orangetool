@@ -329,7 +329,7 @@ def random_generator(number):
 def mount(device_name,mount_address=None,DEBUG=False):
     '''
     :param device_name: name of device for mounted example = sda1
-    :param mount_address: address for mounting device example = /mnt/usb
+    :param mount_address: address for mounting device example = /mnt/usb , default value is None in this case function generate random number for mount folder name
     :param DEBUG: Flag for using Debug mode
     :type device_name:str
     :type mount_address:str
