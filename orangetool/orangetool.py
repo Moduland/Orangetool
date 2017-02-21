@@ -250,8 +250,11 @@ def mount_status(device_name,DEBUG=False):
         for item in output:
             temp=item.split(" ")
             if temp[0].find(device_name)!=-1:
-                return temp[1]
-        return "u"
+                memory_list.append(temp[1])
+        if len(memory_list)==0:
+            return "u"
+        else:
+            return memory_list
     except Exception as e:
         if DEBUG==True:
             print(str(e))
@@ -311,9 +314,11 @@ def unmount_all(DEBUG=False):
         storage_output=storage_status()
         storage_keys=list(storage_output.keys())
         storage_values=list(storage_output.values())
-        for i,item in enumerate(storage_keys):
+        for i,item in enumerate(storage_values):
             if storage_values[i]!="u":
-                unmount(item)
+                print(item)
+                for j in item:
+                    unmount(j)
         return True
     except Exception as e:
         if DEBUG==True:
