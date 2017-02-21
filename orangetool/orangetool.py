@@ -265,7 +265,7 @@ def storage_status(DEBUG=False):
     This function return all of the inserted memory and their status
     :param DEBUG: Flag for using Debug mode
     :type DEBUG:bool
-    :return: All of the inserted memory and their status as dictionary ( device name as keys and mount status (mounted_addresses and u --> unmounted) as values
+    :return: All of the inserted memory and their status as dictionary ( device name as keys and mount status (mounted_addresses as list and u --> unmounted) as values
     '''
     try:
         folder_items=os.listdir("/dev/")
