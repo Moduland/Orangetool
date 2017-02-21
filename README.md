@@ -75,15 +75,41 @@ orangetool.freeup() # To free pagecache, dentries and inodes and return freeuped
 
 ```
 
+### Storage Function				
+
+```python
+#9- mount_status
+
+mount_details=orangetool.mount_status("sda1") # This function return mount addresses of input device
+
+#10- storage_status
+
+mount_details=orangetool.storage_status() # This function return all of the inserted storage and their status
+
+#11- unmount
+
+orangetool.unmount("/mnt/usb1") # This function unmount input device
+
+#12- unmount_all
+
+
+orangetool.unmount_all() #This function unmount all of the mounted devices
+
+#13- mount
+
+orangetool.mount("sda1","/mnt/usb1") # This function mount input device in input addresses
+
+```
+
 ## Other Functions			
 
 ```python
 
-#9- get_temp
+#14- get_temp
 
 temp=orangetool.get_temp() # this function return cpu temperature as string
 
-#10- uptime
+#15- uptime
 
 time=orangetool.uptime() # this function return uptime of system
 

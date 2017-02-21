@@ -7,7 +7,6 @@ import psutil
 import os
 import string
 import random
-import multiprocessing as mu
 ip_pattern=r"(?:[0-9]{1,3}\.){3}[0-9]{1,3}"
 api_1="http://ipinfo.io/ip"
 
