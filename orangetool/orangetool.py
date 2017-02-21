@@ -256,7 +256,7 @@ def mount_status(DEBUG=False):
             print(str(e))
         return "Error"
 
-def origin_status(DEBUG=False):
+def storage_status(DEBUG=False):
     '''
     This function return all of the inserted memory and their status
     :param DEBUG: Flag for using Debug mode
