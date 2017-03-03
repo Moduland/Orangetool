@@ -223,7 +223,10 @@ def freeup(DEBUG=False):
     '''
     try:
         RAM_before=int(ram_free(convert=False))
-        output = sub.Popen(["sync", ";", "echo", "3", ">", "/proc/sys/vm/drop_caches"], stdout=sub.PIPE,stderr=sub.PIPE)
+        output = sub.Popen(["echo", "3", ">", "/proc/sys/vm/drop_caches"], stdout=sub.PIPE,stderr=sub.PIPE)
+        result=list(output.communicate())
+        if len(result[1])>0:
+            raise
         RAM_after=int(ram_free(convert=False))
         freeuped_ram=RAM_after - RAM_before
         if freeuped_ram>0:
