@@ -157,6 +157,17 @@ def ram_percent():
     '''
     response=list(psutil.virtual_memory())
     return str(response[2])+" %"
+def zero_insert(input_string):
+    '''
+    This function get a string as input if input is one digit add a zero
+    :param input_string: input digit az string
+    :type input_string:str
+    :return: modified output as str
+    '''
+    if len(input_string)==1:
+        return "0"+input_string
+    return input_string
+
 def time_convert(input_string):
     '''
     This function convert input_string from uptime from sec to DD,HH,MM,SS Format
@@ -171,7 +182,7 @@ def time_convert(input_string):
     input_minute=int(input_minute-input_hour*60)
     input_day=int(input_hour//24)
     input_hour=int(input_hour-input_day*24)
-    return str(input_day)+" days, "+str(input_hour)+" hour, "+str(input_minute)+" minutes, "+str(input_sec)+" seconds"
+    return zero_insert(str(input_day))+" days, "+zero_insert(str(input_hour))+" hour, "+zero_insert(str(input_minute))+" minutes, "+zero_insert(str(input_sec))+" seconds"
 
 def uptime(DEBUG=False):
     '''
