@@ -1,12 +1,13 @@
-![Logo](http://www.shaghighi.ir/findip/Files/orangetool.gif)
+<div align="center">
+<img src="http://www.shaghighi.ir/photos/orangetool.jpg" height=240px width=320px>
 
-----------
+</br>
+<a href="https://scrutinizer-ci.com/g/Moduland/Orangetool/?branch=master"><img src="https://scrutinizer-ci.com/g/Moduland/Orangetool/badges/quality-score.png?b=master"></a>
+<a href="https://scrutinizer-ci.com/g/Moduland/Orangetool/build-status/master"><img src="https://scrutinizer-ci.com/g/Moduland/Orangetool/badges/build.png?b=master"></a>
+<a href="http://www.python.org"><img src="https://img.shields.io/badge/python-3.3%2C3.4%2C3.5%2C3.6-blue.svg"></a>
+<a href="https://badge.fury.io/py/orangetool"><img src="https://badge.fury.io/py/orangetool.svg"></a>
 
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/Moduland/Orangetool/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/Moduland/Orangetool/?branch=master)
-[![Build Status](https://scrutinizer-ci.com/g/Moduland/Orangetool/badges/build.png?b=master)](https://scrutinizer-ci.com/g/Moduland/Orangetool/build-status/master)
-[![Python](https://img.shields.io/badge/python-3.3%2C3.4%2C3.5%2C3.6-blue.svg)](http://www.python.org)
-[![PyPI version](https://badge.fury.io/py/orangetool.svg)](https://badge.fury.io/py/orangetool)	
-
+</div>
 
 ----------
 		
@@ -125,5 +126,23 @@ time=orangetool.idletime() # this function return idle of system ( all cores)
 - local_ip() and global_ip() originally are available in ipz package [Link](http://github.com/sepandhaghighi/ipz)
 - RAM Functions in this version need psutil package
 
+
+
+## Issues & Bug Reports			
+
+Just fill an issue and describe it. We'll check it ASAP!							
+or send an email to [info@moduland.ir](mailto:info@moduland.ir "info@moduland.ir"). 
+
+
+## Contribution			
+
+You can fork the repository, improve or fix some part of it and then send the pull requests back if you want to see them here. I really appreciate that. ❤️			
+
+Remember to write a few tests for your code before sending pull requests. 
+
+
+##License
+
+<a href="https://github.com/Moduland/orangetool/blob/master/LICENSE"><img src="https://img.shields.io/github/license/mashape/apistatus.svg"/></a>
 			
 
