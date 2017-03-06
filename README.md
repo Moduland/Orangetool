@@ -15,7 +15,7 @@
 
 # Orangetool
 	
-Consist of some useful script for Orange Pi/Raspberry Pi boards (Under Development)					
+Consist of some general and useful scripts that developed for Orange Pi/Raspberry Pi boards (Under Development)					
 
 Tested on Lubuntu 14.04
 
@@ -112,6 +112,10 @@ temp=orangetool.get_temp() # this function return cpu temperature as string
 #15- uptime
 
 time=orangetool.uptime() # this function return uptime of system
+
+#15- idletime
+
+time=orangetool.idletime() # this function return idle of system ( all cores)
 
 ```
 
