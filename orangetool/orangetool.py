@@ -87,7 +87,7 @@ def get_temp(Zone=0,DEBUG=False):
     :return: Board Temp as string in celsius
     '''
     try:
-        command=open("/sys/class/thermal/thermal_zone"+str(Zone)+"temp")
+        command=open("/sys/class/thermal/thermal_zone"+str(Zone))
         #command=sub.Popen(["cat","/sys/class/thermal/thermal_zone"+str(Zone)+"/temp"],stderr=sub.PIPE,stdin=sub.PIPE,stdout=sub.PIPE)
         #response=list(command.communicate())
         response=command.read()
