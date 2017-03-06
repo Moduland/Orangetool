@@ -124,17 +124,11 @@ def ram_total(convert=True):
     :type convert:bool
     :return: total ram of board as string
     '''
-    command=sub.Popen(["free","-m"],stdout=sub.PIPE,stderr=sub.PIPE,stdin=sub.PIPE)
-    response=list(command.communicate())[0]
-    splited_response=str(response).split(" ")
-    for i in splited_response:
-        if i=="":
-            splited_response.remove(i)
-    #response=list(psutil.virtual_memory())
+    response=list(psutil.virtual_memory())
     if convert==True:
-        return convert_bytes(splited_response[7])
+        return convert_bytes(int(response[0]))
     else:
-        return str(splited_response[7])
+        return str(response[0])
 def ram_used(convert=True):
     '''
     Return how much ram is using
@@ -142,17 +136,11 @@ def ram_used(convert=True):
     :type convert:bool
     :return: how much ram is using as string
     '''
-    command = sub.Popen(["free", "-m"], stdout=sub.PIPE, stderr=sub.PIPE, stdin=sub.PIPE)
-    response = list(command.communicate())[0]
-    splited_response = str(response).split(" ")
-    for i in splited_response:
-        if i == "":
-            splited_response.remove(i)
-    # response=list(psutil.virtual_memory())
+    response=list(psutil.virtual_memory())
     if convert == True:
-        return convert_bytes(splited_response[8])
+        return convert_bytes(int(response[3]))
     else:
-        return str(splited_response[8])
+        return str(response[3])
 def ram_free(convert=True):
     '''
     Return how much ram is available
@@ -160,17 +148,11 @@ def ram_free(convert=True):
     :type convert : bool
     :return: how much ram is available
     '''
-    command = sub.Popen(["free", "-m"], stdout=sub.PIPE, stderr=sub.PIPE, stdin=sub.PIPE)
-    response = list(command.communicate())[0]
-    splited_response = str(response).split(" ")
-    for i in splited_response:
-        if i == "":
-            splited_response.remove(i)
-    # response=list(psutil.virtual_memory())
+    response=list(psutil.virtual_memory())
     if convert == True:
-        return convert_bytes(splited_response[9])
+        return convert_bytes(int(response[1]))
     else:
-        return str(splited_response[9])
+        return str(response[1])
 def ram_percent():
     '''
     Return available ram percentage
