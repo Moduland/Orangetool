@@ -121,7 +121,7 @@ temp=orangetool.get_temp() # this function return cpu temperature as string
 
 time=orangetool.uptime() # this function return uptime of system
 
-#15- idletime
+#16- idletime
 
 time=orangetool.idletime() # this function return idle of system ( all cores)
 
