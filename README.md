@@ -10,8 +10,6 @@
 </div>
 
 ----------
-		
-
 
 
 # Orangetool
@@ -24,9 +22,18 @@ Tested on Lubuntu 14.04
 	
 By [Moduland Co](http://www.moduland.ir)		
 
+----------
 
+- [IP Functions](#ip-functions)
+- [RAM Functions](#ram-functions)
+- [Storage Functions](#storage-functions)	
+- [Other Functions](#other-functions)
+- [Issues & Bug Reports](#issues--bug-reports)
+- [Contribution](#contribution)
+- [License](#license)
 </hr>
 </hr>
+
 ## Download ##
 
 - [Download](https://github.com/Moduland/Orangetool/archive/master.zip) source from github
