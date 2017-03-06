@@ -199,11 +199,32 @@ def uptime(DEBUG=False):
         #command=sub.Popen(["cat","/proc/uptime"],stderr=sub.PIPE,stdin=sub.PIPE,stdout=sub.PIPE)
         #response=list(command.communicate())
         response=command.read()
+        return time_convert(response[:-1].split(" ")[0])
         #if len(response[0])!=0:
          #   return time_convert(list(str(response[0])[2:-3].split(" "))[0])
         #else:
             #return "Error"
-        return response
+    except Exception as e:
+        if DEBUG==True:
+            print(str(e))
+        return "Error"
+def idletime(DEBUG=False):
+    '''
+    This function return system idletime
+    :param DEBUG: Flag for using Debug mode
+    :type DEBUG:bool
+    :return: system idle as string
+    '''
+    try:
+        command=open("/proc/uptime")
+        #command=sub.Popen(["cat","/proc/uptime"],stderr=sub.PIPE,stdin=sub.PIPE,stdout=sub.PIPE)
+        #response=list(command.communicate())
+        response=command.read()
+        return time_convert(response[:-1].split(" ")[1])
+        #if len(response[0])!=0:
+         #   return time_convert(list(str(response[0])[2:-3].split(" "))[0])
+        #else:
+            #return "Error"
     except Exception as e:
         if DEBUG==True:
             print(str(e))
