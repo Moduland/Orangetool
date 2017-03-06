@@ -197,7 +197,7 @@ def uptime(DEBUG=False):
     try:
         command=open("/proc/uptime")
         response=command.read()
-        return time_convert(response[:-1].split(" ")[1])
+        return time_convert(response[:-1].split(" ")[0])
     except Exception as e:
         if DEBUG==True:
             print(str(e))
@@ -212,7 +212,7 @@ def idletime(DEBUG=False):
     try:
         command=open("/proc/uptime")
         response=command.read()
-        return time_convert(response[:-1].split(" ")[0])
+        return time_convert(response[:-1].split(" ")[1])
     except Exception as e:
         if DEBUG==True:
             print(str(e))
