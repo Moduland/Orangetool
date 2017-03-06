@@ -83,7 +83,7 @@ orangetool.freeup() # To free pagecache, dentries and inodes and return freeuped
 
 ```
 
-### Storage Function				
+## Storage Functions				
 
 ```python
 #9- mount_status
