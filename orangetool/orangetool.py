@@ -87,7 +87,7 @@ def get_temp(Zone=0,DEBUG=False):
     :return: Board Temp as string in celsius
     '''
     try:
-        command=open("/sys/class/thermal/thermal_zone"+str(Zone))
+        command=open("/sys/class/thermal/thermal_zone"+str(Zone)+"/temp")
         #command=sub.Popen(["cat","/sys/class/thermal/thermal_zone"+str(Zone)+"/temp"],stderr=sub.PIPE,stdin=sub.PIPE,stdout=sub.PIPE)
         #response=list(command.communicate())
         response=command.read()
@@ -196,14 +196,8 @@ def uptime(DEBUG=False):
     '''
     try:
         command=open("/proc/uptime")
-        #command=sub.Popen(["cat","/proc/uptime"],stderr=sub.PIPE,stdin=sub.PIPE,stdout=sub.PIPE)
-        #response=list(command.communicate())
         response=command.read()
-        return time_convert(response[:-1].split(" ")[0])
-        #if len(response[0])!=0:
-         #   return time_convert(list(str(response[0])[2:-3].split(" "))[0])
-        #else:
-            #return "Error"
+        return time_convert(response[:-1].split(" ")[1])
     except Exception as e:
         if DEBUG==True:
             print(str(e))
@@ -217,14 +211,8 @@ def idletime(DEBUG=False):
     '''
     try:
         command=open("/proc/uptime")
-        #command=sub.Popen(["cat","/proc/uptime"],stderr=sub.PIPE,stdin=sub.PIPE,stdout=sub.PIPE)
-        #response=list(command.communicate())
         response=command.read()
-        return time_convert(response[:-1].split(" ")[1])
-        #if len(response[0])!=0:
-         #   return time_convert(list(str(response[0])[2:-3].split(" "))[0])
-        #else:
-            #return "Error"
+        return time_convert(response[:-1].split(" ")[0])
     except Exception as e:
         if DEBUG==True:
             print(str(e))
