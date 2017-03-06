@@ -91,7 +91,7 @@ def get_temp(Zone=0,DEBUG=False):
         #command=sub.Popen(["cat","/sys/class/thermal/thermal_zone"+str(Zone)+"/temp"],stderr=sub.PIPE,stdin=sub.PIPE,stdout=sub.PIPE)
         #response=list(command.communicate())
         response=command.read()
-        return response
+        return response[:-1]
         #if len(response[0])!=0:
             #return str(response[0])[2:-3]
         #else:
@@ -252,7 +252,7 @@ def freeup(DEBUG=False):
         output = sub.Popen(["echo", "3", ">", "/proc/sys/vm/drop_caches"], stdout=sub.PIPE,stderr=sub.PIPE)
         result=list(output.communicate())
         if len(result[1])>0:
-            raise
+            raise Exception
         RAM_after=int(ram_free(convert=False))
         freeuped_ram=RAM_after - RAM_before
         if freeuped_ram>0:
