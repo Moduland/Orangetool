@@ -9,7 +9,7 @@ import string
 import random
 ip_pattern=r"(?:[0-9]{1,3}\.){3}[0-9]{1,3}"
 api_1="http://ipinfo.io/ip"
-
+VERSION="orangetool-v0.2"
 def internet(host="8.8.8.8", port=53, timeout=3):
     """
     Check Internet Connections.
@@ -405,6 +405,12 @@ def mac(DEBUG=False):
         if DEBUG==True:
             print(str(e))
         return "Error"
+def version():
+    '''
+    This function return orangetool version (for test)
+    :return: return orangetool-version number as string
+    '''
+    return VERSION
 
 
 
