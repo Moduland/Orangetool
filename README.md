@@ -121,6 +121,10 @@ orangetool.hdmi_on() # turn on hdmi port
 
 orangetool.hdmi_off() # turn off hdmi port
 
+#16- hdmi_size
+
+orangetool.hdmi_size(1280,720) # this function change hdmi display resolution
+
 ```
 
 ## Other Functions			

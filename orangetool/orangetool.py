@@ -445,6 +445,26 @@ def hdmi_off(DEBUG=False):
         if DEBUG==True:
             print(str(e))
         return "Error"
+def hdmi_size(v=1280,h=720,DEBUG=False):
+    '''
+    This function change hdmi display resolution (need sudo -s)
+    :param v: vertical line
+    :param h: horizental line
+    :param DEBUG: Flag for using Debug mode
+    :type v : int
+    :type h:int
+    :type DEBUG:bool
+    :return: bool
+    '''
+    try:
+        hdmi_control = open("/sys/class/graphics/fb0/virtual_size", "w")
+        hdmi_control.write(str(v)+","+str(h))
+        hdmi_control.close()
+        return True
+    except Exception as e:
+        if DEBUG==True:
+            print(str(e))
+        return "Error"
 
 
 
