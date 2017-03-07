@@ -412,6 +412,44 @@ def version():
     '''
     return VERSION
 
+def hdmi_on(DEBUG=False):
+    '''
+    This function turn on hdmi port (need sudo -s)
+    :param DEBUG: Flag for using Debug mode
+    :type DEBUG:bool
+    :return: bool
+    '''
+    try:
+        hdmi_control=open("/sys/class/graphics/fb0/blank","w")
+        hdmi_control.write("0")
+        hdmi_control.close()
+        return True
+    except Exception as e:
+        if DEBUG==True:
+            print(str(e))
+        return "Error"
+
+def hdmi_off(DEBUG=False):
+    '''
+       This function turn off hdmi port (need sudo -s)
+       :param DEBUG: Flag for using Debug mode
+       :type DEBUG:bool
+       :return: bool
+       '''
+    try:
+        hdmi_control=open("/sys/class/graphics/fb0/blank","w")
+        hdmi_control.write("4")
+        hdmi_control.close()
+        return True
+    except Exception as e:
+        if DEBUG==True:
+            print(str(e))
+        return "Error"
+
+
+
+
+
 
 
 
