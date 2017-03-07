@@ -16,7 +16,7 @@
 	
 Consist of some general and useful scripts that developed for Orange Pi/Raspberry Pi boards (Under Development)					
 
-Tested on Lubuntu 14.04
+Tested on Lubuntu 14.04 - Orange Pi-PC
 
 ----------
 	
@@ -27,6 +27,7 @@ By [Moduland Co](http://www.moduland.ir)
 - [IP Functions](#ip-functions)
 - [RAM Functions](#ram-functions)
 - [Storage Functions](#storage-functions)	
+- [Display Functions](#display-functions)	
 - [Other Functions](#other-functions)
 - [Issues & Bug Reports](#issues--bug-reports)
 - [Contribution](#contribution)
