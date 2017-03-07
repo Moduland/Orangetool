@@ -444,7 +444,7 @@ def hdmi_off(DEBUG=False):
         if DEBUG==True:
             print(str(e))
         return "Error"
-def hdmi_size(v=1280,h=720,DEBUG=False):
+def hdmi_size(v=None,h=None,DEBUG=False):
     '''
     This function change hdmi display resolution (need sudo -s)
     :param v: vertical line
@@ -456,6 +456,11 @@ def hdmi_size(v=1280,h=720,DEBUG=False):
     :return: bool
     '''
     try:
+        if type(v)!=int or type(h)!=int:
+            hdmi_control = open("/sys/class/graphics/fb0/virtual_size", "r")
+            resolution=hdmi_control.read()[:-1].replace(",","x")
+            hdmi_control.close()
+            return resolution
         hdmi_control = open("/sys/class/graphics/fb0/virtual_size", "w")
         hdmi_control.write(str(v)+","+str(h))
         hdmi_control.close()
