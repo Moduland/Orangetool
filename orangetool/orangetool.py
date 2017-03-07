@@ -385,6 +385,30 @@ def mount(device_name,mount_address=None,DEBUG=False):
         if DEBUG==True:
             print(str(e))
         return "Error"
+def mac(DEBUG=False):
+    '''
+    This function return mac addresses of net devices
+    :param DEBUG: Flag for using Debug mode
+    :type DEBUG:bool
+    :return: return mac addresses as dict with name as keys and mac addresses as values
+    '''
+    try:
+        net_dir="/sys/class/net"
+        mac_list=[]
+        dir_list=os.listdir(net_dir)
+        for item in dir_list:
+            mac_addr=open(net_dir+"/"+item+"/address","r")
+            mac_list.append(mac_addr.read()[:-1])
+            mac_addr.close()
+        return dict(zip(dir_list,mac_list))
+    except Exception as e:
+        if DEBUG==True:
+            print(str(e))
+        return "Error"
+
+
+
+
 
 
 
