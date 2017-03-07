@@ -126,6 +126,14 @@ time=orangetool.uptime() # this function return uptime of system
 
 time=orangetool.idletime() # this function return idle of system ( all cores)
 
+#17- mac
+
+mac_dic=orangetool.mac() # return dict of all system net devices mac addresses
+
+#18- version
+
+orangetool.version() # return orangetool version for test
+
 ```
 
 
