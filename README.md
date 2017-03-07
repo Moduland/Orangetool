@@ -131,23 +131,23 @@ orangetool.hdmi_size(1280,720) # this function change hdmi display resolution
 
 ```python
 
-#16- get_temp
+#17- get_temp
 
 temp=orangetool.get_temp() # this function return cpu temperature as string
 
-#17- uptime
+#18- uptime
 
 time=orangetool.uptime() # this function return uptime of system
 
-#18- idletime
+#19- idletime
 
 time=orangetool.idletime() # this function return idle of system ( all cores)
 
-#19- mac
+#20- mac
 
 mac_dic=orangetool.mac() # return dict of all system net devices mac addresses
 
-#20- version
+#21- version
 
 orangetool.version() # return orangetool version for test
 
@@ -158,6 +158,7 @@ orangetool.version() # return orangetool version for test
 - All of the functions in error state return `Error` String
 - local_ip() and global_ip() originally are available in ipz package [Link](http://github.com/sepandhaghighi/ipz)
 - RAM Functions in this version need psutil package
+- Some of this funtions need root access so it's better to run ```sudo -s``` before use this tool
 
 
 
