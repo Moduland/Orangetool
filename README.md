@@ -110,27 +110,40 @@ orangetool.mount("sda1","/mnt/usb1") # This function mount input device in input
 
 ```
 
+## Display Functions				
+
+```python
+#14- hdmi_on
+
+orangetool.hdmi_on() # turn on hdmi port
+
+#15- hdmi_off
+
+orangetool.hdmi_off() # turn off hdmi port
+
+```
+
 ## Other Functions			
 
 ```python
 
-#14- get_temp
+#16- get_temp
 
 temp=orangetool.get_temp() # this function return cpu temperature as string
 
-#15- uptime
+#17- uptime
 
 time=orangetool.uptime() # this function return uptime of system
 
-#16- idletime
+#18- idletime
 
 time=orangetool.idletime() # this function return idle of system ( all cores)
 
-#17- mac
+#19- mac
 
 mac_dic=orangetool.mac() # return dict of all system net devices mac addresses
 
-#18- version
+#20- version
 
 orangetool.version() # return orangetool version for test
 
