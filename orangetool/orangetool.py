@@ -77,6 +77,34 @@ def global_ip(DEBUG=False):
             print(str(e))
         return "Error"
 
+def set_ip(ip,DEBUG=False):
+    '''
+    This function set static ip in interfaces file (need sudo)
+    :param ip: static ip
+    :type ip :str
+    :param DEBUG: Flag for using Debug mode
+    :type DEBUG:bool
+    :return: True in successful
+    '''
+    try:
+        file=open("/etc/network/interfaces","r")
+        file_lines=[]
+        for line in file:
+            if line.find("address")!=-1:
+                file_lines.append("address "+ip+"\n")
+            file_lines.append(line)
+        file.close()
+        file=open("/etc/network/interfaces","w")
+        file.write("".join(file_lines))
+        file.close()
+        return True
+    except Exception as e:
+        if DEBUG==True:
+            print(str(e))
+        if file.closed()==False:
+            file.close()
+        return "Error"
+
 def get_temp(Zone=0,DEBUG=False):
     '''
     This Function Wrote for Orangepi to read cpu temperature
@@ -469,33 +497,7 @@ def hdmi_size(v=None,h=None,DEBUG=False):
         if DEBUG==True:
             print(str(e))
         return "Error"
-def static_ip(ip,DEBUG=False):
-    '''
-    This function set static ip in interfaces file (need sudo)
-    :param ip: static ip
-    :type ip :str
-    :param DEBUG: Flag for using Debug mode
-    :type DEBUG:bool
-    :return: True in successful
-    '''
-    try:
-        file=open("/etc/network/interfaces","r")
-        file_lines=[]
-        for line in file:
-            if line.find("address")!=-1:
-                file_lines.append("address "+ip+"\n")
-            file_lines.append(line+"\n")
-        file.close()
-        file=open("/etc/network/interfaces","w")
-        file.write("".join(file_lines))
-        file.close()
-        return True
-    except Exception as e:
-        if DEBUG==True:
-            print(str(e))
-        if file.closed()==False:
-            file.close()
-        return "Error"
+
 
 
 

@@ -14,7 +14,7 @@
 
 # Orangetool
 	
-Consist of some general and useful scripts that developed for Orange Pi/Raspberry Pi boards (Under Development)					
+Consist of some general and useful scripts that developed for Single-Board Computers (Under Development)					
 
 Tested on Lubuntu 14.04 - Orange Pi-PC
 
@@ -61,25 +61,31 @@ status=orangetool.internet() #this function check internet connection and return
 
 ip_status=orangetool.ping(ip_address) #this function check ip and return True if this ip is available in network and False otherwise
 
+#5- set_ip
+
+set_ip("192.168.1.46")  #this function set static ip for system
+
+
+
 ```
 
 ## RAM Functions		
 
 ```python
  
-#5- total ram
+#6- total ram
 
 ram=orangetool.ram_total() #this function return total ram of the board
 
-#6- free ram
+#7- free ram
 
 ram=orangetool.ram_free() # this function return how much ram is available in the board
 
-#7- ram percentage
+#8- ram percentage
 
 ram=orangetool.ram_percent() # this function return used ram percentage
 
-#8- freeup
+#9- freeup
 
 orangetool.freeup() # To free pagecache, dentries and inodes and return freeuped amount
 
@@ -88,24 +94,24 @@ orangetool.freeup() # To free pagecache, dentries and inodes and return freeuped
 ## Storage Functions				
 
 ```python
-#9- mount_status
+#10- mount_status
 
 mount_details=orangetool.mount_status("sda1") # This function return mount addresses of input device
 
-#10- storage_status
+#11- storage_status
 
 mount_details=orangetool.storage_status() # This function return all of the inserted storage and their status
 
-#11- unmount
+#12- unmount
 
 orangetool.unmount("/mnt/usb1") # This function unmount input device
 
-#12- unmount_all
+#13- unmount_all
 
 
 orangetool.unmount_all() #This function unmount all of the mounted devices
 
-#13- mount
+#14- mount
 
 orangetool.mount("sda1","/mnt/usb1") # This function mount input device in input addresses
 
@@ -114,15 +120,15 @@ orangetool.mount("sda1","/mnt/usb1") # This function mount input device in input
 ## Display Functions				
 
 ```python
-#14- hdmi_on
+#15- hdmi_on
 
 orangetool.hdmi_on() # turn on hdmi port
 
-#15- hdmi_off
+#16- hdmi_off
 
 orangetool.hdmi_off() # turn off hdmi port
 
-#16- hdmi_size
+#17- hdmi_size
 
 orangetool.hdmi_size(1280,720) # this function change hdmi display resolution
 
@@ -132,23 +138,23 @@ orangetool.hdmi_size(1280,720) # this function change hdmi display resolution
 
 ```python
 
-#17- get_temp
+#18- get_temp
 
 temp=orangetool.get_temp() # this function return cpu temperature as string
 
-#18- uptime
+#19- uptime
 
 time=orangetool.uptime() # this function return uptime of system
 
-#19- idletime
+#20- idletime
 
 time=orangetool.idletime() # this function return idle of system ( all cores)
 
-#20- mac
+#21- mac
 
 mac_dic=orangetool.mac() # return dict of all system net devices mac addresses
 
-#21- version
+#22- version
 
 orangetool.version() # return orangetool version for test
 
