@@ -446,7 +446,7 @@ def hdmi_off(DEBUG=False):
         return "Error"
 def hdmi_size(v=None,h=None,DEBUG=False):
     '''
-    This function change hdmi display resolution (need sudo -s)
+    This function change hdmi display resolution (need sudo -s) (if call without any argument return current resolution)
     :param v: vertical line
     :param h: horizental line
     :param DEBUG: Flag for using Debug mode
@@ -469,6 +469,34 @@ def hdmi_size(v=None,h=None,DEBUG=False):
         if DEBUG==True:
             print(str(e))
         return "Error"
+def static_ip(ip,DEBUG=False):
+    '''
+    This function set static ip in interfaces file (need sudo)
+    :param ip: static ip
+    :type ip :str
+    :param DEBUG: Flag for using Debug mode
+    :type DEBUG:bool
+    :return: True in successful
+    '''
+    try:
+        file=open("/etc/network/interfaces","r")
+        file_lines=file.readlines()
+        for i,item in enumerate(file_lines):
+            if item.find("addresses")!=-1:
+                file_lines[i]="addresses "+ip+"\n"
+        file=open("/etc/network/interaces","w")
+        file.write("".join(file_lines))
+        file.close()
+        return True
+    except Exception as e:
+        if DEBUG==True:
+            print(str(e))
+        if file.closed()==False:
+            file.close()
+        return "Error"
+
+
+
 
 
 
