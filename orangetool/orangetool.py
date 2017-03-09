@@ -480,10 +480,12 @@ def static_ip(ip,DEBUG=False):
     '''
     try:
         file=open("/etc/network/interfaces","r")
-        file_lines=file.readlines()
-        for i,item in enumerate(file_lines):
-            if item.find("address")!=-1:
-                file_lines[i]="address "+ip+"\n"
+        file_lines=[]
+        for line in file:
+            if line.find("address")!=-1:
+                file_lines.append("address "+ip+"\n")
+            file_lines.append(line+"\n")
+        file.close()
         file=open("/etc/network/interaces","w")
         file.write("".join(file_lines))
         file.close()
