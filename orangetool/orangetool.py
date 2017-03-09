@@ -486,7 +486,7 @@ def static_ip(ip,DEBUG=False):
                 file_lines.append("address "+ip+"\n")
             file_lines.append(line+"\n")
         file.close()
-        file=open("/etc/network/interaces","w")
+        file=open("/etc/network/interfaces","w")
         file.write("".join(file_lines))
         file.close()
         return True
