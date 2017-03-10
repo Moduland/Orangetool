@@ -7,6 +7,7 @@ import psutil
 import os
 import string
 import random
+import time
 ip_pattern=r"(?:[0-9]{1,3}\.){3}[0-9]{1,3}"
 api_1="http://ipinfo.io/ip"
 VERSION="orangetool-v0.2"
@@ -99,7 +100,7 @@ iface device inet static
     '''
     try:
         if bool(re.match(ip_pattern,ip))==False or ip.find("192.168.")==-1 or DEVICE not in mac().keys():
-            raise Exception
+            raise Exception("IP Formation Error")
         static_string=static_string.replace("ip",ip)
         static_string=static_string.replace("device",DEVICE)
         file=open("/etc/network/interfaces","w")
@@ -265,7 +266,7 @@ def ping(ip,packet_number=3,DEBUG=False):
     '''
     try:
         if re.match(ip_pattern,ip)==False:
-            raise Exception
+            raise Exception("IP Formation Error")
         output=str(list(sub.Popen(["ping",ip,"-c",str(packet_number)],stdout=sub.PIPE,stderr=sub.PIPE).communicate())[0])
         if output.find("Unreachable")==-1:
             return True
@@ -405,7 +406,7 @@ def mount(device_name,mount_address=None,DEBUG=False):
     '''
     try:
         if mount_status(device_name)!="u":
-            raise Exception
+            raise Exception("Device already mount")
         if mount_address==None:
             mount_address="/mnt/"+random_generator(5)
             command=sub.Popen(["mkdir",mount_address], stdout=sub.PIPE, stderr=sub.PIPE)
@@ -504,6 +505,53 @@ def hdmi_size(v=None,h=None,DEBUG=False):
         if DEBUG==True:
             print(str(e))
         return "Error"
+def wakeup(day=0,hour=0,minute=0,DEBUG=False):
+    '''
+    This function set wakeup time for kernel RTC (need sudo)
+    :param day: days for wakeup
+    :param hour: hout for wakeup
+    :param minute: minute for wakeup
+    :param DEBUG: Flag for using Debug mode
+    :type day:int
+    :type hour:int
+    :type minute:int
+    :type DEBUG:bool
+    :return: bool
+    '''
+    try:
+        total_time=day*24*60+hour*60+minute
+        epoch=time.time()+total_time*60
+        file=open("/sys/class/rtc/rtc0/wakealarm","w")
+        file.write("0")
+        file.close()
+        file = open("/sys/class/rtc/rtc0/wakealarm", "w")
+        file.write(str(epoch))
+        file.close()
+        return True
+    except Exception as e:
+        if DEBUG==True:
+            print(str(e))
+        return "Error"
+def sleep(DEBUG=False):
+    '''
+    This function is a shortcut for sleep (need sudo)
+    :param DEBUG: Flag for using Debug mode
+    :type DEBUG:bool
+    :return: None
+    '''
+    try:
+        command=sub.Popen("pm-suspend",stderr=sub.PIPE,stdout=sub.PIPE,stdin=sub.PIPE)
+        response=list(command.communicate())
+        if len(response[1])>0:
+            raise Exception('Root Error')
+    except Exception as e:
+        if DEBUG==True:
+            print(str(e))
+        return "Error"
+
+
+
+
 
 
 
