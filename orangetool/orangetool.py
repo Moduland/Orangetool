@@ -105,6 +105,7 @@ iface device inet static
         file=open("/etc/network/interfaces","w")
         file.write(static_string)
         file.close()
+        command=sub.Popen(["ifdown",DEVICE,"&&","ifup",DEVICE],stderr=sub.PIPE,stdin=sub.PIPE,stdout=sub.PIPE)
         return True
     except Exception as e:
         if DEBUG==True:
