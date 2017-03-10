@@ -96,6 +96,9 @@ iface device inet static
         dns-nameservers 8.8.8.8 8.8.4.4
     '''
     try:
+        print(re.match(ip_pattern,ip))
+        print(ip.find("192.168.")!=-1)
+        print(DEVICE not in mac().keys())
         if re.match(ip_pattern,ip)==False or ip.find("192.168.")!=-1 or DEVICE not in mac().keys():
             raise Exception
         static_string.replace("ip",ip)
