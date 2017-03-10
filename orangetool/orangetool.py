@@ -107,8 +107,6 @@ iface device inet static
     except Exception as e:
         if DEBUG==True:
             print(str(e))
-        if file.closed()==False:
-            file.close()
         return "Error"
 
 def get_temp(Zone=0,DEBUG=False):
