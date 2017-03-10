@@ -77,7 +77,7 @@ def global_ip(DEBUG=False):
             print(str(e))
         return "Error"
 
-def set_ip(ip,DEBUG=False):
+def set_ip(ip,DEBUG=False,DEVICE="eth0"):
     '''
     This function set static ip in interfaces file (need sudo)
     :param ip: static ip
@@ -86,16 +86,22 @@ def set_ip(ip,DEBUG=False):
     :type DEBUG:bool
     :return: True in successful
     '''
+    static_string='''
+    auto lo device
+iface lo inet loopback
+iface device inet static
+        address ip
+        netmask 255.255.255.0
+        gateway 192.168.1.1
+        dns-nameservers 8.8.8.8 8.8.4.4
+    '''
     try:
-        file=open("/etc/network/interfaces","r")
-        file_lines=[]
-        for line in file:
-            if line.find("address")!=-1:
-                file_lines.append("address "+ip+"\n")
-            file_lines.append(line)
-        file.close()
+        if re.match(ip_pattern,ip)==False or ip.find("192.168.")!=-1 or DEVICE not in mac().keys():
+            raise Exception
+        static_string.replace("ip",ip)
+        static_string.replace("device",DEVICE)
         file=open("/etc/network/interfaces","w")
-        file.write("".join(file_lines))
+        file.write(static_string)
         file.close()
         return True
     except Exception as e:
