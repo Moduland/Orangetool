@@ -63,7 +63,7 @@ ip_status=orangetool.ping(ip_address) #this function check ip and return True if
 
 #5- set_ip
 
-set_ip("192.168.1.46")  #this function set static ip for system
+set_ip("192.168.1.46","eth0")  #this function set static ip for system
 
 
 

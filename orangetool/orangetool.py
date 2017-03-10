@@ -77,9 +77,11 @@ def global_ip(DEBUG=False):
             print(str(e))
         return "Error"
 
-def set_ip(ip,DEBUG=False,DEVICE="eth0"):
+def set_ip(ip,DEVICE="eth0",DEBUG=False):
     '''
     This function set static ip in interfaces file (need sudo)
+    :param DEVICE: network device name
+    :type DEVICE:str
     :param ip: static ip
     :type ip :str
     :param DEBUG: Flag for using Debug mode
@@ -96,10 +98,7 @@ iface device inet static
         dns-nameservers 8.8.8.8 8.8.4.4
     '''
     try:
-        print(re.match(ip_pattern,ip))
-        print(ip.find("192.168.")!=-1)
-        print(DEVICE not in mac().keys())
-        if re.match(ip_pattern,ip)==False or ip.find("192.168.")!=-1 or DEVICE not in mac().keys():
+        if bool(re.match(ip_pattern,ip))==False or ip.find("192.168.")==-1 or DEVICE not in mac().keys():
             raise Exception
         static_string.replace("ip",ip)
         static_string.replace("device",DEVICE)
