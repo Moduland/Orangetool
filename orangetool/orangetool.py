@@ -100,8 +100,8 @@ iface device inet static
     try:
         if bool(re.match(ip_pattern,ip))==False or ip.find("192.168.")==-1 or DEVICE not in mac().keys():
             raise Exception
-        static_string.replace("ip",ip)
-        static_string.replace("device",DEVICE)
+        static_string=static_string.replace("ip",ip)
+        static_string=static_string.replace("device",DEVICE)
         file=open("/etc/network/interfaces","w")
         file.write(static_string)
         file.close()
