@@ -30,7 +30,6 @@ By [Moduland Co](http://www.moduland.ir)
 - [Storage Functions](#storage-functions)	
 - [Display Functions](#display-functions)
 - [System Functions](#system-functions)		
-- [Other Functions](#other-functions)
 </hr>
 </hr>
 
