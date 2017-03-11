@@ -8,6 +8,14 @@ import os
 import string
 import random
 import time
+logo='''
+________                                      __                .__
+\_____  \____________    ____    ____   _____/  |_  ____   ____ |  |
+ /   |   \_  __ \__  \  /    \  / ___\_/ __ \   __\/  _ \ /  _ \|  |
+/    |    \  | \// __ \|   |  \/ /_/  >  ___/|  | (  <_> |  <_> )  |__
+\_______  /__|  (____  /___|  /\___  / \___  >__|  \____/ \____/|____/
+        \/           \/     \//_____/      \/
+'''
 ip_pattern=r"(?:[0-9]{1,3}\.){3}[0-9]{1,3}"
 api_1="http://ipinfo.io/ip"
 VERSION="orangetool-v0.2"
@@ -445,6 +453,7 @@ def version():
     This function return orangetool version (for test)
     :return: return orangetool-version number as string
     '''
+    print(logo)
     return VERSION
 
 def hdmi_on(DEBUG=False):
