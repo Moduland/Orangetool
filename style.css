@@ -1,7 +1,7 @@
 .logo{
     vertical-align: middle;
     margin: 10 10 10 10;
-    padding: 90 10 10 10;
+    padding: 40 10 10 10;
 }
 
 body{
@@ -37,4 +37,5 @@ hr{
     position: absolute;
     animation-duration: 4s;
     animation-iteration-count: infinite;
+    position: relative;
 }
