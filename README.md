@@ -134,27 +134,40 @@ orangetool.hdmi_size(1280,720) # this function change hdmi display resolution
 
 ```
 
+## System Functions				
+
+```python
+#18- sleep
+
+orangetool.sleep() # put system in sleep mode
+
+#19- wakeup
+
+orangetool.wakeup(day=1,hour=0,minute=1) # set rtc wakeuptime
+
+```
+
 ## Other Functions			
 
 ```python
 
-#18- get_temp
+#20- get_temp
 
 temp=orangetool.get_temp() # this function return cpu temperature as string
 
-#19- uptime
+#21- uptime
 
 time=orangetool.uptime() # this function return uptime of system
 
-#20- idletime
+#22- idletime
 
 time=orangetool.idletime() # this function return idle of system ( all cores)
 
-#21- mac
+#23- mac
 
 mac_dic=orangetool.mac() # return dict of all system net devices mac addresses
 
-#22- version
+#24- version
 
 orangetool.version() # return orangetool version for test
 
