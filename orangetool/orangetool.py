@@ -558,6 +558,42 @@ def sleep(DEBUG=False):
             print(str(e))
         return "Error"
 
+def halt(DEBUG=False):
+    '''
+    his function is a shortcut for poweroff (need sudo)
+    :param DEBUG: Flag for using Debug mode
+    :type DEBUG:bool
+    :return: None
+    '''
+    try:
+        command = sub.Popen("poweroff", stderr=sub.PIPE, stdout=sub.PIPE, stdin=sub.PIPE)
+        response = list(command.communicate())
+        if len(response[1]) > 0:
+            raise Exception('Root Error')
+    except Exception as e:
+        if DEBUG==True:
+            print(str(e))
+        return "Error"
+
+def restart(DEBUG=False):
+    '''
+        his function is a shortcut for reboot (need sudo)
+        :param DEBUG: Flag for using Debug mode
+        :type DEBUG:bool
+        :return: None
+        '''
+    try:
+        command = sub.Popen("reboot", stderr=sub.PIPE, stdout=sub.PIPE, stdin=sub.PIPE)
+        response = list(command.communicate())
+        if len(response[1]) > 0:
+            raise Exception('Root Error')
+    except Exception as e:
+        if DEBUG == True:
+            print(str(e))
+        return "Error"
+
+
+
 
 
 
