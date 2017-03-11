@@ -1,0 +1,25 @@
+.logo{
+    vertical-align: middle;
+    margin: 10 10 10 10;
+    padding: 80 10 10 10;
+}
+
+body{
+    border: 8px;
+    border-style: groove;
+    
+}
+
+.button{
+    padding-top: 50px
+}
+
+a{
+  opacity: 1; 
+  transition: opacity 3s;
+  -webkit-transition: opacity 3s;
+}
+
+a:hover{
+    opacity: 0.3;
+}

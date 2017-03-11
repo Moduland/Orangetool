@@ -1,0 +1,166 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module orangetool</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body >
+    <div align="center">
+<img src="orangetool.jpg" height=240px width=320px>
+    <p></p>
+    </div>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td align="center" colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-convert_bytes"><strong>convert_bytes</strong></a>(num)</dt><dd><tt>convert&nbsp;num&nbsp;to&nbsp;idiomatic&nbsp;byte&nbsp;unit<br>
+:param&nbsp;num:&nbsp;the&nbsp;input&nbsp;number.<br>
+:type&nbsp;num:int<br>
+:return:&nbsp;str<br>
+&gt;&gt;&gt;&nbsp;<a href="#-convert_bytes">convert_bytes</a>(200)<br>
+'200.0&nbsp;bytes'<br>
+&gt;&gt;&gt;&nbsp;<a href="#-convert_bytes">convert_bytes</a>(6000)<br>
+'5.9&nbsp;KB'<br>
+&gt;&gt;&gt;&nbsp;<a href="#-convert_bytes">convert_bytes</a>(80000)<br>
+'78.1&nbsp;KB'</tt></dd></dl>
+ <dl><dt><a name="-freeup"><strong>freeup</strong></a>(DEBUG=False)</dt><dd><tt>To&nbsp;free&nbsp;pagecache,&nbsp;dentries&nbsp;and&nbsp;inodes:<br>
+:param&nbsp;DEBUG:&nbsp;Flag&nbsp;for&nbsp;using&nbsp;Debug&nbsp;mode<br>
+:type&nbsp;DEBUG:bool<br>
+:return:&nbsp;Amount&nbsp;of&nbsp;freeuped&nbsp;ram&nbsp;as&nbsp;string&nbsp;and&nbsp;converted&nbsp;by&nbsp;<a href="#-convert_bytes">convert_bytes</a>()</tt></dd></dl>
+ <dl><dt><a name="-get_temp"><strong>get_temp</strong></a>(Zone=0, DEBUG=False)</dt><dd><tt>This&nbsp;Function&nbsp;Wrote&nbsp;for&nbsp;Orangepi&nbsp;to&nbsp;read&nbsp;cpu&nbsp;temperature<br>
+:param&nbsp;DEBUG&nbsp;:&nbsp;Flag&nbsp;for&nbsp;using&nbsp;Debug&nbsp;mode<br>
+:param&nbsp;Zone&nbsp;:&nbsp;Thermal&nbsp;Zone&nbsp;Index<br>
+:type&nbsp;DEBUG:bool<br>
+:type&nbsp;Zone:int<br>
+:return:&nbsp;Board&nbsp;Temp&nbsp;as&nbsp;string&nbsp;in&nbsp;celsius</tt></dd></dl>
+ <dl><dt><a name="-global_ip"><strong>global_ip</strong></a>(DEBUG=False)</dt><dd><tt>return&nbsp;ip&nbsp;with&nbsp;by&nbsp;<a href="http://ipinfo.io/ip">http://ipinfo.io/ip</a>&nbsp;api<br>
+:param&nbsp;DEBUG:Flag&nbsp;for&nbsp;using&nbsp;Debug&nbsp;mode<br>
+:type&nbsp;DEBUG:bool<br>
+:return:&nbsp;global&nbsp;ip&nbsp;as&nbsp;string</tt></dd></dl>
+ <dl><dt><a name="-hdmi_off"><strong>hdmi_off</strong></a>(DEBUG=False)</dt><dd><tt>This&nbsp;function&nbsp;turn&nbsp;off&nbsp;hdmi&nbsp;port&nbsp;(need&nbsp;sudo&nbsp;-s)<br>
+:param&nbsp;DEBUG:&nbsp;Flag&nbsp;for&nbsp;using&nbsp;Debug&nbsp;mode<br>
+:type&nbsp;DEBUG:bool<br>
+:return:&nbsp;bool</tt></dd></dl>
+ <dl><dt><a name="-hdmi_on"><strong>hdmi_on</strong></a>(DEBUG=False)</dt><dd><tt>This&nbsp;function&nbsp;turn&nbsp;on&nbsp;hdmi&nbsp;port&nbsp;(need&nbsp;sudo&nbsp;-s)<br>
+:param&nbsp;DEBUG:&nbsp;Flag&nbsp;for&nbsp;using&nbsp;Debug&nbsp;mode<br>
+:type&nbsp;DEBUG:bool<br>
+:return:&nbsp;bool</tt></dd></dl>
+ <dl><dt><a name="-hdmi_size"><strong>hdmi_size</strong></a>(v=None, h=None, DEBUG=False)</dt><dd><tt>This&nbsp;function&nbsp;change&nbsp;hdmi&nbsp;display&nbsp;resolution&nbsp;(need&nbsp;sudo&nbsp;-s)&nbsp;(if&nbsp;call&nbsp;without&nbsp;any&nbsp;argument&nbsp;return&nbsp;current&nbsp;resolution)<br>
+:param&nbsp;v:&nbsp;vertical&nbsp;line<br>
+:param&nbsp;h:&nbsp;horizental&nbsp;line<br>
+:param&nbsp;DEBUG:&nbsp;Flag&nbsp;for&nbsp;using&nbsp;Debug&nbsp;mode<br>
+:type&nbsp;v&nbsp;:&nbsp;int<br>
+:type&nbsp;h:int<br>
+:type&nbsp;DEBUG:bool<br>
+:return:&nbsp;bool</tt></dd></dl>
+ <dl><dt><a name="-idletime"><strong>idletime</strong></a>(DEBUG=False)</dt><dd><tt>This&nbsp;function&nbsp;return&nbsp;system&nbsp;idletime<br>
+:param&nbsp;DEBUG:&nbsp;Flag&nbsp;for&nbsp;using&nbsp;Debug&nbsp;mode<br>
+:type&nbsp;DEBUG:bool<br>
+:return:&nbsp;system&nbsp;idle&nbsp;as&nbsp;string</tt></dd></dl>
+ <dl><dt><a name="-internet"><strong>internet</strong></a>(host='8.8.8.8', port=53, timeout=3)</dt><dd><tt>Check&nbsp;Internet&nbsp;Connections.<br>
+:param&nbsp;&nbsp;host:&nbsp;the&nbsp;host&nbsp;that&nbsp;check&nbsp;connection&nbsp;to<br>
+:param&nbsp;&nbsp;port:&nbsp;port&nbsp;that&nbsp;check&nbsp;connection&nbsp;with<br>
+:param&nbsp;&nbsp;timeout:&nbsp;times&nbsp;that&nbsp;check&nbsp;the&nbsp;connnection<br>
+:type&nbsp;host:str<br>
+:type&nbsp;port:int<br>
+:type&nbsp;timeout:int<br>
+:return&nbsp;bool:&nbsp;True&nbsp;if&nbsp;Connection&nbsp;is&nbsp;Stable<br>
+&gt;&gt;&gt;&nbsp;<a href="#-internet">internet</a>()&nbsp;#&nbsp;if&nbsp;there&nbsp;is&nbsp;stable&nbsp;internet&nbsp;connection<br>
+True<br>
+&gt;&gt;&gt;&nbsp;<a href="#-internet">internet</a>()&nbsp;#&nbsp;if&nbsp;there&nbsp;is&nbsp;no&nbsp;stable&nbsp;internet&nbsp;connection<br>
+False</tt></dd></dl>
+ <dl><dt><a name="-local_ip"><strong>local_ip</strong></a>(DEBUG=False)</dt><dd><tt>return&nbsp;local&nbsp;ip&nbsp;of&nbsp;computer&nbsp;in&nbsp;windows&nbsp;by&nbsp;socket&nbsp;module&nbsp;and&nbsp;in&nbsp;unix&nbsp;with&nbsp;hostname&nbsp;command&nbsp;in&nbsp;shell<br>
+:param&nbsp;DEBUG:Flag&nbsp;for&nbsp;using&nbsp;Debug&nbsp;Mode<br>
+:type&nbsp;DEBUG:bool<br>
+:return:&nbsp;local&nbsp;ip&nbsp;as&nbsp;string</tt></dd></dl>
+ <dl><dt><a name="-mac"><strong>mac</strong></a>(DEBUG=False)</dt><dd><tt>This&nbsp;function&nbsp;return&nbsp;mac&nbsp;addresses&nbsp;of&nbsp;net&nbsp;devices<br>
+:param&nbsp;DEBUG:&nbsp;Flag&nbsp;for&nbsp;using&nbsp;Debug&nbsp;mode<br>
+:type&nbsp;DEBUG:bool<br>
+:return:&nbsp;return&nbsp;mac&nbsp;addresses&nbsp;as&nbsp;dict&nbsp;with&nbsp;name&nbsp;as&nbsp;keys&nbsp;and&nbsp;mac&nbsp;addresses&nbsp;as&nbsp;values</tt></dd></dl>
+ <dl><dt><a name="-mount"><strong>mount</strong></a>(device_name, mount_address=None, DEBUG=False)</dt><dd><tt>:param&nbsp;device_name:&nbsp;name&nbsp;of&nbsp;device&nbsp;for&nbsp;mounted&nbsp;example&nbsp;=&nbsp;sda1<br>
+:param&nbsp;mount_address:&nbsp;address&nbsp;for&nbsp;mounting&nbsp;device&nbsp;example&nbsp;=&nbsp;/mnt/usb&nbsp;,&nbsp;default&nbsp;value&nbsp;is&nbsp;None&nbsp;in&nbsp;this&nbsp;case&nbsp;function&nbsp;generate&nbsp;random&nbsp;number&nbsp;for&nbsp;mount&nbsp;folder&nbsp;name<br>
+:param&nbsp;DEBUG:&nbsp;Flag&nbsp;for&nbsp;using&nbsp;Debug&nbsp;mode<br>
+:type&nbsp;device_name:str<br>
+:type&nbsp;mount_address:str<br>
+:type&nbsp;DEBUG:bool<br>
+:return:&nbsp;True&nbsp;if&nbsp;device&nbsp;mount&nbsp;correctly&nbsp;and&nbsp;False&nbsp;other&nbsp;wise</tt></dd></dl>
+ <dl><dt><a name="-mount_status"><strong>mount_status</strong></a>(device_name, DEBUG=False)</dt><dd><tt>This&nbsp;function&nbsp;return&nbsp;addresses&nbsp;of&nbsp;mounted&nbsp;memory&nbsp;devices&nbsp;in&nbsp;dev&nbsp;by&nbsp;device&nbsp;name<br>
+:param&nbsp;DEBUG:&nbsp;Flag&nbsp;for&nbsp;using&nbsp;Debug&nbsp;mode<br>
+:type&nbsp;DEBUG:bool<br>
+:return:&nbsp;list&nbsp;of&nbsp;memory&nbsp;devices</tt></dd></dl>
+ <dl><dt><a name="-ping"><strong>ping</strong></a>(ip, packet_number=3, DEBUG=False)</dt><dd><tt>This&nbsp;function&nbsp;ping&nbsp;ip&nbsp;and&nbsp;return&nbsp;True&nbsp;if&nbsp;this&nbsp;ip&nbsp;is&nbsp;available&nbsp;and&nbsp;False&nbsp;otherwise<br>
+:param&nbsp;ip:&nbsp;target&nbsp;ip<br>
+:param&nbsp;packet_number:&nbsp;numer&nbsp;of&nbsp;packet&nbsp;to&nbsp;size<br>
+:param&nbsp;DEBUG:&nbsp;Flag&nbsp;for&nbsp;using&nbsp;Debug&nbsp;mode<br>
+:type&nbsp;ip&nbsp;:str<br>
+:type&nbsp;packet_number:int<br>
+:type&nbsp;DEBUG:bool<br>
+:return:&nbsp;a&nbsp;boolean&nbsp;value&nbsp;(True&nbsp;if&nbsp;ip&nbsp;is&nbsp;available&nbsp;and&nbsp;False&nbsp;otherwise)</tt></dd></dl>
+ <dl><dt><a name="-ram_free"><strong>ram_free</strong></a>(convert=True)</dt><dd><tt>Return&nbsp;how&nbsp;much&nbsp;ram&nbsp;is&nbsp;available<br>
+:param&nbsp;convert:&nbsp;Flag&nbsp;for&nbsp;convert&nbsp;mode&nbsp;(using&nbsp;of&nbsp;convert_byte&nbsp;function)<br>
+:type&nbsp;convert&nbsp;:&nbsp;bool<br>
+:return:&nbsp;how&nbsp;much&nbsp;ram&nbsp;is&nbsp;available</tt></dd></dl>
+ <dl><dt><a name="-ram_percent"><strong>ram_percent</strong></a>()</dt><dd><tt>Return&nbsp;available&nbsp;ram&nbsp;percentage<br>
+:return:&nbsp;availabe&nbsp;ram&nbsp;percentage&nbsp;as&nbsp;string&nbsp;with&nbsp;%</tt></dd></dl>
+ <dl><dt><a name="-ram_total"><strong>ram_total</strong></a>(convert=True)</dt><dd><tt>Return&nbsp;total&nbsp;ram&nbsp;of&nbsp;board<br>
+:param&nbsp;convert:&nbsp;Flag&nbsp;for&nbsp;convert&nbsp;mode&nbsp;(using&nbsp;of&nbsp;convert_byte&nbsp;function)<br>
+:type&nbsp;convert:bool<br>
+:return:&nbsp;total&nbsp;ram&nbsp;of&nbsp;board&nbsp;as&nbsp;string</tt></dd></dl>
+ <dl><dt><a name="-ram_used"><strong>ram_used</strong></a>(convert=True)</dt><dd><tt>Return&nbsp;how&nbsp;much&nbsp;ram&nbsp;is&nbsp;using<br>
+:param&nbsp;convert:&nbsp;Flag&nbsp;for&nbsp;convert&nbsp;mode&nbsp;(using&nbsp;of&nbsp;convert_byte&nbsp;function)<br>
+:type&nbsp;convert:bool<br>
+:return:&nbsp;how&nbsp;much&nbsp;ram&nbsp;is&nbsp;using&nbsp;as&nbsp;string</tt></dd></dl>
+ <dl><dt><a name="-random_generator"><strong>random_generator</strong></a>(number)</dt></dl>
+ <dl><dt><a name="-set_ip"><strong>set_ip</strong></a>(ip, DEVICE='eth0', DEBUG=False)</dt><dd><tt>This&nbsp;function&nbsp;set&nbsp;static&nbsp;ip&nbsp;in&nbsp;interfaces&nbsp;file&nbsp;(need&nbsp;sudo)<br>
+:param&nbsp;DEVICE:&nbsp;network&nbsp;device&nbsp;name<br>
+:type&nbsp;DEVICE:str<br>
+:param&nbsp;ip:&nbsp;static&nbsp;ip<br>
+:type&nbsp;ip&nbsp;:str<br>
+:param&nbsp;DEBUG:&nbsp;Flag&nbsp;for&nbsp;using&nbsp;Debug&nbsp;mode<br>
+:type&nbsp;DEBUG:bool<br>
+:return:&nbsp;True&nbsp;in&nbsp;successful</tt></dd></dl>
+ <dl><dt><a name="-sleep"><strong>sleep</strong></a>(DEBUG=False)</dt><dd><tt>This&nbsp;function&nbsp;is&nbsp;a&nbsp;shortcut&nbsp;for&nbsp;sleep&nbsp;(need&nbsp;sudo)<br>
+:param&nbsp;DEBUG:&nbsp;Flag&nbsp;for&nbsp;using&nbsp;Debug&nbsp;mode<br>
+:type&nbsp;DEBUG:bool<br>
+:return:&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-storage_status"><strong>storage_status</strong></a>(DEBUG=False)</dt><dd><tt>This&nbsp;function&nbsp;return&nbsp;all&nbsp;of&nbsp;the&nbsp;inserted&nbsp;memory&nbsp;and&nbsp;their&nbsp;status<br>
+:param&nbsp;DEBUG:&nbsp;Flag&nbsp;for&nbsp;using&nbsp;Debug&nbsp;mode<br>
+:type&nbsp;DEBUG:bool<br>
+:return:&nbsp;All&nbsp;of&nbsp;the&nbsp;inserted&nbsp;memory&nbsp;and&nbsp;their&nbsp;status&nbsp;as&nbsp;dictionary&nbsp;(&nbsp;device&nbsp;name&nbsp;as&nbsp;keys&nbsp;and&nbsp;mount&nbsp;status&nbsp;(mounted_addresses&nbsp;as&nbsp;list&nbsp;and&nbsp;u&nbsp;--&gt;&nbsp;unmounted)&nbsp;as&nbsp;values</tt></dd></dl>
+ <dl><dt><a name="-time_convert"><strong>time_convert</strong></a>(input_string)</dt><dd><tt>This&nbsp;function&nbsp;convert&nbsp;input_string&nbsp;from&nbsp;uptime&nbsp;from&nbsp;sec&nbsp;to&nbsp;DD,HH,MM,SS&nbsp;Format<br>
+:param&nbsp;input_string:&nbsp;input&nbsp;time&nbsp;string&nbsp;&nbsp;in&nbsp;sec<br>
+:type&nbsp;input_string:str<br>
+:return:&nbsp;converted&nbsp;time&nbsp;as&nbsp;string</tt></dd></dl>
+ <dl><dt><a name="-unmount"><strong>unmount</strong></a>(ADDRESS, DEBUG=False)</dt><dd><tt>This&nbsp;function&nbsp;unmount&nbsp;memory&nbsp;devices&nbsp;by&nbsp;addresses<br>
+:param&nbsp;ADDRESS:&nbsp;address&nbsp;of&nbsp;that&nbsp;device&nbsp;mount&nbsp;on<br>
+:type&nbsp;ADDRESS:str<br>
+:param&nbsp;DEBUG:&nbsp;Flag&nbsp;for&nbsp;using&nbsp;Debug&nbsp;mode<br>
+:type&nbsp;DEBUG:bool<br>
+:return:&nbsp;True&nbsp;if&nbsp;device&nbsp;unmount&nbsp;correctly&nbsp;and&nbsp;False&nbsp;other&nbsp;wise</tt></dd></dl>
+ <dl><dt><a name="-unmount_all"><strong>unmount_all</strong></a>(DEBUG=False)</dt><dd><tt>This&nbsp;function&nbsp;unmount&nbsp;all&nbsp;of&nbsp;the&nbsp;mounted&nbsp;devices<br>
+:param&nbsp;DEBUG:&nbsp;Flag&nbsp;for&nbsp;using&nbsp;Debug&nbsp;mode<br>
+:type&nbsp;DEBUG:bool<br>
+:return:&nbsp;return&nbsp;True&nbsp;if&nbsp;all&nbsp;of&nbsp;the&nbsp;mounted&nbsp;devices&nbsp;unmount&nbsp;correctly</tt></dd></dl>
+ <dl><dt><a name="-uptime"><strong>uptime</strong></a>(DEBUG=False)</dt><dd><tt>This&nbsp;function&nbsp;return&nbsp;system&nbsp;uptime<br>
+:param&nbsp;DEBUG:&nbsp;Flag&nbsp;for&nbsp;using&nbsp;Debug&nbsp;mode<br>
+:type&nbsp;DEBUG:bool<br>
+:return:&nbsp;system&nbsp;uptime&nbsp;as&nbsp;string</tt></dd></dl>
+ <dl><dt><a name="-version"><strong>version</strong></a>()</dt><dd><tt>This&nbsp;function&nbsp;return&nbsp;orangetool&nbsp;version&nbsp;(for&nbsp;test)<br>
+:return:&nbsp;return&nbsp;orangetool-version&nbsp;number&nbsp;as&nbsp;string</tt></dd></dl>
+ <dl><dt><a name="-wakeup"><strong>wakeup</strong></a>(day=0, hour=0, minute=0, DEBUG=False)</dt><dd><tt>This&nbsp;function&nbsp;set&nbsp;wakeup&nbsp;time&nbsp;for&nbsp;kernel&nbsp;RTC&nbsp;(need&nbsp;sudo)<br>
+:param&nbsp;day:&nbsp;days&nbsp;for&nbsp;wakeup<br>
+:param&nbsp;hour:&nbsp;hout&nbsp;for&nbsp;wakeup<br>
+:param&nbsp;minute:&nbsp;minute&nbsp;for&nbsp;wakeup<br>
+:param&nbsp;DEBUG:&nbsp;Flag&nbsp;for&nbsp;using&nbsp;Debug&nbsp;mode<br>
+:type&nbsp;day:int<br>
+:type&nbsp;hour:int<br>
+:type&nbsp;minute:int<br>
+:type&nbsp;DEBUG:bool<br>
+:return:&nbsp;bool</tt></dd></dl>
+ <dl><dt><a name="-zero_insert"><strong>zero_insert</strong></a>(input_string)</dt><dd><tt>This&nbsp;function&nbsp;get&nbsp;a&nbsp;string&nbsp;as&nbsp;input&nbsp;if&nbsp;input&nbsp;is&nbsp;one&nbsp;digit&nbsp;add&nbsp;a&nbsp;zero<br>
+:param&nbsp;input_string:&nbsp;input&nbsp;digit&nbsp;az&nbsp;string<br>
+:type&nbsp;input_string:str<br>
+:return:&nbsp;modified&nbsp;output&nbsp;as&nbsp;str</tt></dd></dl>
+</td></tr></table><p>
+
+</body></html>
