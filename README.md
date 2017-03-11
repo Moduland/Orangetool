@@ -6,7 +6,7 @@
 <a href="https://scrutinizer-ci.com/g/Moduland/Orangetool/build-status/master"><img src="https://scrutinizer-ci.com/g/Moduland/Orangetool/badges/build.png?b=master"></a>
 <a href="http://www.python.org"><img src="https://img.shields.io/badge/python-3.3%2C3.4%2C3.5%2C3.6-blue.svg"></a>
 <a href="https://badge.fury.io/py/orangetool"><img src="https://badge.fury.io/py/orangetool.svg"></a>
-<a href="http://moduland.github.io/Orangetool"><img src="https://img.shields.io/badge/doc-latest-orange.svg"></a>
+<a href="http://moduland.github.io/Orangetool/doc"><img src="https://img.shields.io/badge/doc-latest-orange.svg"></a>
 
 </div>
 
