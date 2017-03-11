@@ -6,7 +6,10 @@
 
 body{
     border: 8px;
+    border-color:darkorange;
+    background-color:white;
     border-style: groove;
+    font-family: 'Baloo Bhaina', cursive;
     
 }
 
@@ -22,4 +25,11 @@ a{
 
 a:hover{
     opacity: 0.3;
+}
+hr{
+    border-color: darkorange;
+    border-style:double;
+}
+.badges{
+    padding-top: 4px;
 }
