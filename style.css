@@ -30,6 +30,11 @@ hr{
     border-color: darkorange;
     border-style:double;
 }
-.badges{
-    padding-top: 4px;
+.fork-pc{
+    top: 0;
+    border: 0;
+    left: 0;
+    position: absolute;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
 }
