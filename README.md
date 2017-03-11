@@ -63,6 +63,10 @@ ip_status=orangetool.ping(ip_address) #this function check ip and return True if
 
 set_ip("192.168.1.46","eth0")  #this function set static ip for system
 
+#6- mac
+
+mac_dic=orangetool.mac() # return dict of all system net devices mac addresses
+
 
 
 ```
@@ -83,7 +87,11 @@ ram=orangetool.ram_free() # this function return how much ram is available in th
 
 ram=orangetool.ram_percent() # this function return used ram percentage
 
-#4- freeup
+#4- used percentage
+
+ram=orangetool.ram_used() # this function return used ram 
+
+#5- freeup
 
 orangetool.freeup() # To free pagecache, dentries and inodes and return freeuped amount
 
@@ -151,29 +159,20 @@ orangetool.restart() # restart system
 
 orangetool.wakeup(day=1,hour=0,minute=1) # set rtc wakeuptime
 
-```
-
-## Other Functions			
-
-```python
-
-#1- get_temp
+#5- get_temp
 
 temp=orangetool.get_temp() # this function return cpu temperature as string
 
-#2- uptime
+#6- uptime
 
 time=orangetool.uptime() # this function return uptime of system
 
-#3- idletime
+#7- idletime
 
 time=orangetool.idletime() # this function return idle of system ( all cores)
 
-#4- mac
 
-mac_dic=orangetool.mac() # return dict of all system net devices mac addresses
-
-#5- version
+#8- version
 
 orangetool.version() # return orangetool version for test
 
