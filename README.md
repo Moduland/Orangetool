@@ -28,12 +28,9 @@ By [Moduland Co](http://www.moduland.ir)
 - [IP Functions](#ip-functions)
 - [RAM Functions](#ram-functions)
 - [Storage Functions](#storage-functions)	
-- [Display Functions](#display-functions)	
+- [Display Functions](#display-functions)
+- [System Functions](#system-functions)		
 - [Other Functions](#other-functions)
-- [Issues & Bug Reports](#issues--bug-reports)
-- [Contribution](#contribution)
-- [Authors](https://github.com/Moduland/Orangetool/blob/master/AUTHORS.md)
-- [License](#license)
 </hr>
 </hr>
 
