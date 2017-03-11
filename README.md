@@ -1,5 +1,5 @@
 <div align="center">
-<img src="http://moduland.github.io/Orangetool/orangetool.jpg" height=240px width=320px>
+<img src="http://moduland.github.io/Orangetool/images/orangetool.jpg" height=240px width=320px>
 
 </br>
 <a href="https://scrutinizer-ci.com/g/Moduland/Orangetool/?branch=master"><img src="https://scrutinizer-ci.com/g/Moduland/Orangetool/badges/quality-score.png?b=master"></a>
