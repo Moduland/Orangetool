@@ -1,11 +1,12 @@
 <div align="center">
-<img src="http://www.shaghighi.ir/photos/orangetool.jpg" height=240px width=320px>
+<img src="http://moduland.github.io/Orangetool/orangetool.jpg" height=240px width=320px>
 
 </br>
 <a href="https://scrutinizer-ci.com/g/Moduland/Orangetool/?branch=master"><img src="https://scrutinizer-ci.com/g/Moduland/Orangetool/badges/quality-score.png?b=master"></a>
 <a href="https://scrutinizer-ci.com/g/Moduland/Orangetool/build-status/master"><img src="https://scrutinizer-ci.com/g/Moduland/Orangetool/badges/build.png?b=master"></a>
 <a href="http://www.python.org"><img src="https://img.shields.io/badge/python-3.3%2C3.4%2C3.5%2C3.6-blue.svg"></a>
 <a href="https://badge.fury.io/py/orangetool"><img src="https://badge.fury.io/py/orangetool.svg"></a>
+<a href="http://moduland.github.io/Orangetool"><img src="https://img.shields.io/badge/doc-latest-orange.svg"></a>
 
 </div>
 
