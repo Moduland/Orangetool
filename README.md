@@ -33,9 +33,15 @@ By [Moduland Co](http://www.moduland.ir)
 </hr>
 </hr>
 
-## Download ##
+## Installation
+### Source Code
+- Download [Version 0.2](https://github.com/moduland/Orangetool/archive/v0.2.zip) or [Latest Source ](https://github.com/Moduland/Orangetool/archive/master.zip)
 
-- [Download](https://github.com/Moduland/Orangetool/archive/master.zip) source from github
+- `python3 setup.py install`
+### PyPI
+
+- Check [Python Packaging User Guide](https://packaging.python.org/installing/)     
+- `pip3 install orangetool`
 
 ## IP Functions
 
