@@ -185,6 +185,7 @@ marquee{
     }
     #login-head{
         width: 100%;
+        font-size:50px;
     }
     .form {
   position: relative;
@@ -195,6 +196,16 @@ marquee{
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
   border-radius: 5px;
 }
+    .form #username,#password {
+  font-size: 28px;
+}
+.form .checkbox{
+    font-size: 26px;
+
+}
+    #login-footer{
+        font-size: 20px;
+    }
 }
 #list-page{
     text-align: center;
