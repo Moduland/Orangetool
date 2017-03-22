@@ -1,0 +1,228 @@
+@font-face {
+    font-family: "yekan";
+    src:url("fonts/Yekan.eot?#") format("eot"),    
+          url("fonts/Yekan.woff") format("woff"),
+          url("fonts/Yekan.ttf") format("truetype"); 
+}
+
+#body-screen,#body-index{
+    font-family: "yekan";
+}
+
+.first-class{
+    text-align: center;
+    float: left;
+    height: 40%;
+    width: 15%;
+    padding: 10 10 10 10;
+    margin:10 10 10 50;
+    border-radius: 4px;
+    font-size: 24px;
+}
+#floor-1{
+    background-color: red;
+}
+#floor-2{
+    background-color: yellowgreen;
+}
+#floor-3{
+    background-color: red;
+}
+#floor-4{
+    background-color: orange;
+}
+#floor-5{
+    background-color: skyblue;
+}
+#floor-6{
+    background-color: yellow;
+}
+#floor-7{
+    background-color: darkgreen;
+}
+#floor-8{
+    background-color: darkgoldenrod;
+}
+#floor-9{
+    background-color: lightgoldenrodyellow;
+}
+#floor-10{
+    background-color: mediumaquamarine;
+}
+.second-class{
+    background-color: azure;
+    text-align: right;
+    padding: 10 10 10 10;
+    margin: 10 10 10 10;
+    font-size:16px;
+    border-radius: 4px;
+}
+marquee{
+    margin-top: 50px;
+    border-style: groove;
+    border-width: thin;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 20px;
+    color: deeppink;
+}
+.login-page {
+  width: 360px;
+  padding: 8% 0 0;
+  margin: auto;
+  z-index: 2;
+}
+.form {
+  position: relative;
+  z-index: 1;
+  background-color: cornflowerblue;
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  border-radius: 5px;
+}
+.form #username,#password {
+  font-family: "yekan";
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+.form .checkbox{
+    text-align: right;
+    font-size: 13px;
+    margin-top: 8px;
+    margin-bottom: 10px;
+}
+.form #login-button {
+  font-family: "yekan";
+  text-transform: uppercase;
+  outline: 0;
+  background-color:green;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+    margin: 4px;
+}
+.form button:hover,.form button:active,.form button:focus {
+  background-color: red;
+}
+.form .message {
+  margin: 15px 0 0;
+  color: #b3b3b3;
+  font-size: 12px;
+}
+.form .message a {
+  color: #4CAF50;
+  text-decoration: none;
+}
+#body-login{
+  background-color: whitesmoke;
+  font-family: "yekan";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;      
+}
+#login-head{
+    text-align: center;
+    background-color:white;
+    width: 360px;
+    font-size: 36px;
+    color: cornflowerblue;
+    border-radius: 5px;
+}
+#login-footer{
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+    background-color: cornflowerblue;
+    position: absolute;
+}
+.form #error-message{
+    color: red;
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color: #333;
+    overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+    display: none;
+}
+@media all and (max-width: 1024px) {
+    .login-page{
+        width: 100%;
+    }
+    #login-head{
+        width: 100%;
+    }
+    .form {
+  position: relative;
+  z-index: 1;
+  background-color: cornflowerblue;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  border-radius: 5px;
+}
+}
+#list-page{
+    text-align: center;
+    font-size: 32px;
+}
+#list-page a{
+    text-decoration: none;
+    color:burlywood;
+}
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
