@@ -195,13 +195,14 @@ marquee{
     #login-head{
         width: 100%;
         font-size:50px;
+        text-align: center;
     }
     .form {
   position: relative;
   background-color: cornflowerblue;
   max-width: 100%;
   text-align: center;
-  margin: auto;
+  margin-top: 20%;
 
   border-radius: 5px;
 }
