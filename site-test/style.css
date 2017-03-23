@@ -206,7 +206,7 @@ marquee{
   border-radius: 5px;
 }
     .form #username,#password{
-  font-size: 36px;
+  font-size: 42px;
 }
 .form #login-button {
   font-family: "yekan";
@@ -223,10 +223,14 @@ marquee{
   cursor: pointer;
   margin: 4px;
 }
-.form .checkbox{
-font-size: 20px;
+.form .checkbox label{
+font-size: 30px;
+    margin-right: 20px;
 
 }
+    .form .checkbox input{
+        transform: scale(3);
+    }
     #login-footer{
         font-size: 30px;
     }
@@ -238,7 +242,7 @@ font-size: 20px;
 
 #list-page{
     text-align: center;
-    font-size: 32px;
+    font-size: 42px;
 }
 #list-page a{
     text-decoration: none;
