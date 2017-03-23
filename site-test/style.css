@@ -220,7 +220,6 @@ marquee{
 }
     .form #username,#password{
   font-size: 42px;
-  padding: 27px;
         
 }
 .form #login-button {
@@ -243,10 +242,6 @@ font-size: 30px;
     margin-right: 20px;
 
 }
-    .form #login-button {
-        padding: 30px;
-    }
-    
     .form .checkbox input{
         transform: scale(3);
     }
