@@ -66,12 +66,7 @@ marquee{
     font-size: 20px;
     color: deeppink;
 }
-.login-page {
-  width: 360px;
-  padding: 8% 0 0;
-  margin: auto;
-  z-index: 2;
-}
+
 .form {
   position: relative;
   z-index: 1;
@@ -127,6 +122,13 @@ marquee{
   color: #4CAF50;
   text-decoration: none;
 }
+
+.login-page {
+  width: 360px;
+  padding: 8% 0 0;
+  margin: auto;
+  z-index: 2;
+}
 #body-login{
   background-color: whitesmoke;
   font-family: "yekan";
@@ -141,6 +143,7 @@ marquee{
     color: cornflowerblue;
     border-radius: 5px;
 }
+
 #login-footer{
     width: 100%;
     bottom: 0;
@@ -181,9 +184,13 @@ marquee{
 .topnav .icon {
     display: none;
 }
+
+
 @media all and (max-width: 1024px) {
     .login-page{
         width: 100%;
+        padding: auto;
+        height: 100%;
     }
     #login-head{
         width: 100%;
@@ -191,16 +198,15 @@ marquee{
     }
     .form {
   position: relative;
-  z-index: 1;
   background-color: cornflowerblue;
-  width: 100%;
+  max-width: 100%;
   text-align: center;
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  margin: auto;
 
   border-radius: 5px;
 }
     .form #username,#password{
-  font-size: 30px;
+  font-size: 36px;
 }
 .form #login-button {
   font-family: "yekan";
@@ -211,7 +217,7 @@ marquee{
   border: 0;
   padding: 15px;
   color: #FFFFFF;
-  font-size: 30px;
+  font-size: 36px;
   -webkit-transition: all 0.3 ease;
   transition: all 0.3 ease;
   cursor: pointer;
@@ -222,9 +228,14 @@ font-size: 20px;
 
 }
     #login-footer{
-        font-size: 20px;
+        font-size: 30px;
+    }
+    #body-login{
+        background-color: cornflowerblue;
     }
 }
+
+
 #list-page{
     text-align: center;
     font-size: 32px;
