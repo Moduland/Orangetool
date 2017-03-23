@@ -154,10 +154,16 @@ marquee{
 .form #error-message{
     color: red;
 }
-
-/* Add a black background color to the top navigation */
+#menu{
+    background-color: blue;
+    
+}
+#menu #search{
+    float: left;
+    margin-top: 15px;
+    margin-left: 10px;
+}
 .topnav {
-    background-color:blue;
     overflow: hidden;
     text-align: center;
     padding-right: 20%;
