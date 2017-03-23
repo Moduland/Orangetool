@@ -220,6 +220,7 @@ marquee{
 }
     .form #username,#password{
   font-size: 42px;
+  padding:27px;
         
 }
 .form #login-button {
@@ -229,7 +230,7 @@ marquee{
   background-color:green;
   width: 100%;
   border: 0;
-  padding: 15px;
+  padding: 30px;
   color: #FFFFFF;
   font-size: 36px;
   -webkit-transition: all 0.3 ease;
@@ -246,7 +247,7 @@ font-size: 30px;
         transform: scale(3);
     }
     #login-footer{
-        font-size: 30px;
+        font-size: 45px;
     }
     #body-login{
         background-color: cornflowerblue;

@@ -2,17 +2,19 @@ function login(){
     var password;
     var username;
     var message;
-    username=document.getElementById("username").value;
-    password=document.getElementById("password").value;
+    username=document.getElementById("username");
+    password=document.getElementById("password");
     message=document.getElementById("error-message")
-    if (username.length==0){
+    if (username.value.length==0){
     message.innerHTML="نام کاربری خود را وارد کنید";
+    username.style.backgroundColor="pink";
     }
-    else if (password.length==0){
+    else if (password.value.length==0){
        message.innerHTML="کلمه عبور خود را وارد کنید"; 
+       password.style.backgroundColor="pink";
     }
     
-    setTimeout(function(){message.innerHTML=""},"4000");
+    setTimeout(function(){message.innerHTML="";password.style.backgroundColor="white";username.style.backgroundColor="white";},"4000");
 }
 
 
