@@ -206,9 +206,8 @@ marquee{
     }
     #login-head{
         width: 100%;
-        font-size:50px;
+        font-size:45px;
         text-align: center;
-        transform: scale(2);
     }
     .form {
   position: relative;
