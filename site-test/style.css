@@ -153,6 +153,8 @@ marquee{
 }
 .form #error-message{
     color: red;
+    font-size: 14px;
+    height: 14px;
 }
 #menu{
     background-color: blue;
@@ -193,6 +195,10 @@ marquee{
 
 
 @media all and (max-width: 1024px) {
+   .form #error-message{
+    color: red;
+    font-size: 50px;
+        } 
     .login-page{
         width: 100%;
         padding: auto;
@@ -214,6 +220,8 @@ marquee{
 }
     .form #username,#password{
   font-size: 42px;
+  padding: 20px;
+        
 }
 .form #login-button {
   font-family: "yekan";
