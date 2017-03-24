@@ -168,6 +168,7 @@ marquee{
 .topnav {
     overflow: hidden;
     text-align: center;
+    margin-right: 8%;
 }
 
 /* Style the links inside the navigation bar */
@@ -186,18 +187,24 @@ marquee{
     background-color: cornflowerblue;
     color: black;
 }
+.topnav a.icon{
+    display: none;
+}
 
 /* Hide the link that should open and close the topnav on small screens */
 
 
 @media all and (max-width: 1024px) {
+    #body-index{
+        margin: 0px;
+    }
     #body-index #menu-item img{
         display: none;
     }
     #body-index #menu-item{
         width: 100%;
-        height: 120px;
-        margin: 0px;;
+        height:120px;
+        margin: 0px;
         font-size: 30px;
         text-align: center;
         display:block;
@@ -208,7 +215,6 @@ marquee{
         display: block;
         margin: 0px;
     }
-    
     .banner #left-image img{
         display: none;
     }
@@ -246,7 +252,7 @@ marquee{
     display: block;
     text-align: right;
     font-size: 45px;
-      margin-right: 60px;
+    margin-right: 60px;
   }
 
    .form #error-message{
@@ -327,6 +333,7 @@ font-size: 30px;
     font-size: 30px;
     display: inline-block;
     margin-bottom: 60px;
+    vertical-align: middle;
 }
 .banner #left-image,#right-image{
     margin-right: 10%;
