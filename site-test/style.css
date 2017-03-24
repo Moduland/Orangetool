@@ -160,10 +160,13 @@ marquee{
     background-color: blue;
     
 }
-#menu #search{
+#menu #search input{
     float: left;
     margin-top: 15px;
     margin-left: 10px;
+    font-size: 16px;
+    background-color: blue;
+    border-style: none;
 }
 .topnav {
     overflow: hidden;
@@ -195,6 +198,12 @@ marquee{
 
 
 @media all and (max-width: 1024px) {
+    #menu #search input{
+        margin-top: 8px;
+        background-color: blue;
+        font-size: 40px;
+        border-style: none;
+    }
     #body-index{
         margin: auto;
     }
@@ -245,7 +254,7 @@ marquee{
     display: block;
     font-size: 45px;
   }
-  .topnav.responsive {position: relative;}
+  .topnav.responsive {position:relative;}
   .topnav.responsive a.icon {
     position: absolute;
     right: 0;
@@ -386,11 +395,7 @@ font-size: 30px;
     width: 600px;
     
 }
-.input[type=text] {
-    width: 130px;
-    -webkit-transition: width 0.4s ease-in-out;
-    transition: width 0.4s ease-in-out;
-}
+
 
 /* When the input field gets focus, change its width to 100% */
 input[type=text]:focus {
