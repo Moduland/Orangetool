@@ -196,13 +196,17 @@ marquee{
     }
     #body-index #menu-item{
         width: 100%;
-        height: auto;
-        margin: 0;
+        height: 120px;
+        margin: 0px;;
+        font-size: 30px;
         text-align: center;
+        display:block;
     }
     #body-index #menu-text{
         text-align: center;
         background-color: white;
+        display: block;
+        margin: 0px;
     }
     
     .banner #left-image img{
@@ -223,7 +227,6 @@ marquee{
         width: 100%;
     }
     #body-index #map{
-        width: 100%;
         height: auto;
     }
   .topnav a {display: none;}
@@ -364,8 +367,12 @@ font-size: 30px;
 #map{
     text-align: center;
     margin-top: 15px;
-    height="400px";
-    width="600px";
+ 
+}
+#map img{
+    height: 400px;
+    width: 600px;
+    
 }
 .input[type=text] {
     width: 130px;
