@@ -4,7 +4,9 @@
           url("fonts/Yekan.woff") format("woff"),
           url("fonts/Yekan.ttf") format("truetype"); 
 }
-
+#body-index{
+        margin: auto;
+    }
 #body-screen,#body-index{
     font-family: "yekan";
 }
@@ -158,6 +160,8 @@ marquee{
 }
 #menu{
     background-color: blue;
+    width: 100%;
+    height: 60px;
     
 }
 #menu #search input{
@@ -204,9 +208,7 @@ marquee{
         font-size: 40px;
         border-style: none;
     }
-    #body-index{
-        margin: auto;
-    }
+    
     #page-body{
         overflow:scroll;
     }

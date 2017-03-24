@@ -27,3 +27,15 @@ function myFunction() {
         x.className = "topnav";
     }
 }
+
+
+function search_hide(){
+    var menu
+    menu=document.getElementById("myTopnav");
+    menu.style.display="none";
+}
+function search_view(){
+    var menu
+    menu=document.getElementById("myTopnav");
+    menu.style.display="block";
+}
