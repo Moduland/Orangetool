@@ -195,6 +195,12 @@ marquee{
 
 
 @media all and (max-width: 1024px) {
+    .banner #left-image{
+        left: 0;
+    }
+    .banner #right-image{
+        right: 0;
+    }
     #body-index .banner{
         width: 100%;
     }
