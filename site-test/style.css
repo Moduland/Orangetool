@@ -196,12 +196,10 @@ marquee{
 
 @media all and (max-width: 1024px) {
     #body-index{
-        margin: 0px;
-        overflow: scroll;
+        margin: auto;
     }
     #page-body{
-        overflow: scroll;
-        text-align: center;
+        overflow:scroll;
     }
     #body-index #menu-item img{
         display: none;
@@ -314,6 +312,7 @@ font-size: 30px;
     }
     #login-footer{
         font-size: 45px;
+        position: relative;
     }
     #body-login{
         background-color: cornflowerblue;
