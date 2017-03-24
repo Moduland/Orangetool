@@ -197,6 +197,11 @@ marquee{
 @media all and (max-width: 1024px) {
     #body-index{
         margin: 0px;
+        overflow: scroll;
+    }
+    #page-body{
+        overflow: scroll;
+        text-align: center;
     }
     #body-index #menu-item img{
         display: none;
@@ -204,16 +209,17 @@ marquee{
     #body-index #menu-item{
         width: 100%;
         height:120px;
-        margin: 0px;
+        margin: auto;
         font-size: 30px;
         text-align: center;
         display:block;
+
     }
     #body-index #menu-text{
         text-align: center;
         background-color: white;
         display: block;
-        margin: 0px;
+        margin: auto;
     }
     .banner #left-image img{
         display: none;
