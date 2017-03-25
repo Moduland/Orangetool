@@ -25,9 +25,11 @@ function myFunction() {
     if (x.className === "topnav") {
         x.className += " responsive";
         menu.style.height="auto";
+        document.getElementById("search").style.display="none";
     } else {
         x.className = "topnav";
         menu.style.height="100px";
+        document.getElementById("search").style.display="block";
     }
 }
 

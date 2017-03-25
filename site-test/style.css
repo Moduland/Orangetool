@@ -221,18 +221,21 @@ marquee{
     }
     #body-index #menu-item{
         width: 100%;
-        height:120px;
         margin: auto;
-        font-size: 30px;
         text-align: center;
         display:block;
-
+        font-size: 45px;
+        margin-top: 8px;
+        border-radius: 8px;
     }
     #body-index #menu-text{
         text-align: center;
         background-color: white;
-        display: block;
+        display: inline;
         margin: auto;
+    }
+     #body-index p{
+        margin-top: 70px;
     }
     .banner #left-image img{
         display: none;
@@ -329,6 +332,7 @@ font-size: 30px;
     #login-footer{
         font-size: 45px;
         position: relative;
+        height:100px;
     }
     #body-login{
         background-color: cornflowerblue;
