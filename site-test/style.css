@@ -161,13 +161,12 @@ marquee{
 #menu{
     background-color: blue;
     width: 100%;
-    height: 60px;
+    height: 58px;
     
 }
 #menu #search input{
     float: left;
     margin-top: 15px;
-    margin-left: 10px;
     font-size: 16px;
     background-color: blue;
     border-style: none;
@@ -190,7 +189,7 @@ marquee{
 }
 
 /* Change the color of links on hover */
-.topnav a:hover {
+.topnav a:not(:last-child):hover {
     background-color: cornflowerblue;
     color: black;
 }
@@ -202,11 +201,16 @@ marquee{
 
 
 @media all and (max-width: 1024px) {
+    #menu{
+        height: 100px;
+ 
+    }
     #menu #search input{
-        margin-top: 8px;
+        margin-top: 23px;
         background-color: blue;
-        font-size: 40px;
+        font-size: 45px;
         border-style: none;
+        margin-left: 25px;
     }
     
     #page-body{
@@ -262,6 +266,7 @@ marquee{
     right: 0;
     top: 0;
   }
+  
   .topnav.responsive a:not(:last-child) {
     float: none;
     display: block;
@@ -401,5 +406,5 @@ font-size: 30px;
 
 /* When the input field gets focus, change its width to 100% */
 input[type=text]:focus {
-    width: 100%;
+    width: 90%;
 }

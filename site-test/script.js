@@ -21,10 +21,13 @@ function login(){
 
 function myFunction() {
     var x = document.getElementById("myTopnav");
+    var menu=document.getElementById("menu");
     if (x.className === "topnav") {
         x.className += " responsive";
+        menu.style.height="auto";
     } else {
         x.className = "topnav";
+        menu.style.height="100px";
     }
 }
 
