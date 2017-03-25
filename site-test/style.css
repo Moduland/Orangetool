@@ -166,10 +166,12 @@ marquee{
 }
 #menu #search input{
     float: left;
-    margin-top: 15px;
-    font-size: 16px;
+    margin-top: 17px;
+    font-size: 20px;
     background-color: blue;
     border-style: none;
+    margin-left: 50px;
+    color: white;
 }
 .topnav {
     overflow: hidden;
@@ -409,6 +411,42 @@ font-size: 30px;
 
 
 /* When the input field gets focus, change its width to 100% */
+
+#page-body #table-banner{
+    border:1px solid black;
+    border-radius: 6px;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 2%;
+    
+}
+#page-body #table-banner p{
+    margin-top:2px;
+    vertical-align: middle;
+}
 input[type=text]:focus {
     width: 90%;
+}
+
+#week-table table,tr,td{
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+}
+#week-table td{
+    width: 120px;
+}
+#week-table{
+    text-align: center;
+    margin-left: 24%;
+}
+
+#week-table .fix td{
+    height: 20px;
+}
+#week-table .place td{
+    height: 40px;
+}
+#week-table .hour td{
+    height: 50px;
 }
