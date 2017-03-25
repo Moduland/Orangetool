@@ -203,6 +203,13 @@ marquee{
 
 
 @media all and (max-width: 1024px) {
+    #page-body #table-banner{
+    font-size: 35px;
+    
+    }
+    #page-body #week-table{
+        display: none;
+    }
     #menu{
         height: 100px;
  
