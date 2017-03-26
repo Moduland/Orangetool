@@ -204,6 +204,11 @@ marquee{
 
 
 @media all and (max-width: 1024px) {
+    .table-search input{
+        font-size: 60px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
     #page-body #table-banner,#map-banner{
     font-size: 35px;
     
@@ -517,9 +522,29 @@ input[type=text]:focus {
 }
 #page-body .floor-table th{
     text-align: center;
+    font-size: 20px;
 }
 #page-body .floor-table td{
-    font-size: 13;
+    font-size: 20px;
     height: 40px;
-    width: 270px;
+    width: 380px;
+    padding-right: 9px;
+}
+#page-body .floor-table{
+    display: inline-block;
+    margin-top: 10px;
+    margin-left: 12px;
+    margin-bottom: 10px;
+}
+#page-body .floor-tables{
+    margin-left: 18.05%;
+    margin-right:18.5%;
+}
+.table-search input{
+    font-size: 20px;
+    width: 794px;
+    text-align: right;
+    padding-right: 10px;
+    font-family: "yekan";
+    margin-bottom: 10px;
 }
