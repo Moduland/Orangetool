@@ -207,6 +207,11 @@ marquee{
     font-size: 35px;
     
     }
+    #page-body #mobile-table{
+        display: block;
+        margin-left: 2%;
+        margin-right:2%;
+    }
     #page-body #week-table{
         display: none;
     }
@@ -456,4 +461,34 @@ input[type=text]:focus {
 }
 #week-table .hour td{
     height: 50px;
+}
+#mobile-table{
+    display: none;
+    text-align: center;
+}
+#mobile-table table,tr,td{
+    border:1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+}
+.rotate-hour div{
+    transform: rotate(90deg);
+}
+
+#mobile-table td{
+    height: 200px;
+    width: 170px;
+}
+#mobile-table .rotate-hour{
+    width: 30px;
+}
+#mobile-table .rotate-hour {
+    width: 1px;
+}
+#mobile-table .place{
+    border-top: 1px dashed black;
+    height: 5px;
+}
+#mobile-table .fix td{
+    height: 10px;
 }
