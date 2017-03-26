@@ -209,8 +209,6 @@ marquee{
     }
     #page-body #mobile-table{
         display: block;
-        margin-left: 2%;
-        margin-right:2%;
     }
     #page-body #week-table{
         display: none;
@@ -464,30 +462,34 @@ input[type=text]:focus {
 }
 #mobile-table{
     display: none;
+    vertical-align: middle;
     text-align: center;
+    margin-left: 5%;
+    margin-right: 4%;
 }
 #mobile-table table,tr,td{
     border:1px solid black;
     border-collapse: collapse;
-    text-align: center;
+
 }
 .rotate-hour div{
     transform: rotate(90deg);
+    text-align: center;
 }
 
 #mobile-table td{
     height: 200px;
     width: 170px;
+    margin: auto;
+    display: table-cell;
+    vertical-align: middle;
 }
 #mobile-table .rotate-hour{
-    width: 30px;
-}
-#mobile-table .rotate-hour {
-    width: 1px;
+    width: 37px;
 }
 #mobile-table .place{
     border-top: 1px dashed black;
-    height: 5px;
+    height: 5%;
 }
 #mobile-table .fix td{
     height: 10px;
