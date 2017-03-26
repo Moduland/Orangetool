@@ -152,7 +152,7 @@ marquee{
     text-align: center;
     background-color: cornflowerblue;
     position: absolute;
-    font-size: 22px;
+    font-size: 16px;
 }
 .form #error-message{
     color: red;
@@ -425,7 +425,8 @@ font-size: 30px;
     
 }
 #map img{
-   height: 55%;
+
+    height: 55%;
     width: 60%;
 }
 
