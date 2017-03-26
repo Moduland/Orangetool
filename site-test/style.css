@@ -509,3 +509,17 @@ input[type=text]:focus {
 #mobile-table .place p{
     margin-top: 5%;
 }
+#page-body .floor-table table,tr,td{
+    border:1px solid black;
+    border-collapse: collapse;
+    text-align: right;
+    border-radius: 10px;
+}
+#page-body .floor-table th{
+    text-align: center;
+}
+#page-body .floor-table td{
+    font-size: 13;
+    height: 40px;
+    width: 270px;
+}
