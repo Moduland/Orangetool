@@ -151,7 +151,7 @@ marquee{
     bottom: 0;
     text-align: center;
     background-color: cornflowerblue;
-    position: absolute;
+    position: fixed;
     font-size: 16px;
 }
 .form #error-message{
