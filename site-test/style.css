@@ -226,7 +226,6 @@ marquee{
     }
     
     #page-body{
-        overflow:scroll;
     }
     #body-index #menu-item img{
         display: none;
@@ -466,6 +465,7 @@ input[type=text]:focus {
     text-align: center;
     margin-left: 5%;
     margin-right: 4%;
+    font-size:40px;
 }
 #mobile-table table,tr,td{
     border:1px solid black;
@@ -483,6 +483,7 @@ input[type=text]:focus {
     margin: auto;
     display: table-cell;
     vertical-align: middle;
+    font-size: 24px
 }
 #mobile-table .rotate-hour{
     width: 37px;
@@ -493,4 +494,7 @@ input[type=text]:focus {
 }
 #mobile-table .fix td{
     height: 10px;
+}
+#mobile-table .place p{
+    margin-top: 5%;
 }
