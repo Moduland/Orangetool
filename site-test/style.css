@@ -272,7 +272,7 @@ marquee{
   .topnav a.icon {
     float: right;
     display: block;
-    font-size: 45px;
+    font-size: 60px;
   }
   .topnav.responsive {position:relative;}
   .topnav.responsive a.icon {
@@ -348,6 +348,9 @@ font-size: 30px;
     #body-login{
         background-color: cornflowerblue;
     }
+    #menu-item:hover{
+    opacity: 1;
+}
 }
 
 
@@ -479,18 +482,18 @@ input[type=text]:focus {
 
 #mobile-table td{
     height: 200px;
-    width: 170px;
+    width: 200px;
     margin: auto;
     display: table-cell;
     vertical-align: middle;
-    font-size: 24px
+    font-size: 31px
 }
 #mobile-table .rotate-hour{
     width: 37px;
 }
 #mobile-table .place{
     border-top: 1px dashed black;
-    height: 5%;
+    height: 30%;
 }
 #mobile-table .fix td{
     height: 10px;
