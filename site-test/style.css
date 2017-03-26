@@ -151,7 +151,8 @@ marquee{
     bottom: 0;
     text-align: center;
     background-color: cornflowerblue;
-    position: absolute;
+    position: relative;
+    font-size: 22px;
 }
 .form #error-message{
     color: red;
@@ -203,7 +204,7 @@ marquee{
 
 
 @media all and (max-width: 1024px) {
-    #page-body #table-banner{
+    #page-body #table-banner,#map-banner{
     font-size: 35px;
     
     }
@@ -265,8 +266,11 @@ marquee{
     #body-index #menu{
         width: 100%;
     }
-    #body-index #map{
+    #body-index #map,#map-prev{
         height: auto;
+    }
+    #body-index #map img{
+        width: 90%;
     }
   .topnav a {display: none;}
   .topnav a.icon {
@@ -410,21 +414,24 @@ font-size: 30px;
     background: azure;
     text-align: center;
 }
-#map{
+#map,#map-prev{
     text-align: center;
     margin-top: 15px;
  
 }
-#map img{
+#map-prev img{
     height: 400px;
     width: 600px;
     
 }
-
+#map img{
+   height: 800px;
+    width: 60%;
+}
 
 /* When the input field gets focus, change its width to 100% */
 
-#page-body #table-banner{
+#page-body #table-banner,#map-banner{
     border:1px solid black;
     border-radius: 6px;
     margin-left: 5%;
@@ -432,7 +439,7 @@ font-size: 30px;
     margin-bottom: 2%;
     
 }
-#page-body #table-banner p{
+#page-body #table-banner,#map-banner p{
     margin-top:2px;
     vertical-align: middle;
 }
