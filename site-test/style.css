@@ -154,7 +154,7 @@ marquee{
     background-color: cornflowerblue;
     position:sticky;
     font-size: 27px;
-    margin-top: 200px;
+    margin-top: 100px;
     height: 50px;
 }
 .form #error-message{
@@ -207,8 +207,16 @@ marquee{
 
 
 @media all and (max-width: 1024px) {
+    #page-body .table table,tr,td{
+    font-size: 27px;
+    }
+    
+    #page-body .notif p{
+    width: 100%;
+    font-size: 40px;
+    }
     #page-body .table-search input{
-        font-size: 40;
+        font-size: 30;
         width: 80%;
         padding-right: 20px;
         margin-top: 10px;
@@ -559,4 +567,29 @@ input[type=text]:focus {
     font-family: "yekan";
     margin-bottom: 10px;
      border: 1px solid black;
+}
+#page-body .notif p{
+    border: 1px solid black;
+    text-align: right;
+    width: 794px;
+    padding: 8px;
+    margin: 10px auto auto auto;
+}
+#page-body .table table,tr,td{
+    border:1px solid black;
+    border-collapse: collapse;
+    text-align: right;
+    border-radius: 10px;
+    margin: auto;
+}
+#page-body .table tr td:first-child{
+    width: 130px;
+    padding: 6px;
+}
+#page-body .table tr td:not(:first-child){
+    width: 221px;
+    padding: 6px;
+}
+#page-body .table{
+    margin-top: 8px;
 }
