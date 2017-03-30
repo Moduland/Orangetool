@@ -6,6 +6,7 @@
 }
 #body-index{
         margin: auto;
+    height: 100%;
     }
 #body-screen,#body-index{
     font-family: "yekan";
@@ -152,7 +153,9 @@ marquee{
     text-align: center;
     background-color: cornflowerblue;
     position:sticky;
-    font-size: 22px;
+    font-size: 27px;
+    margin-top: 200px;
+    height: 50px;
 }
 .form #error-message{
     color: red;
@@ -359,6 +362,7 @@ font-size: 30px;
     #login-footer{
         font-size: 45px;
         height:100px;
+        position: sticky;
     }
     #body-login{
         background-color: cornflowerblue;
@@ -474,6 +478,7 @@ input[type=text]:focus {
 
 #week-table .fix td{
     height: 20px;
+    text-align: center;
 }
 #week-table .place td{
     height: 40px;
