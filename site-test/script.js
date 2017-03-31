@@ -32,7 +32,7 @@ function myFunction() {
         x.className = "topnav";
         menu.style.height="100px";
         document.getElementById("search").style.display="block";
-        icon.innerHTML="&#9776;"
+        icon.innerHTML="&#9726;"
     }
 }
 
@@ -46,4 +46,19 @@ function search_view(){
     var menu
     menu=document.getElementById("myTopnav");
     menu.style.display="block";
+}
+
+function openNav() {
+    var admin_icon=document.getElementById("adicon");
+    if (document.getElementById("mySidenav").style.width=="" || document.getElementById("mySidenav").style.width=="0px")
+    {
+        document.getElementById("mySidenav").style.width = "250px"
+        admin_icon.innerHTML="&#x2716;";
+    }
+    else{
+        document.getElementById("mySidenav").style.width = "0"
+        admin_icon.innerHTML="&#9776;";
+        
+    }
+
 }
