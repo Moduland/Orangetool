@@ -180,7 +180,8 @@ marquee{
 .topnav {
     overflow: hidden;
     text-align: center;
-    margin-right: 8%;
+    margin-right: 5%;
+    
 }
 
 /* Style the links inside the navigation bar */
@@ -192,6 +193,7 @@ marquee{
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
+    
 }
 
 /* Change the color of links on hover */
@@ -244,7 +246,7 @@ marquee{
     #menu #search input{
         margin-top: 23px;
         background-color: blue;
-        font-size: 45px;
+        font-size: 50px;
         border-style: none;
         margin-left: 25px;
     }
@@ -299,7 +301,7 @@ marquee{
   .topnav a.icon {
     float: right;
     display: block;
-    font-size: 60px;
+    font-size: 50px;
   }
   .topnav.responsive {position:relative;}
   .topnav.responsive a.icon {

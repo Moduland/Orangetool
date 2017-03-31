@@ -22,14 +22,17 @@ function login(){
 function myFunction() {
     var x = document.getElementById("myTopnav");
     var menu=document.getElementById("menu");
+    var icon=document.getElementById("mobile-icon");
     if (x.className === "topnav") {
         x.className += " responsive";
         menu.style.height="auto";
         document.getElementById("search").style.display="none";
+        icon.innerHTML="&#x2716";
     } else {
         x.className = "topnav";
         menu.style.height="100px";
         document.getElementById("search").style.display="block";
+        icon.innerHTML="&#9776;"
     }
 }
 
