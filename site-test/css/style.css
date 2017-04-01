@@ -152,7 +152,7 @@ marquee{
     bottom: 0;
     text-align: center;
     background-color: cornflowerblue;
-    position:sticky;
+    position:fixed;
     font-size: 27px;
     margin-top: 100px;
     height: 50px;
@@ -595,6 +595,7 @@ input[type=text]:focus {
 }
 #page-body .table{
     margin-top: 8px;
+    margin-bottom: 100px;
 }
 .sidenav {
     height: 100%; /* 100% Full-height */
@@ -650,6 +651,7 @@ input[type=text]:focus {
 /* When you mouse over the navigation links, change their color */
 .sidenav a:hover, .offcanvas a:focus{
     color: #f1f1f1;
+    text-decoration: none;
 }
 
 /* Position and style the close button (top right corner) */
@@ -659,14 +661,37 @@ input[type=text]:focus {
     right: 5px;
     font-size: 30px;
     margin-left: 50px;
+    text-decoration: none;
 }
 
 @import "compass/css3";
 
 .table-editable {
   position: relative;
+    margin: auto;
+    width: 1200px;
+    margin-bottom: 80px;
+    
   
 }
+.table-editable tr td th {
+  text-align: right;
+  
+}
+
+.table-editable td{
+    margin: auto;
+    overflow:hidden;
+}
+
+.table-editable table{
+    table-layout: fixed;
+}
+
+.table-editable .sign{
+    text-align: center;
+}
+
 
 .table-remove {
   color: #700;
@@ -687,12 +712,15 @@ input[type=text]:focus {
 }
 
 .table-add {
-  color: #070;
+  color: white;
   cursor: pointer;
   position: absolute;
   top: 8px;
   right: 0;
-  
+   border: 1px solid black;
+  padding: 10px;
+    background-color: green;
+    border-radius: 3px;
   &:hover {
     color: #0b0;
   }

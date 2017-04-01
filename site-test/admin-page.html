@@ -3,7 +3,6 @@
         <link href="css/style.css" rel="stylesheet" type="text/css">
         <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
         <link href="css/jquery-ui.css" rel="stylesheet" type="text/css">
-        <link href="css/style2.css" rel="stylesheet" type="text/css">
         <title>سامانه اطلاع رسانی ساختمان ابوریحان</title>
     </head>
     <body id="body-index">
@@ -37,39 +36,40 @@
             
             <div class="table-search">
                 <input type="text" name="table-search" placeholder="جستجو در جدول" >
+                
             </div>
-            <input type="button" name="table-add" class="table-add glyphicon" placeholder="&#x271A;">
-            <div id="table" class="table-editable">
-    <span class="table-add glyphicon">&#x271A;</span>
+    <span class="table-add glyphicon"> افزودن آزمایشگاه &#x271A;</span>        
+    <div id="table" class="table-editable">
+    
     <table class="table">
+        <col width="10px"/>
+         <col width="10px"/>
+        <col width="40px"/>
+        <col width="40px"/>
       <tr>
-        <th>Name</th>
-        <th>Value</th>
-        <th></th>
-        <th></th>
-      </tr>
-      <tr>
-        <td contenteditable="true">&nbsp;</td>
-        <td contenteditable="true">&nbsp;</td>
-        <td>
+          <td class="sign">
           <span class="table-remove glyphicon ">&#x2716;</span>
         </td>
-        <td>
-          <span class="table-up glyphicon ">&#x2191;</span>
-          <span class="table-down glyphicon ">&#x2193;</span>
+        <td class="sign">
+          <span class="table-up">&#x2191;</span>
+          <span class="table-down">&#x2193;</span>
         </td>
+        <td contenteditable="true">&nbsp;</td>
+        <td contenteditable="true">&nbsp;</td>
+        
       </tr>
       <!-- This is our clonable table line -->
       <tr class="hide">
-        <td contenteditable="true">&nbsp;</td>
-        <td contenteditable="true">&nbsp;</td>
-        <td>
+        <td class="sign">
           <span class="table-remove glyphicon">&#x2716;</span>
         </td>
-        <td>
+        <td class="sign">
           <span class="table-up glyphicon">&#x2191;</span>
           <span class="table-down glyphicon">&#x2193;</span>
         </td>
+        <td contenteditable="true">&nbsp;</td>
+        <td contenteditable="true">&nbsp;</td>
+        
       </tr>
     </table>
   </div>
