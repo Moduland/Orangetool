@@ -1,12 +1,9 @@
-
-
 <html>
     <head>
         <link href="css/style.css" rel="stylesheet" type="text/css">
         <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
         <link href="css/jquery-ui.css" rel="stylesheet" type="text/css">
         <link href="css/style2.css" rel="stylesheet" type="text/css">
-        
         <title>سامانه اطلاع رسانی ساختمان ابوریحان</title>
     </head>
     <body id="body-index">
@@ -19,24 +16,25 @@
                 <p>سامانه اطلاع رسانی ساختمان ابوریحان</p>
             </div>
             <div id="left-image">
+                
                 <img src="images/2.gif" height="100px" width="100px"/>
             </div>
              
         </div>
-        <div id="menu">
-        <div id="search">
-            <input type="text" name="search" placeholder=&#128270; onclick="search_hide();" onmouseout="search_view();">
-        </div>
-        <div class="topnav" id="myTopnav">
-            <a href="#table">جدول راهنمای طبقات</a>
-            <a href="#map">نقشه طبقات</a>
-            <a href="#masters">برنامه هفتگی اساتید</a>
-            <a href="#labs">آزمایشگاه ها</a>
-            <a href="#messages">اطلاعیه ها</a>
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
-        </div>
+        <div id="mySidenav" class="sidenav">
+            <div id="user-role">
+               <p>ادمین<img src="images/admin.png"> </p>
+            </div>
+            <a href="javascript:void(0)" id="adicon" onclick="openNav();">&#9776;</a>
+            <a href="#">اتاق ها <img src="images/admin.png"></a>
+            <a href="#">اساتید <img src="images/admin.png"></a>
+            <a href="#">آزمایشگاه ها <img src="images/admin.png"></a>
+            <a href="#">اطلاعیه ها <img src="images/admin.png"></a>
+            <a href="#">کاربران <img src="images/admin.png"></a>
+            <a href="#">خروج <img src="images/admin.png"></a>
         </div>
         <div id="page-body">
+            
             <div class="table-search">
                 <input type="text" name="table-search" placeholder="جستجو در جدول" >
             </div>
@@ -75,14 +73,19 @@
       </tr>
     </table>
   </div>
+            
         </div>
         <div id="login-footer">
         <p> ایده پردازان فناور ماورا &#169 1395</p>
     </div>
-        <script src="js/bootstrap.min.js"></script>
+                <script src="js/bootstrap.min.js"></script>
         <script src="js/jquery-ui.min.js"></script>
         <script src="js/jquery.min.js"></script>
         <script src="js/underscore.js"></script>
         <script src="js/script.js"></script>
     </body>
+
+
+
+
 </html>
