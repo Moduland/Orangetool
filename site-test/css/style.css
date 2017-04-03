@@ -209,6 +209,14 @@ marquee{
 
 
 @media all and (max-width: 1024px) {
+    .table-add{
+        font-size: 35px;
+    }
+    .table-editable table{
+      width: 100%;
+        flex: 1;
+        font-size: 30px;
+        }  
     #page-body .table table,tr,td{
     font-size: 27px;
     }
@@ -371,9 +379,9 @@ font-size: 30px;
         transform: scale(3);
     }
     #login-footer{
-        font-size: 45px;
+        font-size: 40px;
         height:100px;
-        position: sticky;
+        position: fixed;
     }
     #body-login{
         background-color: cornflowerblue;
@@ -614,7 +622,7 @@ input[type=text]:focus {
 
 /* The navigation menu links */
 .sidenav #user-role{
-    padding: 8px 8px 8px 32px;
+    padding: auto;
     text-decoration: none;
     font-size: 22px;
     color: black;
@@ -669,7 +677,7 @@ input[type=text]:focus {
 .table-editable {
   position: relative;
     margin: auto;
-    width: 1200px;
+    width: 80%;
     margin-bottom: 80px;
     
   
@@ -685,7 +693,8 @@ input[type=text]:focus {
 }
 
 .table-editable table{
-    table-layout: fixed;
+       table-layout:fixed;
+ 
 }
 
 .table-editable .sign{
