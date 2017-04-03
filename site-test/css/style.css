@@ -146,8 +146,12 @@ marquee{
     color: cornflowerblue;
     border-radius: 5px;
 }
-
+#login-footer p{
+    vertical-align: center;
+    margin:auto;
+}
 #login-footer{
+    
     width: 100%;
     bottom: 0;
     text-align: center;
@@ -155,7 +159,7 @@ marquee{
     position:fixed;
     font-size: 27px;
     margin-top: 100px;
-    height: 50px;
+    height: auto;
 }
 .form #error-message{
     color: red;
@@ -243,6 +247,7 @@ marquee{
     }
     #page-body #mobile-table{
         display: block;
+        margin-bottom: 100px;
     }
     #page-body #week-table{
         display: none;
@@ -272,6 +277,9 @@ marquee{
         font-size: 45px;
         margin-top: 8px;
         border-radius: 8px;
+    }
+    #body-index #menu-item:last-child{
+        margin-bottom: 100px;
     }
     #body-index #menu-text{
         text-align: center;
@@ -304,6 +312,7 @@ marquee{
     }
     #body-index #map img{
         width: 90%;
+        margin-bottom: 100px;
     }
   .topnav a {display: none;}
   .topnav a.icon {
@@ -379,9 +388,12 @@ font-size: 30px;
         transform: scale(3);
     }
     #login-footer{
-        font-size: 40px;
-        height:100px;
-        position: fixed;
+        font-size: 45px;
+        height: auto;
+    }
+     #login-footer p{
+        margin: auto;
+        padding: auto;
     }
     #body-login{
         background-color: cornflowerblue;
@@ -493,6 +505,7 @@ input[type=text]:focus {
 #week-table{
     text-align: center;
     margin-left: 24%;
+    margin-bottom: 100px;
 }
 
 #week-table .fix td{
@@ -569,6 +582,7 @@ input[type=text]:focus {
 #page-body .floor-tables{
     margin-left: 18.05%;
     margin-right:18.5%;
+    margin-bottom: 100px;
 }
 .table-search input{
     font-size: 20px;
@@ -585,6 +599,9 @@ input[type=text]:focus {
     width: 794px;
     padding: 8px;
     margin: 10px auto auto auto;
+}
+#page-body .notif{
+    margin-bottom: 100px;
 }
 #page-body .table table,tr,td{
     border:1px solid black;
