@@ -63,6 +63,27 @@ function openNav() {
 
 }
 
+function search(){
+    var input,filter,table,tr,td_list,i;
+    input=document.getElementById("myinput");
+    filter=input.value.toUpperCase();
+    tr=document.getElementsByTagName("tr");
+    for (i = 0; i < tr.length; i++) {
+    td_list = tr[i].getElementsByTagName("td");
+        for (j=0;j<td_list.length;j++){
+            td=td_list[j];
+    if (td) {
+      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+          break;
+      } else {
+        tr[i].style.display = "none";
+          
+      }
+    } 
+  }
+    }
+}
 
 
 var $TABLE = $('#table');
