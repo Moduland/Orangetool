@@ -103,6 +103,27 @@ function notif_search(){
 }
 
 
+function floor_search(){
+    var input,filter,i,j,table_list,td_list;
+    input=document.getElementById("myinput");
+    filter=input.value.toUpperCase();
+    table_list=document.getElementsByTagName("table");
+    for(i=0;i<table_list.length;i++){
+        td_list=table_list[i].getElementsByTagName("td");
+        for (j=0;j<td_list.length;j++){
+            if(td_list[j].innerHTML.toUpperCase().indexOf(filter)>-1){
+                table_list[i].style.display="";
+                break;
+            } 
+            else{
+                table_list[i].style.display="none";
+                
+            }
+        }
+    }
+}
+
+
 var $TABLE = $('#table');
 var $BTN = $('#export-btn');
 var $EXPORT = $('#export');
