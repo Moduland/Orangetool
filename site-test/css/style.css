@@ -490,7 +490,7 @@ font-size: 30px;
     margin-top:2px;
     vertical-align: middle;
 }
-input[type=text]:focus {
+#search input[type=text]:focus {
     width: 90%;
 }
 
