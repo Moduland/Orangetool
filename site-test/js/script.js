@@ -85,6 +85,23 @@ function search(){
     }
 }
 
+function notif_search(){
+    var input,filter,notif,p_list,i;
+    input=document.getElementById("myinput");
+    filter=input.value.toUpperCase();
+    notif=document.getElementById("notif");
+    p_list=notif.getElementsByTagName("p");
+    for (i=0;i<p_list.length;i++){
+        if (p_list[i].innerHTML.toUpperCase().indexOf(filter)>-1){
+            p_list[i].style.display="";
+        }
+        else{
+            p_list[i].style.display="none";
+        }
+    }
+    
+}
+
 
 var $TABLE = $('#table');
 var $BTN = $('#export-btn');
