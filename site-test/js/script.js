@@ -32,7 +32,7 @@ function myFunction() {
         x.className = "topnav";
         menu.style.height="100px";
         document.getElementById("search").style.display="block";
-        icon.innerHTML="&#9726;"
+        icon.innerHTML="&#9776;"
     }
 }
 

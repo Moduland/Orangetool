@@ -212,197 +212,7 @@ marquee{
 /* Hide the link that should open and close the topnav on small screens */
 
 
-@media all and (max-width: 1024px) {
-    
-    .table-add{
-        font-size: 35px;
-    }
-    .table-editable table{
-      width: 100%;
-        flex: 1;
-        font-size: 30px;
-        }  
-    #page-body .table table,tr,td{
-    font-size: 27px;
-    }
-    
-    #page-body .notif p{
-    width: 100%;
-    font-size: 40px;
-    }
-    #page-body .table-search input{
-        font-size: 30;
-        width: 80%;
-        padding-right: 20px;
-        margin-top: 10px;
-       
-    }
-    #page-body .floor-table td{
-        width: 100%;
-        height: 400px;
-        font-size: 30;
-    }
-    #page-body #table-banner,#map-banner{
-    font-size: 35px;
-    
-    }
-    #page-body #mobile-table{
-        display: block;
-        margin-bottom: 100px;
-    }
-    #page-body #week-table{
-        display: none;
-    }
-    #menu{
-        height: 100px;
- 
-    }
-    #menu #search input{
-        margin-top: 23px;
-        background-color: blue;
-        font-size: 50px;
-        border-style: none;
-        margin-left: 25px;
-    }
-    
-    #page-body{
-    }
-    #body-index #menu-item img{
-        display: none;
-    }
-    #body-index #menu-item{
-        width: 100%;
-        margin: auto;
-        text-align: center;
-        display:block;
-        font-size: 45px;
-        margin-top: 8px;
-        border-radius: 8px;
-    }
-    #body-index #menu-item:last-child{
-        margin-bottom: 100px;
-    }
-    #body-index #menu-text{
-        text-align: center;
-        background-color: white;
-        display: inline;
-        margin: auto;
-    }
-     #body-index p{
-        margin-top: 70px;
-    }
-    .banner #left-image img{
-        display: none;
-    }
-    .banner #right-image img{
-        display: none;
-    }
-    #body-index .banner{
-        width: 100%;
-        height: auto;
-    }
-    #body-index .banner #topic{
-        font-size: 70px;
-        margin-bottom: 20px;
-    }
-    #body-index #menu{
-        width: 100%;
-    }
-    #body-index #map,#map-prev{
-        height: auto;
-    }
-    #body-index #map img{
-        width: 90%;
-        margin-bottom: 100px;
-    }
-  .topnav a {display: none;}
-  .topnav a.icon {
-    float: right;
-    display: block;
-    font-size: 50px;
-    
-  }
-  .topnav.responsive {position:relative;}
-  .topnav.responsive a.icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  
-  .topnav.responsive a:not(:last-child) {
-    float: none;
-    display: block;
-    text-align: right;
-    font-size: 45px;
-    margin-right: 60px;
-  }
 
-   .form #error-message{
-    color: red;
-    font-size: 50px;
-        } 
-    .login-page{
-        width: 100%;
-        padding: auto;
-        height: 100%;
-    }
-    #login-head{
-        width: 100%;
-        font-size:60px;
-        text-align: center;
-    }
-    .form {
-  position: relative;
-  background-color: cornflowerblue;
-  max-width: 100%;
-  text-align: center;
-  margin-top: 20%;
-
-  border-radius: 5px;
-}
-    .form #username,#password{
-  font-size: 42px;
-  padding:27px;
-        
-}
-.form #login-button {
-  font-family: "yekan";
-  text-transform: uppercase;
-  outline: 0;
-  background-color:green;
-  width: 100%;
-  border: 0;
-  padding: 30px;
-  color: #FFFFFF;
-  font-size: 36px;
-  -webkit-transition: all 0.3 ease;
-  transition: all 0.3 ease;
-  cursor: pointer;
-  margin: 4px;
-}
-.form .checkbox label{
-font-size: 30px;
-    margin-right: 20px;
-
-}
-    .form .checkbox input{
-        transform: scale(3);
-    }
-    #login-footer{
-        font-size: 45px;
-        height: auto;
-    }
-     #login-footer p{
-        margin: auto;
-        padding: auto;
-    }
-    #body-login{
-        background-color: cornflowerblue;
-    }
-    #menu-item:hover{
-    opacity: 1;
-}
-}
 
 
 #list-page{
@@ -492,16 +302,17 @@ font-size: 30px;
     vertical-align: middle;
 }
 #search input[type=text]:focus {
-    width: 90%;
+    width: 98%;
 }
 
 #week-table table,tr,td{
     border: 1px solid black;
     border-collapse: collapse;
-    text-align: center;
+    
 }
 #week-table td{
     width: 120px;
+    text-align: center;
 }
 #week-table{
     text-align: center;
@@ -527,10 +338,10 @@ font-size: 30px;
     margin-right: 4%;
     font-size:40px;
 }
-#mobile-table table,tr,td{
+#mobile-table table tr td{
     border:1px solid black;
     border-collapse: collapse;
-
+    text-align: center;
 }
 .rotate-hour div{
     transform: rotate(90deg);
@@ -561,7 +372,6 @@ font-size: 30px;
 #page-body .floor-table table,tr,td{
     border:1px solid black;
     border-collapse: collapse;
-    text-align: right;
     border-radius: 10px;
 }
 #page-body .floor-table th{
@@ -573,6 +383,7 @@ font-size: 30px;
     height: 40px;
     width: 380px;
     padding-right: 9px;
+        text-align: center;
 }
 #page-body .floor-table{
     display: inline-block;
@@ -717,6 +528,7 @@ font-size: 30px;
 
 .table-editable .sign{
     text-align: center;
+    vertical-align: middle;
 }
 
 
@@ -741,13 +553,13 @@ font-size: 30px;
 .table-add {
   color: white;
   cursor: pointer;
-  position: absolute;
   top: 8px;
   right: 0;
    border: 1px solid black;
   padding: 10px;
     background-color: green;
     border-radius: 3px;
+    margin-left: 5px;
   &:hover {
     color: #0b0;
   }
@@ -756,4 +568,218 @@ font-size: 30px;
 #search-message{
     display: none;
     font-size: 25px;
+}
+
+
+
+@media all and (max-width: 1024px) {
+    
+    
+    .sidenav  #adicon {
+    font-size: 50px;
+
+}
+    .sidenav a{
+        font-size: 25;
+    }
+    
+    
+    .table-add span {
+        display: none;
+    }
+    .table-add{
+        font-size: 25;
+    }
+    .table-editable table{
+      width: 80%;
+        }  
+    
+    #page-body .table table,tr,td{
+    font-size: 27px;
+    }
+    
+    #page-body .notif p{
+    width: 80%;
+    font-size: 40px;
+   margin-top: 15px;
+    }
+    #page-body .table-search input{
+        font-size: 45;
+        width: 80%;
+        padding-right: 29px;
+        margin: auto;
+        margin-top: 25px;
+        margin-bottom: 20px;
+       
+    }
+    #page-body .floor-table td{
+        width: 100%;
+        height: auto;
+        font-size: 40;
+    }
+      #page-body .floor-table th{
+        font-size: 45;
+    }
+    #page-body #table-banner,#map-banner{
+    font-size: 35px;
+    
+    }
+    #page-body #mobile-table{
+        display: block;
+        margin-bottom: 100px;
+    }
+    #page-body #week-table{
+        display: none;
+    }
+    #menu{
+        height: 100px;
+ 
+    }
+    #menu #search input{
+        margin-top: 23px;
+        background-color: blue;
+        font-size: 50px;
+        border-style: none;
+        margin-left: 25px;
+    }
+    
+    #page-body{
+    }
+    #body-index #menu-item img{
+        display: none;
+    }
+    #body-index #menu-item{
+        width: 100%;
+        margin: auto;
+        text-align: center;
+        display:block;
+        font-size: 45px;
+        margin-top: 8px;
+        border-radius: 8px;
+    }
+    #body-index #menu-item:last-child{
+        margin-bottom: 100px;
+    }
+    #body-index #menu-text{
+        text-align: center;
+        background-color: white;
+        display: inline;
+        margin: auto;
+    }
+     #body-index p{
+        margin-top: 70px;
+    }
+    .banner #left-image img{
+        display: none;
+    }
+    .banner #right-image img{
+        display: none;
+    }
+    #body-index .banner{
+        width: 100%;
+        height: auto;
+        vertical-align: center;
+    }
+    #body-index .banner #topic{
+        font-size: 70px;
+        margin-bottom: 20px;
+        vertical-align: middle;
+    }
+    #body-index #menu{
+        width: 100%;
+    }
+    #body-index #map,#map-prev{
+        height: auto;
+    }
+    #body-index #map img{
+        width: 90%;
+        margin-bottom: 100px;
+    }
+  .topnav a {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+    font-size: 50px;
+    
+  }
+  .topnav.responsive {position:relative;}
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  
+  .topnav.responsive a:not(:last-child) {
+    float: none;
+    display: block;
+    text-align: right;
+    font-size: 45px;
+    margin-right: 60px;
+  }
+
+   .form #error-message{
+    color: red;
+    font-size: 50px;
+        } 
+    .login-page{
+        width: 100%;
+        padding: auto;
+        height: 100%;
+    }
+    #login-head{
+        width: 100%;
+        font-size:60px;
+        text-align: center;
+    }
+    .form {
+  position: relative;
+  background-color: cornflowerblue;
+  max-width: 100%;
+  text-align: center;
+  margin-top: 20%;
+
+  border-radius: 5px;
+}
+    .form #username,#password{
+  font-size: 42px;
+  padding:27px;
+        
+}
+.form #login-button {
+  font-family: "yekan";
+  text-transform: uppercase;
+  outline: 0;
+  background-color:green;
+  width: 100%;
+  border: 0;
+  padding: 30px;
+  color: #FFFFFF;
+  font-size: 36px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+  margin: 4px;
+}
+.form .checkbox label{
+font-size: 30px;
+    margin-right: 20px;
+
+}
+    .form .checkbox input{
+        transform: scale(3);
+    }
+    #login-footer{
+        font-size: 45px;
+        height: auto;
+    }
+     #login-footer p{
+        margin: auto;
+        padding: auto;
+    }
+    #body-login{
+        background-color: cornflowerblue;
+    }
+    #menu-item:hover{
+    opacity: 1;
+}
 }
