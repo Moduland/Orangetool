@@ -64,8 +64,10 @@ function openNav() {
 }
 
 function search(){
-    var input,filter,table,tr,td_list,i;
+    var input,filter,table,tr,td_list,i,message,counter;
+    counter=0;
     input=document.getElementById("myinput");
+    message=document.getElementById("search-message");
     filter=input.value.toUpperCase();
     tr=document.getElementsByTagName("tr");
     for (i = 0; i < tr.length; i++) {
@@ -83,13 +85,21 @@ function search(){
     } 
   }
     }
+    if (counter==0){
+        message.style.display="block";
+    }
+    else{
+        message.style.display="none";
+    }
 }
 
 function notif_search(){
-    var input,filter,notif,p_list,i;
+    var input,filter,notif,p_list,i,message,counter;
+    counter=0;
     input=document.getElementById("myinput");
     filter=input.value.toUpperCase();
     notif=document.getElementById("notif");
+    message=document.getElementById("search-message");
     p_list=notif.getElementsByTagName("p");
     for (i=0;i<p_list.length;i++){
         if (p_list[i].innerHTML.toUpperCase().indexOf(filter)>-1){
@@ -99,20 +109,29 @@ function notif_search(){
             p_list[i].style.display="none";
         }
     }
+    if (counter==0){
+        message.style.display="block";
+    }
+    else{
+        message.style.display="none";
+    }
     
 }
 
 
 function floor_search(){
-    var input,filter,i,j,table_list,td_list;
+    var input,filter,i,j,table_list,td_list,counter,message;
+    counter=0;
     input=document.getElementById("myinput");
     filter=input.value.toUpperCase();
+    message=document.getElementById("search-message");
     table_list=document.getElementsByTagName("table");
     for(i=0;i<table_list.length;i++){
         td_list=table_list[i].getElementsByTagName("td");
         for (j=0;j<td_list.length;j++){
             if(td_list[j].innerHTML.toUpperCase().indexOf(filter)>-1){
                 table_list[i].style.display="";
+                counter=counter+1;
                 break;
             } 
             else{
@@ -120,6 +139,12 @@ function floor_search(){
                 
             }
         }
+    }
+    if (counter==0){
+        message.style.display="block";
+    }
+    else{
+        message.style.display="none";
     }
 }
 

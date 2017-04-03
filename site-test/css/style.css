@@ -213,6 +213,7 @@ marquee{
 
 
 @media all and (max-width: 1024px) {
+    
     .table-add{
         font-size: 35px;
     }
@@ -750,4 +751,9 @@ font-size: 30px;
   &:hover {
     color: #0b0;
   }
+}
+
+#search-message{
+    display: none;
+    font-size: 25px;
 }
