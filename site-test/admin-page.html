@@ -38,7 +38,7 @@
         <div id="page-body">
             
             <div class="table-search">
-                <input type="text" name="table-search" placeholder="جستجو در جدول" id="myinput" onkeyup="search();" >
+                <input type="text" name="table-search" placeholder="جستجو در جدول" id="myinput" onkeyup="custom_search();" >
                 
             </div>
     <span class="table-add glyphicon">افزودن آزمایشگاه &#x271A;</span>        
@@ -57,8 +57,8 @@
           <span class="table-up">&#x2191;</span>
           <span class="table-down">&#x2193;</span>
         </td>
-        <td contenteditable="true">&nbsp;</td>
-        <td contenteditable="true">&nbsp;</td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
         
       </tr>
       <!-- This is our clonable table line -->
@@ -70,13 +70,13 @@
           <span class="table-up glyphicon">&#x2191;</span>
           <span class="table-down glyphicon">&#x2193;</span>
         </td>
-        <td contenteditable="true">&nbsp;</td>
-        <td contenteditable="true">&nbsp;</td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
         
       </tr>
     </table>
   </div>
-            
+         <p id="search-message">نتیجه ای یافت نشد</p>   
         </div>
         <div id="login-footer">
         <p> ایده پردازان فناور ماورا &#169 1395</p>

@@ -63,7 +63,31 @@ function openNav() {
 
 }
 
-function search(){
+function custom_search(){
+    var input,filter,table,tr,td_list,i,message,counter;
+    counter=0;
+    input=document.getElementById("myinput");
+    message=document.getElementById("search-message");
+    filter=input.value.toUpperCase();
+    tr=document.getElementsByTagName("tr");
+    for (i = 0; i < tr.length; i++) {
+    td_list = tr[i].getElementsByTagName("td");
+        for (j=td_list.length;j>1;j--){
+            td=td_list[j];
+    if (td) {
+      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+          break;
+      } else {
+        tr[i].style.display = "none";
+          
+      }
+    } 
+  }
+    }
+}
+
+function all_search(){
     var input,filter,table,tr,td_list,i,message,counter;
     counter=0;
     input=document.getElementById("myinput");
