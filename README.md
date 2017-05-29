@@ -18,7 +18,9 @@
 	
 Consist of some general and useful scripts that developed for Single-Board Computers (Under Development)					
 
-Tested on Lubuntu 14.04 - Orange Pi-PC
+Tested on [Lubuntu](http://lubuntu.me/) 14.04
+
+[Supported Device List](Supported_Device_List.md)
 
 ----------
 	
