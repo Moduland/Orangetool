@@ -18,7 +18,7 @@
 	
 Consist of some general and useful scripts that developed for Single-Board Computers (Under Development)					
 
-Tested on [Lubuntu](http://lubuntu.me/) 14.04
+Tested on [Lubuntu](http://lubuntu.me/)
 
 [Supported Device List](Supported_Device_List.md)
 

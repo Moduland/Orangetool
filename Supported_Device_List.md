@@ -13,3 +13,5 @@
 - Orange Pi PC 
 - Orange Pi One
 - Orange Pi2
+- Raspberry Pi 2
+- Raspberry Pi 3
