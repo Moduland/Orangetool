@@ -1,20 +1,22 @@
 .logo{
     vertical-align: middle;
-    margin: 10 10 10 10;
-    padding: 40 10 10 10;
+    margin: auto;
+    padding: auto;;
 }
 
 body{
-    border: 8px;
-    border-color:darkorange;
     background-color:white;
-    border-style: groove;
     font-family: 'Baloo Bhaina', cursive;
+    margin: 0;
     
+}
+.moduland{
+    color: red;
 }
 
 .button{
-    padding-top: 60px
+    padding-top: 80px;
+    padding-bottom: 30px;
 }
 
 a{
@@ -38,4 +40,21 @@ hr{
     animation-duration: 4s;
     animation-iteration-count: infinite;
     position: relative;
+}
+
+
+#login-footer p{
+    vertical-align: center;
+    margin:auto;
+}
+#login-footer{
+    color: white;
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+    background-color: #f2b56b;
+    position:fixed;
+    font-size: 17px;
+    margin-top: 100px;
+    height: auto;
 }
