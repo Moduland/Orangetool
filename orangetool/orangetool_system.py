@@ -11,7 +11,7 @@ ________                                      __                .__
 '''
 ip_pattern=r"(?:[0-9]{1,3}\.){3}[0-9]{1,3}"
 api_1="http://ipinfo.io/ip"
-VERSION="orangetool-v0.2"
+VERSION="orangetool-v0.22"
 
 def get_temp(Zone=0,DEBUG=False):
     '''

@@ -38,7 +38,7 @@ By [Moduland Co](http://www.moduland.ir)
 
 ## Installation
 ### Source Code
-- Download [Version 0.2](https://github.com/moduland/Orangetool/archive/v0.2.zip) or [Latest Source ](https://github.com/Moduland/Orangetool/archive/master.zip)
+- Download [Version 0.22](https://github.com/moduland/Orangetool/archive/v0.22.zip) or [Latest Source ](https://github.com/Moduland/Orangetool/archive/master.zip)
 
 - `python3 setup.py install`
 ### PyPI
