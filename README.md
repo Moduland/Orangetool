@@ -209,7 +209,17 @@ or send an email to [info@moduland.ir](mailto:info@moduland.ir "info@moduland.ir
 You can fork the repository, improve or fix some part of it and then send the pull requests back if you want to see them here. I really appreciate that. ❤️			
 
 Remember to write a few tests for your code before sending pull requests. 
+					
+## Donate to our project
 
+<h3>Bitcoin :</h3>					
+
+```1XGr9qbZjBpUQJJSB6WtgBQbDTgrhPLPA```
+				
+
+<h3>Payping (For Iranian citizens) :</h3>
+
+<a href="http://www.payping.net/sepandhaghighi" target="__blank"><img src="http://www.qpage.ir/images/payping.png" height=100px width=100px></a>
 
 ## License
 <div align="center">
@@ -218,5 +228,8 @@ Remember to write a few tests for your code before sending pull requests.
 <a href="http://www.moduland.ir" target="_blank" title="Moduland Website"><img src="http://www.orangetool.ir/images/moduland.jpg" height="128px" width="128px" alt="Moduland Website"></a>
 
 </div>
+
+
+
 			
 
