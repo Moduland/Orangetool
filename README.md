@@ -210,7 +210,10 @@ You can fork the repository, improve or fix some part of it and then send the pu
 
 Remember to write a few tests for your code before sending pull requests. 
 					
-## Donate to our project
+## Donate to our project									
+
+If you feel like our project is important can you please support us?			
+Our project is not and is never going to be working for profit. We need the money just so we can continue doing what we do.
 
 <h3>Bitcoin :</h3>					
 
