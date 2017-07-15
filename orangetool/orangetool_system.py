@@ -1,6 +1,7 @@
 import os
 import subprocess as sub
 import time
+import requests
 logo='''
 ________                                      __                .__
 \_____  \____________    ____    ____   _____/  |_  ____   ____ |  |
@@ -11,7 +12,29 @@ ________                                      __                .__
 '''
 ip_pattern=r"(?:[0-9]{1,3}\.){3}[0-9]{1,3}"
 api_1="http://ipinfo.io/ip"
-VERSION="orangetool-v0.22"
+VERSION="0.22"
+UPDATE_URL="http://www.orangetool.ir/version"
+def check_update(DEBUG=False):
+    '''
+    This function check orangetool site for newversion
+    :param DEBUG: Flag for using Debug mode
+    :type DEBUG:bool
+    :return: True if new version is available
+    '''
+    try:
+        new_version=requests.get(UPDATE_URL).text
+        if float(new_version)>VERSION:
+            print("New Version ("+new_version+") Of Orangetool Is Available")
+            return True
+        else:
+            print("Update!")
+            return False
+    except Exception as e:
+        if DEBUG==True:
+            print(str(e))
+        return "Error"
+
+
 
 def get_temp(Zone=0,DEBUG=False):
     '''
@@ -101,7 +124,7 @@ def version():
     :return: return orangetool-version number as string
     '''
     print(logo)
-    return VERSION
+    return "orangetool-v"+VERSION
 
 
 def wakeup(day=0,hour=0,minute=0,DEBUG=False):
