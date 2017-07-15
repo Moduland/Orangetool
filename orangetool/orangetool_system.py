@@ -1,4 +1,3 @@
-import os
 import subprocess as sub
 import time
 import requests

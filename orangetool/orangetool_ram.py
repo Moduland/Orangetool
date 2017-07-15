@@ -1,5 +1,3 @@
-import subprocess as sub
-import re
 import psutil
 def convert_bytes(num):
     """
