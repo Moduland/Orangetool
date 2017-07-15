@@ -2,7 +2,7 @@ from distutils.core import setup
 setup(
   name = 'orangetool',
   packages = ['orangetool'],
-  version = '0.22',
+  version = '0.23',
   description = 'Some useful script for Orangepi/Raspberrypi boards',
   long_description="",
   author = 'Moduland Co',

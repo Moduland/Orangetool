@@ -38,7 +38,7 @@ By [Moduland Co](http://www.moduland.ir)
 
 ## Installation
 ### Source Code
-- Download [Version 0.22](https://github.com/moduland/Orangetool/archive/v0.22.zip) or [Latest Source ](https://github.com/Moduland/Orangetool/archive/master.zip)
+- Download [Version 0.23](https://github.com/moduland/Orangetool/archive/v0.23.zip) or [Latest Source ](https://github.com/Moduland/Orangetool/archive/master.zip)
 
 - `python3 setup.py install`
 ### PyPI
@@ -186,6 +186,10 @@ time=orangetool.idletime() # this function return idle of system ( all cores)
 #8- version
 
 orangetool.version() # return orangetool version for test
+
+#9- check_update
+
+orangetool.check_update # Return True if new version is available
 
 ```
 
