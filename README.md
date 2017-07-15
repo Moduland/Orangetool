@@ -13,6 +13,8 @@
 
 ----------
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/ad9374e6e7b24a63b34d6a4f419497ac)](https://www.codacy.com/app/sepand-haghighi/Orangetool?utm_source=github.com&utm_medium=referral&utm_content=Moduland/Orangetool&utm_campaign=badger)
+
 
 # Orangetool
 	
