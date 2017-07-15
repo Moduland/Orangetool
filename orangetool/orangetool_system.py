@@ -23,7 +23,7 @@ def check_update(DEBUG=False):
     '''
     try:
         new_version=requests.get(UPDATE_URL).text
-        if float(new_version)>VERSION:
+        if float(new_version)>float(VERSION):
             print("New Version ("+new_version+") Of Orangetool Is Available")
             return True
         else:
