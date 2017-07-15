@@ -214,7 +214,18 @@ or send an email to [info@moduland.ir](mailto:info@moduland.ir "info@moduland.ir
 
 You can fork the repository, improve or fix some part of it and then send the pull requests back if you want to see them here. I really appreciate that. ❤️			
 
-Remember to write a few tests for your code before sending pull requests. 
+Remember to write a few tests for your code before sending pull requests. 			
+
+		
+## Citing
+
+If you use Orangetool for your project homepage or something like this , please cite this ;-)
+
+<blockquote>
+<p>Sepand Haghighi. 2017. Moduland/Orangetool: Version 0.23. (July 2017). DOI:http://dx.doi.org/10.5281/zenodo.829797</p>
+</blockquote>			
+
+						
 					
 ## Donate to our project									
 
