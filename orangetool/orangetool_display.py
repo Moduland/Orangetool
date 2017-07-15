@@ -43,7 +43,7 @@ def hdmi_size(v=None,h=None,DEBUG=False):
     :return: bool
     '''
     try:
-        if type(v)!=int or type(h)!=int:
+        if (not isinstance(v,int)) or (not isinstance(h,int)):
             hdmi_control = open("/sys/class/graphics/fb0/virtual_size", "r")
             resolution=hdmi_control.read()[:-1].replace(",","x")
             hdmi_control.close()
