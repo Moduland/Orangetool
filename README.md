@@ -18,7 +18,7 @@
 
 # Orangetool
 	
-General And Useful Scripts For Single-Board Computers				
+Controller-Measurement Functions For Single-Board Computers				
 
 Tested on [Lubuntu](http://lubuntu.me/)
 

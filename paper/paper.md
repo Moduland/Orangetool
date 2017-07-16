@@ -1,5 +1,5 @@
 ---
-title: 'Orangetool: General And Useful Scripts For Single-Board Computers'
+title: 'Orangetool: Controller-Measurement Functions For Single-Board Computers'
 tags:
   - orangepi
   - script
@@ -19,7 +19,7 @@ date: 16 July 2017
 
 # Summary
 
-Orangetool is a python library that consist of some general and useful scripts , developed for single-board computers like raspberry pi , orange pi and ...
+Orangetool is a python library that consist of some  useful controller-measurement functions , developed for single-board computers like raspberry pi , orange pi and ...
 these scripts provides simple and fast way to control system in programming.
 
 Website : www.orangetool.ir
