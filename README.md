@@ -218,8 +218,7 @@ Remember to write a few tests for your code before sending pull requests.
 
 		
 ## Citing
-
-If you use Orangetool for your project homepage or something like this , please cite this ;-)
+If you use orangetool in your research , please cite this ;-)
 
 <blockquote>
 <p>Sepand Haghighi. 2017. Moduland/Orangetool: Version 0.23. (July 2017). DOI:http://dx.doi.org/10.5281/zenodo.829797</p>
