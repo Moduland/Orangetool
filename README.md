@@ -18,7 +18,7 @@
 
 # Orangetool
 	
-Consist of some general and useful scripts that developed for Single-Board Computers (Under Development)					
+General And Useful Scripts For Single-Board Computers				
 
 Tested on [Lubuntu](http://lubuntu.me/)
 
