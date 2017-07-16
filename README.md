@@ -18,7 +18,7 @@
 
 # Orangetool
 	
-Controller-Measurement Functions For Single-Board Computers				
+Controller Functions For Single-Board Computers				
 
 Tested on [Lubuntu](http://lubuntu.me/)
 
