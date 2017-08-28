@@ -237,5 +237,7 @@ button{
         width: 90%;
         margin-bottom: 20px;
     }
-    
+    .button{
+        margin-bottom: 60px;
+    }
 }
