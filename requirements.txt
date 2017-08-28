@@ -1,5 +1,3 @@
 psutil
-subprocess
-platform
 requests
 
