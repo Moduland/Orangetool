@@ -2,7 +2,7 @@
 function redirect(flag){
     switch(flag){
         case 1:
-            window.open("https://saythanks.io/to/lightsout");
+            window.open("https://saythanks.io/to/orangetool");
             break;
         case 2:
             swal("Bitocin Wallet","1XGr9qbZjBpUQJJSB6WtgBQbDTgrhPLPA");
