@@ -1,7 +1,8 @@
 .logo{
     vertical-align: middle;
     margin: auto;
-    padding: auto;;
+    padding: auto;
+    margin-top: 10px;
 }
 
 body{
@@ -14,6 +15,7 @@ body{
 .orange_image{
     height: 350px;
     width: 500px;
+    opacity: 0.7;
 }
 
 .moduland{
@@ -90,6 +92,14 @@ hr{
     margin: auto;
     font-size: 37px;
     text-align: center;
+    font-size-adjust: auto;
+    hyphens: auto;
+}
+.functions{
+    width: 80%;
+    margin: auto;
+    font-size: 37px;
+    text-align: left;
     font-size-adjust: auto;
     hyphens: auto;
 }
@@ -199,7 +209,21 @@ button {
     font-family: "sacramento";
     font-size: 25px;
 }
-
+#particles-js{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    background-image: url('');
+    background-size: cover; 
+    background-repeat: no-repeat;
+  }
+.siteWrapper {
+    position: fixed;
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+}
 @media all and (max-width: 1024px) {
   #login-footer {
         position: relative;
@@ -231,6 +255,12 @@ button {
            width: 95%;
         font-size: 40px;
         text-align: center;
+        hyphens: auto;
+    }
+    .functions{
+            width: 95%;
+        font-size: 40px;
+        text-align: left;
         hyphens: auto;
     }
 button{
