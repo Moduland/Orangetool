@@ -8,7 +8,26 @@
 
 <url>
   <loc>http://www.orangetool.ir/</loc>
-  <lastmod>2017-07-15T12:42:24+00:00</lastmod>
+  <lastmod>2017-08-29T19:46:57+00:00</lastmod>
   <changefreq>monthly</changefreq>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>http://www.orangetool.ir/functions.html</loc>
+  <lastmod>2017-08-29T19:46:57+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.orangetool.ir/donate.html</loc>
+  <lastmod>2017-08-29T19:46:57+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.orangetool.ir/index.html</loc>
+  <lastmod>2017-08-29T19:46:57+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.64</priority>
 </url>
 </urlset>
