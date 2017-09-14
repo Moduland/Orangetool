@@ -40,7 +40,7 @@ By [Moduland Co](http://www.moduland.ir)
 
 ## Installation
 ### Source Code
-- Download [Version 0.23](https://github.com/moduland/Orangetool/archive/v0.23.zip) or [Latest Source ](https://github.com/Moduland/Orangetool/archive/master.zip)
+- Download [Version 0.25](https://github.com/moduland/Orangetool/archive/v0.25.zip) or [Latest Source ](https://github.com/Moduland/Orangetool/archive/master.zip)
 - `pip3 install -r requirements.txt` or `pip install -r requirements.txt` (Need root access)	
 - `python3 setup.py install` or `python setup.py install`
 ### PyPI
