@@ -1,0 +1,50 @@
+Aquarium,24,0,0,0
+Boom Box,8,0,0,0
+Cable Box,140,0,0,0
+CD Player,7,0,2,0
+Ceiling Fan,35,0,0,0
+Clothes Dryer,2790,0,0,0
+Clothes Washer,255,0,0,0
+Coffe Maker,1000,0,0,0
+Compactors,400,0,0,0
+PC,75,0,0,0
+Laptop,25,2,2,2
+Deep Fryer,1000,2,2,2
+Monitor,42,2,2,2
+Dishwasher,330,0,0,0
+DVD/VCR,17,0,0,0
+Electric Blanket,400,0,0,0
+Electronic Air cleaner,50,0,0,0
+Furance Fan,295,0,0,0
+Garage Door Opener,400,0,0,0
+Hair Dryer,710,0,0,0
+Humidifer,11,0,0,0
+Iron,1100,0,0,0
+Lawn sprinkler,11,0,0,0
+Microwave,1500,0,0,0
+Pool Pump,1000,0,0,0
+Portable spa,4350,0,0,0
+Printer(Laser),250,0,0,0
+Printer(Inkjet),13,0,0,0
+Reciever,28,0,0,0
+Rechargable Power Tool,13,0,0,0
+Refrigerator,225,4,0,0
+DSL Modem,6,0,0,0
+Slow Cooker,200,0,0,0
+Space Heater,1320,0,0,0
+Stereo System,33,2,2,0
+Television Analog <40,86,0,0,0
+Television Analog >40,156,0,0,0
+Television CRT,60,0,0,0
+Television Plasma,300,0,0,0
+Television LCD,150,0,0,0
+Television set-top box,20,0,0,0
+Toaster,1100,0,0,0
+Toaster oven,1051,0,0,0
+Video Game System,36,0,0,0
+Water Heater,4500,0,0,0
+Waterbed Heater,350,0,0,0
+Well Pump,725,0,0,0
+Elevator,2000,0,0,0
+Fluorescent-Tube,43,0,0,0
+Lamp,100,0,0,0
