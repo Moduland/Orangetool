@@ -48,7 +48,7 @@ By [Moduland Co](http://www.moduland.ir)
 - Check [Python Packaging User Guide](https://packaging.python.org/installing/)     
 - `pip3 install orangetool`
 <div align="center">
-<img src="http://www.orangetool.ir/images/install.gif" alt="Orangetool Installation" title="Orangetool Installation">
+<a href="https://asciinema.org/a/141548" target="_blank"><img src="https://asciinema.org/a/141548.png" /></a>
 </div>
 												
 ## IP Functions
