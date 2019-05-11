@@ -18,11 +18,11 @@
 
 # Orangetool
 	
-Controller Functions For Single-Board Computers				
+Control functions for Single-Board computers				
 
 Tested on [Lubuntu](http://lubuntu.me/)
 
-[Supported Device List](Supported_Device_List.md)
+[Supported Device List](https://github.com/Moduland/Orangetool/Supported_Device_List.md)
 
 ----------
 	
@@ -30,17 +30,17 @@ By [Moduland Co](http://www.moduland.ir)
 
 ----------
 
-- [IP Functions](#ip-functions)
-- [RAM Functions](#ram-functions)
-- [Storage Functions](#storage-functions)	
-- [Display Functions](#display-functions)
-- [System Functions](#system-functions)		
+- [IP Functions](https://github.com/Moduland/Orangetool#ip-functions)
+- [RAM Functions](https://github.com/Moduland/Orangetool#ram-functions)
+- [Storage Functions](https://github.com/Moduland/Orangetool#storage-functions)	
+- [Display Functions](https://github.com/Moduland/Orangetool#display-functions)
+- [System Functions](https://github.com/Moduland/Orangetool#system-functions)		
 </hr>
 </hr>
 
 ## Installation
 ### Source Code
-- Download [Version 0.25](https://github.com/moduland/Orangetool/archive/v0.25.zip) or [Latest Source ](https://github.com/Moduland/Orangetool/archive/master.zip)
+- Download [Version 0.25](https://github.com/moduland/Orangetool/archive/v0.25.zip) or [Latest Source ](https://github.com/Moduland/Orangetool/archive/dev.zip)
 - `pip3 install -r requirements.txt` or `pip install -r requirements.txt` (Need root access)	
 - `python3 setup.py install` or `python setup.py install`
 ### PyPI
@@ -199,8 +199,8 @@ orangetool.check_update # Return True if new version is available
 
 - All of the functions in error state return `Error` String
 - local_ip() and global_ip() originally are available in ipz package [Link](http://github.com/sepandhaghighi/ipz)
-- RAM Functions in this version need psutil package
-- Some of this funtions need root access so it's better to run ```sudo -s``` before use this tool
+- RAM functions in this version need psutil package
+- Some of funtions need root access so it's better to run ```sudo -s``` before use this tool
 
 
 
