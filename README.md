@@ -2,7 +2,6 @@
 <a href="http://www.orangetool.ir"><img src="http://moduland.github.io/Orangetool/images/orangetool.jpg" height=240px width=320px></a>
 
 </br>
-<a href="https://scrutinizer-ci.com/g/Moduland/Orangetool/?branch=master"><img src="https://scrutinizer-ci.com/g/Moduland/Orangetool/badges/quality-score.png?b=master"></a>
 <a href="https://www.codacy.com/app/sepand-haghighi/Orangetool?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Moduland/Orangetool&amp;utm_campaign=Badge_Grade"><img src="https://api.codacy.com/project/badge/Grade/ad9374e6e7b24a63b34d6a4f419497ac"/></a>
 <a href="https://scrutinizer-ci.com/g/Moduland/Orangetool/build-status/master"><img src="https://scrutinizer-ci.com/g/Moduland/Orangetool/badges/build.png?b=master"></a>
 <a href="https://zenodo.org/badge/latestdoi/80631089"><img src="https://zenodo.org/badge/80631089.svg" alt="DOI"></a>
