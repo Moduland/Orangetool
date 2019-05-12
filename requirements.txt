@@ -1,2 +1,2 @@
-psutil
-requests
+psutil>=5.2.1
+requests>=2.14.0
