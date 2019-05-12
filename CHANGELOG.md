@@ -21,6 +21,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Test system modified
 - `restart`, `halt` and `sleep` functions modified
 - `hdmi_on` and `hdmi_off` functions modified
+- `requirements.txt` modified
 
 ## [0.25] - 2017-09-14
 ### Changed
