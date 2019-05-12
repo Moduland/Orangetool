@@ -10,6 +10,7 @@
 <a href="https://badge.fury.io/py/orangetool"><img src="https://badge.fury.io/py/orangetool.svg"></a>
 <a href="http://moduland.github.io/Orangetool/doc"><img src="https://img.shields.io/badge/doc-latest-orange.svg"></a>
 <a href="http://www.orangetool.ir"><img src="https://img.shields.io/website-up-down-green-red/http/shields.io.svg?label=website"></a>
+<a href="https://app.fossa.io/projects/git%2Bgithub.com%2FModuland%2FOrangetool?ref=badge_shield" alt="FOSSA Status"><img src="https://app.fossa.io/api/projects/git%2Bgithub.com%2FModuland%2FOrangetool.svg?type=shield"/></a>
 
 </div>
 
@@ -252,3 +253,6 @@ Our project is not and is never going to be working for profit. We need the mone
 
 			
 
+
+
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FModuland%2FOrangetool.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2FModuland%2FOrangetool?ref=badge_large)
