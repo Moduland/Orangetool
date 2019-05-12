@@ -164,6 +164,26 @@ def wakeup(day=0,hour=0,minute=0,DEBUG=False):
             print(str(e))
         return "Error"
 
+def power_control(command, DEBUG=False):
+    """
+    Control different power options.
+
+    :param command: input command
+    :type command: str
+    :param DEBUG: flag for using Debug mode
+    :type DEBUG: bool
+    :return: None
+    """
+    try:
+        command=sub.Popen(command,stderr=sub.PIPE,stdout=sub.PIPE,stdin=sub.PIPE)
+        response=list(command.communicate())
+        if len(response[1])>0:
+            raise Exception('Root Error')
+    except Exception as e:
+        if DEBUG==True:
+            print(str(e))
+        return "Error"
+
 def sleep(DEBUG=False):
     """
     Shortcut for sleep command (need sudo).
@@ -172,15 +192,7 @@ def sleep(DEBUG=False):
     :type DEBUG:bool
     :return: None
     """
-    try:
-        command=sub.Popen("pm-suspend",stderr=sub.PIPE,stdout=sub.PIPE,stdin=sub.PIPE)
-        response=list(command.communicate())
-        if len(response[1])>0:
-            raise Exception('Root Error')
-    except Exception as e:
-        if DEBUG==True:
-            print(str(e))
-        return "Error"
+    power_control("pm-suspend", DEBUG)
 
 def halt(DEBUG=False):
     """
@@ -190,15 +202,7 @@ def halt(DEBUG=False):
     :type DEBUG:bool
     :return: None
     """
-    try:
-        command = sub.Popen("poweroff", stderr=sub.PIPE, stdout=sub.PIPE, stdin=sub.PIPE)
-        response = list(command.communicate())
-        if len(response[1]) > 0:
-            raise Exception('Root Error')
-    except Exception as e:
-        if DEBUG==True:
-            print(str(e))
-        return "Error"
+    power_control("poweroff", DEBUG)
 
 def restart(DEBUG=False):
     """
@@ -208,15 +212,7 @@ def restart(DEBUG=False):
     :type DEBUG:bool
     :return: None
     """
-    try:
-        command = sub.Popen("reboot", stderr=sub.PIPE, stdout=sub.PIPE, stdin=sub.PIPE)
-        response = list(command.communicate())
-        if len(response[1]) > 0:
-            raise Exception('Root Error')
-    except Exception as e:
-        if DEBUG == True:
-            print(str(e))
-        return "Error"
+    power_control("reboot", DEBUG)
 
 
 
