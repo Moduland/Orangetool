@@ -20,7 +20,7 @@
    		* [Display Functions](https://github.com/Moduland/Orangetool#display-functions)
    		* [System Functions](https://github.com/Moduland/Orangetool#system-functions)
    * [Issues & Bug Reports](https://github.com/Moduland/Orangetool#issues--bug-reports)
-   * [Supported Device List](https://github.com/Moduland/Orangetool/Supported_Device_List.md)
+   * [Supported Device List](https://github.com/Moduland/Orangetool/blob/master/Supported_Device_List.md)
    * [Dependencies](https://github.com/Moduland/Orangetool#dependencies)
    * [Contribution](https://github.com/Moduland/Orangetool/blob/master/.github/CONTRIBUTING.md)
    * [Cite](https://github.com/Moduland/Orangetool#cite)
