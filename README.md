@@ -45,7 +45,7 @@ By [Moduland Co](http://www.moduland.ir)
 ### PyPI
 
 - Check [Python Packaging User Guide](https://packaging.python.org/installing/)     
-- `pip3 install orangetool`
+- `pip3 install orangetool==0.25` or `pip install orangetool==0.25` (Need root access)	
 <div align="center">
 <a href="https://asciinema.org/a/141548" target="_blank"><img src="https://asciinema.org/a/141548.png" /></a>
 </div>

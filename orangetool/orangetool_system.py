@@ -13,7 +13,7 @@ ________                                      __                .__
 '''
 ip_pattern=r"(?:[0-9]{1,3}\.){3}[0-9]{1,3}"
 api_1="http://ipinfo.io/ip"
-VERSION="0.25"
+VERSION = "0.25"
 UPDATE_URL="http://www.orangetool.ir/version"
 def check_update(DEBUG=False):
     """
