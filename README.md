@@ -2,8 +2,6 @@
 <a href="http://www.orangetool.ir"><img src="http://moduland.github.io/Orangetool/images/orangetool.jpg" height=240px width=320px></a>
 
 </br>
-<a href="https://www.codacy.com/app/sepand-haghighi/Orangetool?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Moduland/Orangetool&amp;utm_campaign=Badge_Grade"><img src="https://api.codacy.com/project/badge/Grade/ad9374e6e7b24a63b34d6a4f419497ac"/></a>
-<a href="https://scrutinizer-ci.com/g/Moduland/Orangetool/build-status/master"><img src="https://scrutinizer-ci.com/g/Moduland/Orangetool/badges/build.png?b=master"></a>
 <a href="https://zenodo.org/badge/latestdoi/80631089"><img src="https://zenodo.org/badge/80631089.svg" alt="DOI"></a>
 <a href="https://requires.io/github/Moduland/Orangetool/requirements/?branch=master"><img src="https://requires.io/github/Moduland/Orangetool/requirements.svg?branch=master" alt="Requirements Status" /></a>
 <a href="https://badge.fury.io/py/orangetool"><img src="https://badge.fury.io/py/orangetool.svg"></a>
@@ -39,6 +37,45 @@
 Control functions for Single-Board computers				
 
 Tested on [Lubuntu](http://lubuntu.me/)
+
+<table>
+	<tr> 
+		<td align="center">Open Hub</td>
+		<td align="center"><a href="https://www.openhub.net/p/orangetool"><img src="https://www.openhub.net/p/orangetool/widgets/project_thin_badge.gif"></a></td>	
+	</tr>
+	<tr>
+		<td align="center">PyPI Counter</td>
+		<td align="center"><a href="http://pepy.tech/count/orangetool"><img src="http://pepy.tech/badge/orangetool"></a></td>
+	</tr>
+	<tr>
+		<td align="center">Github Stars</td>
+		<td align="center"><a href="https://github.com/Moduland/Orangetool/pycm"><img src="https://img.shields.io/github/stars/Moduland/Orangetool.svg?style=social&label=Stars"></a></td>
+	</tr>
+</table>
+
+
+
+<table>
+	<tr> 
+		<td align="center">Branch</td>
+		<td align="center">master</td>	
+		<td align="center">dev</td>	
+	</tr>
+	<tr>
+		<td align="center">Travis</td>
+		<td align="center"><a href="https://travis-ci.org/Moduland/Orangetool"><img src="https://travis-ci.org/Moduland/Orangetool.svg?branch=master"></a></td>
+		<td align="center"><a href="https://travis-ci.org/Moduland/Orangetool"><img src="https://travis-ci.org/Moduland/Orangetool.svg?branch=dev"></a></td>
+	</tr>
+</table>
+
+
+<table>
+	<tr> 
+		<td align="center">Code Quality</td>
+		<td align="center"><a href="https://www.codacy.com/app/sepand-haghighi/Orangetool?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Moduland/Orangetool&amp;utm_campaign=Badge_Grade"><img src="https://api.codacy.com/project/badge/Grade/ad9374e6e7b24a63b34d6a4f419497ac"/></a></td>	
+		<td align="center"><a href="https://scrutinizer-ci.com/g/Moduland/Orangetool/build-status/master"><img src="https://scrutinizer-ci.com/g/Moduland/Orangetool/badges/build.png?b=master"></a></td>		
+	</tr>
+</table>
 
 ----------
 	
