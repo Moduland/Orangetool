@@ -1,5 +1,29 @@
 # -*- coding: utf-8 -*-
 """Orangetool display functions."""
+
+def hdmi_controller(command, DEBUG=False):
+    """
+    Control hdmi port.
+
+    :param command: inpurt command
+    :type command: bool
+    :param DEBUG: flag for using Debug mode
+    :type DEBUG: bool
+    :return: bool
+    """
+    try:
+        hdmi_control=open("/sys/class/graphics/fb0/blank","w")
+        if command :
+            hdmi_control.write("0")
+        else:
+            hdmi_control.write("4")
+        hdmi_control.close()
+        return True
+    except Exception as e:
+        if DEBUG==True:
+            print(str(e))
+        return "Error"
+
 def hdmi_on(DEBUG=False):
     """
     Turn on hdmi port (need sudo -s).
@@ -8,15 +32,8 @@ def hdmi_on(DEBUG=False):
     :type DEBUG:bool
     :return: bool
     """
-    try:
-        hdmi_control=open("/sys/class/graphics/fb0/blank","w")
-        hdmi_control.write("0")
-        hdmi_control.close()
-        return True
-    except Exception as e:
-        if DEBUG==True:
-            print(str(e))
-        return "Error"
+    hdmi_controller(True, DEBUG)
+
 
 def hdmi_off(DEBUG=False):
     """
@@ -26,15 +43,8 @@ def hdmi_off(DEBUG=False):
     :type DEBUG:bool
     :return: bool
     """
-    try:
-        hdmi_control=open("/sys/class/graphics/fb0/blank","w")
-        hdmi_control.write("4")
-        hdmi_control.close()
-        return True
-    except Exception as e:
-        if DEBUG==True:
-            print(str(e))
-        return "Error"
+    hdmi_controller(False, DEBUG)
+
 def hdmi_size(v=None,h=None,DEBUG=False):
     """
     Change hdmi display resolution (need sudo -s) (if call without any argument return current resolution).
