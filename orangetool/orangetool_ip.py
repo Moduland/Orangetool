@@ -9,10 +9,11 @@ ip_pattern=r"(?:[0-9]{1,3}\.){3}[0-9]{1,3}"
 api_1="http://ipinfo.io/ip"
 def internet(host="8.8.8.8", port=53, timeout=3):
     """
-    Check Internet Connections.
+    Check internet connections.
+
     :param  host: the host that check connection to
     :param  port: port that check connection with
-    :param  timeout: times that check the connnection
+    :param  timeout: times that check the connection
     :type host:str
     :type port:int
     :type timeout:int
@@ -31,12 +32,13 @@ def internet(host="8.8.8.8", port=53, timeout=3):
         return False
 
 def local_ip(DEBUG=False):
-    '''
-    return local ip of computer in windows by socket module and in unix with hostname command in shell
-    :param DEBUG:Flag for using Debug Mode
+    """
+    Return local ip of computer in windows by socket module and in unix with hostname command in shell.
+
+    :param DEBUG:flag for using Debug Mode
     :type DEBUG:bool
     :return: local ip as string
-    '''
+    """
     try:
         ip=socket.gethostbyname(socket.gethostname())
         if ip!="127.0.0.1":
@@ -57,12 +59,13 @@ def local_ip(DEBUG=False):
         return "Error"
 
 def global_ip(DEBUG=False):
-    '''
-    return ip with by http://ipinfo.io/ip api
-    :param DEBUG:Flag for using Debug mode
+    """
+    Return ip with by http://ipinfo.io/ip api.
+
+    :param DEBUG:flag for using Debug mode
     :type DEBUG:bool
     :return: global ip as string
-    '''
+    """
     try:
         new_session=requests.session()
         response=new_session.get(api_1)
@@ -75,16 +78,17 @@ def global_ip(DEBUG=False):
         return "Error"
 
 def set_ip(ip,DEVICE="eth0",DEBUG=False):
-    '''
-    This function set static ip in interfaces file (need sudo)
+    """
+    Set static ip in interfaces file (need sudo).
+
     :param DEVICE: network device name
     :type DEVICE:str
     :param ip: static ip
     :type ip :str
-    :param DEBUG: Flag for using Debug mode
+    :param DEBUG: flag for using Debug mode
     :type DEBUG:bool
     :return: True in successful
-    '''
+    """
     static_string='''
     auto lo device
 iface lo inet loopback
@@ -112,16 +116,17 @@ iface device inet static
 
 
 def ping(ip,packet_number=3,DEBUG=False):
-    '''
-    This function ping ip and return True if this ip is available and False otherwise
+    """
+    Ping ip and return True if this ip is available and False otherwise.
+
     :param ip: target ip
-    :param packet_number: numer of packet to size
-    :param DEBUG: Flag for using Debug mode
+    :param packet_number: number of packet to size
+    :param DEBUG: flag for using Debug mode
     :type ip :str
     :type packet_number:int
     :type DEBUG:bool
     :return: a boolean value (True if ip is available and False otherwise)
-    '''
+    """
     try:
         if re.match(ip_pattern,ip)==False:
             raise Exception("IP Formation Error")
@@ -136,12 +141,13 @@ def ping(ip,packet_number=3,DEBUG=False):
         return "Error"
 
 def mac(DEBUG=False):
-    '''
-    This function return mac addresses of net devices
-    :param DEBUG: Flag for using Debug mode
+    """
+    Return mac addresses of net devices.
+
+    :param DEBUG: flag for using Debug mode
     :type DEBUG:bool
     :return: return mac addresses as dict with name as keys and mac addresses as values
-    '''
+    """
     try:
         net_dir="/sys/class/net"
         mac_list=[]
