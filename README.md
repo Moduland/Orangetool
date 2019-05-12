@@ -25,7 +25,7 @@
    * [Supported Device List](https://github.com/Moduland/Orangetool/Supported_Device_List.md)
    * [Dependencies](https://github.com/Moduland/Orangetool#dependencies)
    * [Contribution](https://github.com/Moduland/Orangetool/blob/master/.github/CONTRIBUTING.md)
-   * [Cite](https://github.com/sepandhaghighi/pycm#cite)
+   * [Cite](https://github.com/Moduland/Orangetool#cite)
    * [Authors](https://github.com/Moduland/Orangetool/blob/master/AUTHORS.md)
    * [License](https://github.com/Moduland/Orangetool#license)
    * [Donate](https://github.com/Moduland/Orangetool#donate-to-our-project)
@@ -49,7 +49,7 @@ Tested on [Lubuntu](http://lubuntu.me/)
 	</tr>
 	<tr>
 		<td align="center">Github Stars</td>
-		<td align="center"><a href="https://github.com/Moduland/Orangetool/pycm"><img src="https://img.shields.io/github/stars/Moduland/Orangetool.svg?style=social&label=Stars"></a></td>
+		<td align="center"><a href="https://github.com/Moduland/Orangetool"><img src="https://img.shields.io/github/stars/Moduland/Orangetool.svg?style=social&label=Stars"></a></td>
 	</tr>
 </table>
 
@@ -255,8 +255,11 @@ orangetool.check_update # Return True if new version is available
 Just fill an issue and describe it. We'll check it ASAP!							
 or send an email to [info@moduland.ir](mailto:info@moduland.ir "info@moduland.ir"). 
 
+## Dependencies
+[![Requirements Status](https://requires.io/github/Moduland/Orangetool/requirements.svg?branch=dev)](https://requires.io/github/Moduland/Orangetool/requirements/?branch=dev)
+
 		
-## Citing
+## Cite
 If you use orangetool in your research , please cite this ;-)
 
 <blockquote>
