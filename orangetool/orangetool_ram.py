@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+"""Orangetool RAM functions."""
 import psutil
 def convert_bytes(num):
     """

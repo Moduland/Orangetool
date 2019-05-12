@@ -1,4 +1,6 @@
-'''
+# -*- coding: utf-8 -*-
+"""Orangetool modules."""
+"""
 MIT License
 
 Copyright (c) 2017 Moduland Co
@@ -20,7 +22,7 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-'''
+"""
 
 from .orangetool_display import *
 from .orangetool_ip import *

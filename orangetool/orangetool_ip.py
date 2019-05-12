@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+"""Orangetool IP functions."""
 import subprocess as sub
 import socket
 import requests

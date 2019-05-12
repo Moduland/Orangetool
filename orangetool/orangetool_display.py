@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+"""Orangetool display functions."""
 def hdmi_on(DEBUG=False):
     '''
     This function turn on hdmi port (need sudo -s)

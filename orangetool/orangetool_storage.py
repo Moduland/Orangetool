@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+"""Orangetool storage functions."""
 import subprocess as sub
 import os
 import string
