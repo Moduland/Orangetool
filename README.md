@@ -27,7 +27,7 @@
    * [Contribution](https://github.com/Moduland/Orangetool/blob/master/.github/CONTRIBUTING.md)
    * [Cite](https://github.com/Moduland/Orangetool#cite)
    * [Authors](https://github.com/Moduland/Orangetool/blob/master/AUTHORS.md)
-   * [License](https://github.com/Moduland/Orangetool#license)
+   * [License](https://github.com/Moduland/Orangetool/blob/master/LICENSE)
    * [Donate](https://github.com/Moduland/Orangetool#donate-to-our-project)
    * [Changelog](https://github.com/Moduland/Orangetool/blob/master/CHANGELOG.md)
    * [Code of Conduct](https://github.com/Moduland/Orangetool/blob/master/.github/CODE_OF_CONDUCT.md)
