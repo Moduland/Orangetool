@@ -1,6 +1,6 @@
   set -e
   set -x
-
+  python version_check.py
   if [ "$TRAVIS_PYTHON_VERSION" = '3.6' ]
   then
 	python -m vulture --min-confidence 80 --exclude=orangetool,build,.eggs --sort-by-size .
