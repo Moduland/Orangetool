@@ -5,6 +5,7 @@ try:
 except ImportError:
     from distutils.core import setup
 
+
 def get_requires():
     """Read requirements.txt."""
     requirements = open("requirements.txt", "r").read()
@@ -23,30 +24,32 @@ def read_description():
         return description
     except Exception:
         return "Some useful script for Orangepi/Raspberrypi boards"
+
+
 setup(
-  name='orangetool',
-  packages=['orangetool'],
-  version='0.25',
-  description='Some useful script for Orangepi/Raspberrypi boards',
-  long_description=read_description(),
-  author='Moduland Co',
-  author_email='info@moduland.ir',
-  url='https://github.com/Moduland/Orangetool',
-  download_url='https://github.com/Moduland/Orangetool/tarball/v0.25',
-  keywords="orangepi raspberrypi embedded-systems python",
-  classifiers=[
-    'Development Status :: 4 - Beta',
-    'Intended Audience :: Developers',
-    'Natural Language :: English',
-    'License :: OSI Approved :: MIT License',
-    'Operating System :: Unix',
-    'Intended Audience :: Developers',
-    'Programming Language :: Python :: 3.4',
-    'Programming Language :: Python :: 3.5',
-    'Programming Language :: Python :: 3.6',
-    'Programming Language :: Python :: 3.7',
-    'Topic :: Scientific/Engineering',
-  ],
-  install_requires = get_requires(),
-  license='MIT',
+    name='orangetool',
+    packages=['orangetool'],
+    version='0.25',
+    description='Some useful script for Orangepi/Raspberrypi boards',
+    long_description=read_description(),
+    author='Moduland Co',
+    author_email='info@moduland.ir',
+    url='https://github.com/Moduland/Orangetool',
+    download_url='https://github.com/Moduland/Orangetool/tarball/v0.25',
+    keywords="orangepi raspberrypi embedded-systems python",
+    classifiers=[
+        'Development Status :: 4 - Beta',
+        'Intended Audience :: Developers',
+        'Natural Language :: English',
+        'License :: OSI Approved :: MIT License',
+        'Operating System :: Unix',
+        'Intended Audience :: Developers',
+        'Programming Language :: Python :: 3.4',
+        'Programming Language :: Python :: 3.5',
+        'Programming Language :: Python :: 3.6',
+        'Programming Language :: Python :: 3.7',
+        'Topic :: Scientific/Engineering',
+    ],
+    install_requires=get_requires(),
+    license='MIT',
 )

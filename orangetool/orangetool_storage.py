@@ -5,7 +5,8 @@ import os
 import string
 import random
 
-def mount_status(device_name,DEBUG=False):
+
+def mount_status(device_name, DEBUG=False):
     """
     Return addresses of mounted memory devices in dev by device name.
 
@@ -15,20 +16,21 @@ def mount_status(device_name,DEBUG=False):
     """
     try:
         file = open("/proc/mounts")
-        output=file.readlines()
-        memory_list=[]
+        output = file.readlines()
+        memory_list = []
         for item in output:
-            temp=item.split(" ")
-            if temp[0].find(device_name)!=-1:
+            temp = item.split(" ")
+            if temp[0].find(device_name) != -1:
                 memory_list.append(temp[1])
-        if len(memory_list)==0:
+        if len(memory_list) == 0:
             return "u"
         else:
             return memory_list
     except Exception as e:
-        if DEBUG==True:
+        if DEBUG:
             print(str(e))
         return "Error"
+
 
 def storage_status(DEBUG=False):
     """
@@ -39,21 +41,22 @@ def storage_status(DEBUG=False):
     :return: all of the inserted memory and their status as dictionary ( device name as keys and mount status (mounted_addresses as list and u --> unmounted) as values
     """
     try:
-        folder_items=os.listdir("/dev/")
-        memory_items=[]
-        memory_status=[]
+        folder_items = os.listdir("/dev/")
+        memory_items = []
+        memory_status = []
         for i in string.ascii_lowercase:
-            if "sd"+i+"1" in folder_items:
-                memory_items.append("sd"+i+"1")
+            if "sd" + i + "1" in folder_items:
+                memory_items.append("sd" + i + "1")
         for item in memory_items:
             memory_status.append(mount_status(item))
-        return dict(zip(memory_items,memory_status))
+        return dict(zip(memory_items, memory_status))
     except Exception as e:
-        if DEBUG==True:
+        if DEBUG:
             print(str(e))
         return "Error"
 
-def unmount(ADDRESS,DEBUG=False):
+
+def unmount(ADDRESS, DEBUG=False):
     """
     Unmount memory devices by addresses.
 
@@ -64,16 +67,18 @@ def unmount(ADDRESS,DEBUG=False):
     :return: True if device unmount correctly and False other wise
     """
     try:
-        command = sub.Popen(["umount",ADDRESS], stdout=sub.PIPE, stderr=sub.PIPE)
-        output=list(command.communicate())
-        if len(output[0])==0 and len(output[1])==0:
+        command = sub.Popen(["umount", ADDRESS],
+                            stdout=sub.PIPE, stderr=sub.PIPE)
+        output = list(command.communicate())
+        if len(output[0]) == 0 and len(output[1]) == 0:
             return True
         else:
             return False
     except Exception as e:
-        if DEBUG==True:
+        if DEBUG:
             print(str(e))
         return "Error"
+
 
 def unmount_all(DEBUG=False):
     """
@@ -84,19 +89,21 @@ def unmount_all(DEBUG=False):
     :return: return True if all of the mounted devices unmount correctly
     """
     try:
-        storage_output=storage_status()
-        storage_keys=list(storage_output.keys())
-        storage_values=list(storage_output.values())
-        for i,item in enumerate(storage_values):
-            if storage_values[i]!="u":
+        storage_output = storage_status()
+        storage_keys = list(storage_output.keys())
+        storage_values = list(storage_output.values())
+        for i, item in enumerate(storage_values):
+            if storage_values[i] != "u":
                 print(item)
                 for j in item:
                     unmount(j)
         return True
     except Exception as e:
-        if DEBUG==True:
+        if DEBUG:
             print(str(e))
         return "Error"
+
+
 def random_generator(number):
     """
     Generate random number.
@@ -105,13 +112,15 @@ def random_generator(number):
     :type number: int
     :return: random number as str
     """
-    response=""
-    i=0
-    while(i<number):
-        i+=1
-        response+=str(random.randint(0,9))
+    response = ""
+    i = 0
+    while(i < number):
+        i += 1
+        response += str(random.randint(0, 9))
     return response
-def mount(device_name,mount_address=None,DEBUG=False):
+
+
+def mount(device_name, mount_address=None, DEBUG=False):
     """
     Mount memory devices by addresses.
 
@@ -124,45 +133,23 @@ def mount(device_name,mount_address=None,DEBUG=False):
     :return: True if device mount correctly and False other wise
     """
     try:
-        if mount_status(device_name)!="u":
+        if mount_status(device_name) != "u":
             raise Exception("Device already mount")
-        if mount_address==None:
-            mount_address="/mnt/"+random_generator(5)
-            command=sub.Popen(["mkdir",mount_address], stdout=sub.PIPE, stderr=sub.PIPE)
-        command = sub.Popen(["mount","/dev/"+device_name,mount_address], stdout=sub.PIPE, stderr=sub.PIPE)
-        output=list(command.communicate())
-        if len(output[0])==0 and len(output[1])==0:
+        if mount_address is None:
+            mount_address = "/mnt/" + random_generator(5)
+            command = sub.Popen(["mkdir", mount_address],
+                                stdout=sub.PIPE, stderr=sub.PIPE)
+        command = sub.Popen(["mount",
+                             "/dev/" + device_name,
+                             mount_address],
+                            stdout=sub.PIPE,
+                            stderr=sub.PIPE)
+        output = list(command.communicate())
+        if len(output[0]) == 0 and len(output[1]) == 0:
             return True
         else:
             return False
     except Exception as e:
-        if DEBUG==True:
+        if DEBUG:
             print(str(e))
         return "Error"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

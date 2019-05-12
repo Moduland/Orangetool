@@ -20,7 +20,12 @@ CHANGELOG_ITEMS = [
     "[{0}]:"]
 PARAMS_ITEMS = ['VERSION = "{0}"']
 FILES = {
-    "setup.py": SETUP_ITEMS, "README.md": README_ITEMS, "CHANGELOG.md": CHANGELOG_ITEMS,  os.path.join("orangetool", "orangetool_system.py"): PARAMS_ITEMS}
+    "setup.py": SETUP_ITEMS,
+    "README.md": README_ITEMS,
+    "CHANGELOG.md": CHANGELOG_ITEMS,
+    os.path.join(
+        "orangetool",
+        "orangetool_system.py"): PARAMS_ITEMS}
 
 TEST_NUMBER = len(FILES.keys())
 
