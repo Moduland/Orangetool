@@ -40,7 +40,7 @@ def check_update(DEBUG=False):
 
 def get_temp(Zone=0,DEBUG=False):
     """
-    This Function Wrote for Orangepi to read cpu temperature.
+    Read cpu temperature.
 
     :param DEBUG : flag for using Debug mode
     :param Zone : thermal Zone Index
@@ -127,7 +127,7 @@ def idletime(DEBUG=False):
 
 def version():
     """
-    Return orangetool version (for test).
+    Return orangetool version.
 
     :return: return orangetool-version number as string
     """
@@ -163,9 +163,10 @@ def wakeup(day=0,hour=0,minute=0,DEBUG=False):
         if DEBUG==True:
             print(str(e))
         return "Error"
+
 def sleep(DEBUG=False):
     """
-    A shortcut for sleep (need sudo).
+    Shortcut for sleep command (need sudo).
 
     :param DEBUG: flag for using Debug mode
     :type DEBUG:bool
@@ -183,7 +184,7 @@ def sleep(DEBUG=False):
 
 def halt(DEBUG=False):
     """
-    A shortcut for poweroff (need sudo).
+    Shortcut for poweroff (need sudo).
 
     :param DEBUG: flag for using Debug mode
     :type DEBUG:bool
@@ -201,7 +202,7 @@ def halt(DEBUG=False):
 
 def restart(DEBUG=False):
     """
-    A shortcut for reboot (need sudo).
+    Shortcut for reboot (need sudo).
 
     :param DEBUG: flag for using Debug mode
     :type DEBUG:bool
