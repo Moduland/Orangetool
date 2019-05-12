@@ -4,6 +4,7 @@
 </br>
 <a href="https://zenodo.org/badge/latestdoi/80631089"><img src="https://zenodo.org/badge/80631089.svg" alt="DOI"></a>
 <a href="https://badge.fury.io/py/orangetool"><img src="https://badge.fury.io/py/orangetool.svg"></a>
+<a href="https://anaconda.org/sepandhaghighi/orangetool"><img src="https://anaconda.org/sepandhaghighi/orangetool/badges/version.svg"></a>
 <a href="http://www.orangetool.ir"><img src="https://img.shields.io/website-up-down-green-red/http/shields.io.svg?label=website"></a>
 
 </div>
@@ -92,6 +93,15 @@ By [Moduland Co](http://www.moduland.ir)
 <div align="center">
 <a href="https://asciinema.org/a/141548" target="_blank"><img src="https://asciinema.org/a/141548.png" /></a>
 </div>
+
+### Conda
+
+- Check [Conda Managing Package](https://conda.io/docs/user-guide/tasks/manage-pkgs.html#installing-packages-from-anaconda-org)
+- `conda install -c sepandhaghighi orangetool` (Need root access)
+
+### Easy install
+
+- Run `easy_install --upgrade orangetool` (Need root access)
 
 ## Usage
 												
