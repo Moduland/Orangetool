@@ -14,28 +14,36 @@
 
 ----------
 
+## Table of contents					
+   * [Overview](https://github.com/Moduland/Orangetool#overview)
+   * [Installation](https://github.com/Moduland/Orangetool#installation)
+   * [Usage](https://github.com/Moduland/Orangetool#usage)
+   		* [IP Functions](https://github.com/Moduland/Orangetool#ip-functions)
+   		* [RAM Functions](https://github.com/Moduland/Orangetool#ram-functions)
+   		* [Storage Functions](https://github.com/Moduland/Orangetool#storage-functions)	
+   		* [Display Functions](https://github.com/Moduland/Orangetool#display-functions)
+   		* [System Functions](https://github.com/Moduland/Orangetool#system-functions)
+   * [Issues & Bug Reports](https://github.com/Moduland/Orangetool#issues--bug-reports)
+   * [Supported Device List](https://github.com/Moduland/Orangetool/Supported_Device_List.md)
+   * [Dependencies](https://github.com/Moduland/Orangetool#dependencies)
+   * [Contribution](https://github.com/Moduland/Orangetool/blob/master/.github/CONTRIBUTING.md)
+   * [Cite](https://github.com/sepandhaghighi/pycm#cite)
+   * [Authors](https://github.com/Moduland/Orangetool/blob/master/AUTHORS.md)
+   * [License](https://github.com/Moduland/Orangetool#license)
+   * [Donate](https://github.com/Moduland/Orangetool#donate-to-our-project)
+   * [Changelog](https://github.com/Moduland/Orangetool/blob/master/CHANGELOG.md)
+   * [Code of Conduct](https://github.com/Moduland/Orangetool/blob/master/.github/CODE_OF_CONDUCT.md)
 
-# Orangetool
+## Overview
 	
 Control functions for Single-Board computers				
 
 Tested on [Lubuntu](http://lubuntu.me/)
 
-[Supported Device List](https://github.com/Moduland/Orangetool/Supported_Device_List.md)
-
 ----------
 	
 By [Moduland Co](http://www.moduland.ir)		
 
-----------
-
-- [IP Functions](https://github.com/Moduland/Orangetool#ip-functions)
-- [RAM Functions](https://github.com/Moduland/Orangetool#ram-functions)
-- [Storage Functions](https://github.com/Moduland/Orangetool#storage-functions)	
-- [Display Functions](https://github.com/Moduland/Orangetool#display-functions)
-- [System Functions](https://github.com/Moduland/Orangetool#system-functions)		
-</hr>
-</hr>
 
 ## Installation
 ### Source Code
@@ -49,8 +57,10 @@ By [Moduland Co](http://www.moduland.ir)
 <div align="center">
 <a href="https://asciinema.org/a/141548" target="_blank"><img src="https://asciinema.org/a/141548.png" /></a>
 </div>
+
+## Usage
 												
-## IP Functions
+### IP Functions
 
 ```python
 import orangetool
@@ -83,7 +93,7 @@ mac_dic=orangetool.mac() # return dict of all system net devices mac addresses
 
 ```
 
-## RAM Functions		
+### RAM Functions		
 
 ```python
  
@@ -109,7 +119,7 @@ orangetool.freeup() # To free pagecache, dentries and inodes and return freeuped
 
 ```
 
-## Storage Functions				
+### Storage Functions				
 
 ```python
 #1- mount_status
@@ -135,7 +145,7 @@ orangetool.mount("sda1","/mnt/usb1") # This function mount input device in input
 
 ```
 
-## Display Functions				
+### Display Functions				
 
 ```python
 #1- hdmi_on
@@ -152,7 +162,7 @@ orangetool.hdmi_size(1280,720) # this function change hdmi display resolution
 
 ```
 
-## System Functions				
+### System Functions				
 
 ```python
 #1- sleep
