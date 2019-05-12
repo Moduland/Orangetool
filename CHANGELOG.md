@@ -5,6 +5,23 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Added
+- `version_check.py`
+- `CODE_OF_CONDUCT.md`
+- `ISSUE_TEMPLATE.md`
+- `PULL_REQUEST_TEMPLATE.md`
+- `CONTRIBUTING.md`
+- `test.sh`
+- `autopep8.bat`
+- `dev-requirements.txt`
+- `CHANGELOG.md`
+
+### Changed
+- `README.md` modified
+- Test system modified
+- `restart`, `halt` and `sleep` functions modified
+- `hdmi_on` and `hdmi_off` functions modified
+
 ## [0.25] - 2017-09-14
 ### Changed
 - Minor bug in PyPi dependencies fixed
