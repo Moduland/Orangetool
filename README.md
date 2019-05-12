@@ -71,7 +71,7 @@ Tested on [Lubuntu](http://lubuntu.me/)
 	<tr> 
 		<td align="center">Code Quality</td>
 		<td align="center"><a href="https://www.codacy.com/app/sepand-haghighi/Orangetool?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Moduland/Orangetool&amp;utm_campaign=Badge_Grade"><img src="https://api.codacy.com/project/badge/Grade/ad9374e6e7b24a63b34d6a4f419497ac"/></a></td>	
-		<td align="center"><a href="https://scrutinizer-ci.com/g/Moduland/Orangetool/build-status/master"><img src="https://scrutinizer-ci.com/g/Moduland/Orangetool/badges/build.png?b=master"></a></td>		
+		<td align="center"><a href="https://www.codefactor.io/repository/github/moduland/orangetool"><img src="https://www.codefactor.io/repository/github/moduland/orangetool/badge" alt="CodeFactor" /></a></td>		
 	</tr>
 </table>
 
