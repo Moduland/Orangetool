@@ -20,4 +20,4 @@ before_script:
   - pip install --upgrade --upgrade-strategy=only-if-needed -r dev-requirements.txt
   - chmod +x test.sh
 script:
-  - test.sh
+  - sh test.sh
