@@ -2,6 +2,7 @@
 """Orangetool IP functions."""
 import subprocess as sub
 import socket
+import os
 import requests
 import re
 import platform
