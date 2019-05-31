@@ -72,8 +72,7 @@ def unmount(ADDRESS, DEBUG=False):
         output = list(command.communicate())
         if len(output[0]) == 0 and len(output[1]) == 0:
             return True
-        else:
-            return False
+        return False
     except Exception as e:
         if DEBUG:
             print(str(e))
@@ -147,8 +146,7 @@ def mount(device_name, mount_address=None, DEBUG=False):
         output = list(command.communicate())
         if len(output[0]) == 0 and len(output[1]) == 0:
             return True
-        else:
-            return False
+        return False
     except Exception as e:
         if DEBUG:
             print(str(e))
