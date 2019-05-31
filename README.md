@@ -264,7 +264,17 @@ Just fill an issue and describe it. We'll check it ASAP!
 or send an email to [info@moduland.ir](mailto:info@moduland.ir "info@moduland.ir"). 
 
 ## Dependencies
-[![Requirements Status](https://requires.io/github/Moduland/Orangetool/requirements.svg?branch=dev)](https://requires.io/github/Moduland/Orangetool/requirements/?branch=dev)
+
+<table>
+	<tr> 
+		<td align="center">master</td>	
+		<td align="center">dev</td>	
+	</tr>
+	<tr>
+		<td align="center"><a href="https://requires.io/github/Moduland/Orangetool/requirements/?branch=master"><img src="https://requires.io/github/Moduland/Orangetool/requirements.svg?branch=master"></a></td>
+		<td align="center"><a href="https://requires.io/github/Moduland/Orangetool/requirements/?branch=dev"><img src="https://requires.io/github/Moduland/Orangetool/requirements.svg?branch=dev"></a></td>
+	</tr>
+</table>
 
 		
 ## Cite
