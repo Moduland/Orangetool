@@ -56,10 +56,8 @@ def local_ip(DEBUG=False):
             response = list(command.communicate())
             if len(response[0]) > 0:
                 return str(response[0])[2:-4]
-            else:
-                return "Error"
-        else:
             return "Error"
+        return "Error"
 
     except Exception as e:
         if DEBUG:
@@ -149,8 +147,7 @@ def ping(ip, packet_number=3, DEBUG=False):
                                     stderr=sub.PIPE).communicate())[0])
         if output.find("Unreachable") == -1:
             return True
-        else:
-            return False
+        return False
     except Exception as e:
         if DEBUG:
             print(str(e))
