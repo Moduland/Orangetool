@@ -132,7 +132,7 @@ def version():
     :return: return orangetool-version number as string
     """
     tprint("orangetool", font="bulbhead")
-    return "orangetool-v" + VERSION
+    tprint("v"+VERSION,font="bulbhead")
 
 
 def wakeup(day=0, hour=0, minute=0, DEBUG=False):
