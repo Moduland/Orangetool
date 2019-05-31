@@ -34,8 +34,7 @@ def ram_total(convert=True):
     response = list(psutil.virtual_memory())
     if convert:
         return convert_bytes(int(response[0]))
-    else:
-        return str(response[0])
+    return str(response[0])
 
 
 def ram_used(convert=True):
@@ -49,8 +48,7 @@ def ram_used(convert=True):
     response = list(psutil.virtual_memory())
     if convert:
         return convert_bytes(int(response[3]))
-    else:
-        return str(response[3])
+    return str(response[3])
 
 
 def ram_free(convert=True):
@@ -64,8 +62,7 @@ def ram_free(convert=True):
     response = list(psutil.virtual_memory())
     if convert:
         return convert_bytes(int(response[1]))
-    else:
-        return str(response[1])
+    return str(response[1])
 
 
 def ram_percent():
@@ -95,8 +92,7 @@ def freeup(DEBUG=False):
         freeuped_ram = RAM_after - RAM_before
         if freeuped_ram > 0:
             return convert_bytes(freeuped_ram)
-        else:
-            return convert_bytes(0)
+        return convert_bytes(0)
     except Exception as e:
         if DEBUG:
             print(str(e))
