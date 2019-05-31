@@ -131,7 +131,7 @@ def version():
 
     :return: return orangetool-version number as string
     """
-    tprint("orangetool",font="bulbhead")
+    tprint("orangetool", font="bulbhead")
     return "orangetool-v" + VERSION
 
 

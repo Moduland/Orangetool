@@ -121,7 +121,7 @@ iface device inet static
         file.close()
         sub.Popen(["ifdown", device, "&&", "ifup", device],
                   stderr=sub.PIPE, stdin=sub.PIPE, stdout=sub.PIPE)
-        if restart == True :
+        if restart:
             restart_func()
         return True
     except Exception as e:
