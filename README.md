@@ -2,56 +2,110 @@
 <a href="http://www.orangetool.ir"><img src="http://moduland.github.io/Orangetool/images/orangetool.jpg" height=240px width=320px></a>
 
 </br>
-<a href="https://scrutinizer-ci.com/g/Moduland/Orangetool/?branch=master"><img src="https://scrutinizer-ci.com/g/Moduland/Orangetool/badges/quality-score.png?b=master"></a>
-<a href="https://www.codacy.com/app/sepand-haghighi/Orangetool?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Moduland/Orangetool&amp;utm_campaign=Badge_Grade"><img src="https://api.codacy.com/project/badge/Grade/ad9374e6e7b24a63b34d6a4f419497ac"/></a>
-<a href="https://scrutinizer-ci.com/g/Moduland/Orangetool/build-status/master"><img src="https://scrutinizer-ci.com/g/Moduland/Orangetool/badges/build.png?b=master"></a>
 <a href="https://zenodo.org/badge/latestdoi/80631089"><img src="https://zenodo.org/badge/80631089.svg" alt="DOI"></a>
-<a href="https://requires.io/github/Moduland/Orangetool/requirements/?branch=master"><img src="https://requires.io/github/Moduland/Orangetool/requirements.svg?branch=master" alt="Requirements Status" /></a>
 <a href="https://badge.fury.io/py/orangetool"><img src="https://badge.fury.io/py/orangetool.svg"></a>
-<a href="http://moduland.github.io/Orangetool/doc"><img src="https://img.shields.io/badge/doc-latest-orange.svg"></a>
+<a href="https://anaconda.org/sepandhaghighi/orangetool"><img src="https://anaconda.org/sepandhaghighi/orangetool/badges/version.svg"></a>
 <a href="http://www.orangetool.ir"><img src="https://img.shields.io/website-up-down-green-red/http/shields.io.svg?label=website"></a>
 
 </div>
 
 ----------
 
+## Table of contents					
+   * [Overview](https://github.com/Moduland/Orangetool#overview)
+   * [Installation](https://github.com/Moduland/Orangetool#installation)
+   * [Usage](https://github.com/Moduland/Orangetool#usage)
+   		* [IP Functions](https://github.com/Moduland/Orangetool#ip-functions)
+   		* [RAM Functions](https://github.com/Moduland/Orangetool#ram-functions)
+   		* [Storage Functions](https://github.com/Moduland/Orangetool#storage-functions)	
+   		* [Display Functions](https://github.com/Moduland/Orangetool#display-functions)
+   		* [System Functions](https://github.com/Moduland/Orangetool#system-functions)
+   * [Issues & Bug Reports](https://github.com/Moduland/Orangetool#issues--bug-reports)
+   * [Supported Device List](https://github.com/Moduland/Orangetool/blob/master/Supported_Device_List.md)
+   * [Dependencies](https://github.com/Moduland/Orangetool#dependencies)
+   * [Contribution](https://github.com/Moduland/Orangetool/blob/master/.github/CONTRIBUTING.md)
+   * [Cite](https://github.com/Moduland/Orangetool#cite)
+   * [Authors](https://github.com/Moduland/Orangetool/blob/master/AUTHORS.md)
+   * [License](https://github.com/Moduland/Orangetool/blob/master/LICENSE)
+   * [Donate](https://github.com/Moduland/Orangetool#donate-to-our-project)
+   * [Changelog](https://github.com/Moduland/Orangetool/blob/master/CHANGELOG.md)
+   * [Code of Conduct](https://github.com/Moduland/Orangetool/blob/master/.github/CODE_OF_CONDUCT.md)
 
-# Orangetool
+## Overview
 	
-Controller Functions For Single-Board Computers				
+Control functions for Single-Board computers				
 
 Tested on [Lubuntu](http://lubuntu.me/)
 
-[Supported Device List](Supported_Device_List.md)
+<table>
+	<tr> 
+		<td align="center">Open Hub</td>
+		<td align="center"><a href="https://www.openhub.net/p/orangetool"><img src="https://www.openhub.net/p/orangetool/widgets/project_thin_badge.gif"></a></td>	
+	</tr>
+	<tr>
+		<td align="center">PyPI Counter</td>
+		<td align="center"><a href="http://pepy.tech/count/orangetool"><img src="http://pepy.tech/badge/orangetool"></a></td>
+	</tr>
+	<tr>
+		<td align="center">Github Stars</td>
+		<td align="center"><a href="https://github.com/Moduland/Orangetool"><img src="https://img.shields.io/github/stars/Moduland/Orangetool.svg?style=social&label=Stars"></a></td>
+	</tr>
+</table>
+
+
+
+<table>
+	<tr> 
+		<td align="center">Branch</td>
+		<td align="center">master</td>	
+		<td align="center">dev</td>	
+	</tr>
+	<tr>
+		<td align="center">Travis</td>
+		<td align="center"><a href="https://travis-ci.org/Moduland/Orangetool"><img src="https://travis-ci.org/Moduland/Orangetool.svg?branch=master"></a></td>
+		<td align="center"><a href="https://travis-ci.org/Moduland/Orangetool"><img src="https://travis-ci.org/Moduland/Orangetool.svg?branch=dev"></a></td>
+	</tr>
+</table>
+
+
+<table>
+	<tr> 
+		<td align="center">Code Quality</td>
+		<td align="center"><a href="https://www.codacy.com/app/sepand-haghighi/Orangetool?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Moduland/Orangetool&amp;utm_campaign=Badge_Grade"><img src="https://api.codacy.com/project/badge/Grade/ad9374e6e7b24a63b34d6a4f419497ac"/></a></td>	
+		<td align="center"><a href="https://www.codefactor.io/repository/github/moduland/orangetool"><img src="https://www.codefactor.io/repository/github/moduland/orangetool/badge" alt="CodeFactor" /></a></td>		
+	</tr>
+</table>
 
 ----------
 	
 By [Moduland Co](http://www.moduland.ir)		
 
-----------
-
-- [IP Functions](#ip-functions)
-- [RAM Functions](#ram-functions)
-- [Storage Functions](#storage-functions)	
-- [Display Functions](#display-functions)
-- [System Functions](#system-functions)		
-</hr>
-</hr>
 
 ## Installation
 ### Source Code
-- Download [Version 0.25](https://github.com/moduland/Orangetool/archive/v0.25.zip) or [Latest Source ](https://github.com/Moduland/Orangetool/archive/master.zip)
+- Download [Version 0.3](https://github.com/moduland/Orangetool/archive/v0.3.zip) or [Latest Source ](https://github.com/Moduland/Orangetool/archive/dev.zip)
 - `pip3 install -r requirements.txt` or `pip install -r requirements.txt` (Need root access)	
 - `python3 setup.py install` or `python setup.py install`
 ### PyPI
 
 - Check [Python Packaging User Guide](https://packaging.python.org/installing/)     
-- `pip3 install orangetool`
+- `pip3 install orangetool==0.3` or `pip install orangetool==0.3` (Need root access)	
 <div align="center">
 <a href="https://asciinema.org/a/141548" target="_blank"><img src="https://asciinema.org/a/141548.png" /></a>
 </div>
+
+### Conda
+
+- Check [Conda Managing Package](https://conda.io/docs/user-guide/tasks/manage-pkgs.html#installing-packages-from-anaconda-org)
+- `conda install -c sepandhaghighi orangetool` (Need root access)
+
+### Easy install
+
+- Run `easy_install --upgrade orangetool` (Need root access)
+
+## Usage
 												
-## IP Functions
+### IP Functions
 
 ```python
 import orangetool
@@ -84,7 +138,7 @@ mac_dic=orangetool.mac() # return dict of all system net devices mac addresses
 
 ```
 
-## RAM Functions		
+### RAM Functions		
 
 ```python
  
@@ -110,7 +164,7 @@ orangetool.freeup() # To free pagecache, dentries and inodes and return freeuped
 
 ```
 
-## Storage Functions				
+### Storage Functions				
 
 ```python
 #1- mount_status
@@ -136,7 +190,7 @@ orangetool.mount("sda1","/mnt/usb1") # This function mount input device in input
 
 ```
 
-## Display Functions				
+### Display Functions				
 
 ```python
 #1- hdmi_on
@@ -153,7 +207,7 @@ orangetool.hdmi_size(1280,720) # this function change hdmi display resolution
 
 ```
 
-## System Functions				
+### System Functions				
 
 ```python
 #1- sleep
@@ -198,9 +252,11 @@ orangetool.check_update # Return True if new version is available
 
 
 - All of the functions in error state return `Error` String
-- local_ip() and global_ip() originally are available in ipz package [Link](http://github.com/sepandhaghighi/ipz)
-- RAM Functions in this version need psutil package
-- Some of this funtions need root access so it's better to run ```sudo -s``` before use this tool
+- `local_ip` and `global_ip` originally are available in ipz package [Link](http://github.com/sepandhaghighi/ipz)
+- RAM functions in this version need psutil package
+- Running `set_ip` function remotely will freeze your terminal so it's better to set `restart` parameter to True
+- Running `halt`,`restart` & `sleep` functions remotely will freeze your terminal
+- Some of funtions need root access so it's better to run ```sudo -s``` before use this tool
 
 
 
@@ -209,15 +265,21 @@ orangetool.check_update # Return True if new version is available
 Just fill an issue and describe it. We'll check it ASAP!							
 or send an email to [info@moduland.ir](mailto:info@moduland.ir "info@moduland.ir"). 
 
+## Dependencies
 
-## Contribution			
-
-You can fork the repository, improve or fix some part of it and then send the pull requests back if you want to see them here. I really appreciate that. ❤️			
-
-Remember to write a few tests for your code before sending pull requests. 			
+<table>
+	<tr> 
+		<td align="center">master</td>	
+		<td align="center">dev</td>	
+	</tr>
+	<tr>
+		<td align="center"><a href="https://requires.io/github/Moduland/Orangetool/requirements/?branch=master"><img src="https://requires.io/github/Moduland/Orangetool/requirements.svg?branch=master"></a></td>
+		<td align="center"><a href="https://requires.io/github/Moduland/Orangetool/requirements/?branch=dev"><img src="https://requires.io/github/Moduland/Orangetool/requirements.svg?branch=dev"></a></td>
+	</tr>
+</table>
 
 		
-## Citing
+## Cite
 If you use orangetool in your research , please cite this ;-)
 
 <blockquote>
