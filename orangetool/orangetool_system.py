@@ -30,9 +30,8 @@ def check_update(DEBUG=False):
         if float(new_version) > float(VERSION):
             print("New Version (" + new_version + ") Of Orangetool Is Available")
             return True
-        else:
-            print("Update!")
-            return False
+        print("Update!")
+        return False
     except Exception as e:
         if DEBUG:
             print(str(e))
