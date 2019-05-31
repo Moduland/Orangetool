@@ -3,14 +3,7 @@
 import subprocess as sub
 import time
 import requests
-logo = '''
-________                                      __                .__
-\_____  \____________    ____    ____   _____/  |_  ____   ____ |  |
- /   |   \_  __ \__  \  /    \  / ___\_/ __ \   __\/  _ \ /  _ \|  |
-/    |    \  | \// __ \|   |  \/ /_/  >  ___/|  | (  <_> |  <_> )  |__
-\_______  /__|  (____  /___|  /\___  / \___  >__|  \____/ \____/|____/
-        \/           \/     \//_____/      \/
-'''
+from art import tprint
 ip_pattern = r"(?:[0-9]{1,3}\.){3}[0-9]{1,3}"
 api_1 = "http://ipinfo.io/ip"
 VERSION = "0.25"
@@ -138,7 +131,7 @@ def version():
 
     :return: return orangetool-version number as string
     """
-    print(logo)
+    tprint("orangetool",font="bulbhead")
     return "orangetool-v" + VERSION
 
 
