@@ -252,8 +252,10 @@ orangetool.check_update # Return True if new version is available
 
 
 - All of the functions in error state return `Error` String
-- local_ip() and global_ip() originally are available in ipz package [Link](http://github.com/sepandhaghighi/ipz)
+- `local_ip` and `global_ip` originally are available in ipz package [Link](http://github.com/sepandhaghighi/ipz)
 - RAM functions in this version need psutil package
+- Running `set_ip` function remotely will freeze your terminal so it's better to set `restart` parameter to True
+- Running `halt`,`restart` & `sleep` functions remotely will freeze your terminal
 - Some of funtions need root access so it's better to run ```sudo -s``` before use this tool
 
 
