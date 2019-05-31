@@ -22,6 +22,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - `restart`, `halt` and `sleep` functions modified
 - `hdmi_on` and `hdmi_off` functions modified
 - `requirements.txt` modified
+- `DEVICE` parameter renamed to `device` in `set_ip` function
+- `restart` parameter added to `set_ip` function
 
 ## [0.25] - 2017-09-14
 ### Changed
