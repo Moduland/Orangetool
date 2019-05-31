@@ -6,7 +6,7 @@ import requests
 from art import tprint
 ip_pattern = r"(?:[0-9]{1,3}\.){3}[0-9]{1,3}"
 api_1 = "http://ipinfo.io/ip"
-VERSION = "0.25"
+VERSION = "0.3"
 UPDATE_URL = "http://www.orangetool.ir/version"
 
 

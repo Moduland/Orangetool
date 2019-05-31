@@ -4,7 +4,7 @@ import os
 import sys
 import codecs
 Failed = 0
-VERSION = "0.25"
+VERSION = "0.3"
 
 
 SETUP_ITEMS = [

@@ -29,13 +29,13 @@ def read_description():
 setup(
     name='orangetool',
     packages=['orangetool'],
-    version='0.25',
+    version='0.3',
     description='Some useful script for Orangepi/Raspberrypi boards',
     long_description=read_description(),
     author='Moduland Co',
     author_email='info@moduland.ir',
     url='https://github.com/Moduland/Orangetool',
-    download_url='https://github.com/Moduland/Orangetool/tarball/v0.25',
+    download_url='https://github.com/Moduland/Orangetool/tarball/v0.3',
     keywords="orangepi raspberrypi embedded-systems python",
     classifiers=[
         'Development Status :: 4 - Beta',
