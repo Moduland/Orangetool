@@ -1,7 +1,7 @@
 psutil==5.6.2
-requests==2.21.0
+requests==2.22.0
 setuptools==41.0.1
 vulture==1.0
-bandit==1.5.1
+bandit==2.22.0
 pydocstyle==3.0.0
 
