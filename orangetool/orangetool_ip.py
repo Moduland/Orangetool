@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 """Orangetool IP functions."""
+from .orangetool_system import restart as restart_func
 import subprocess as sub
 import socket
 import os
@@ -86,10 +87,12 @@ def global_ip(DEBUG=False):
         return "Error"
 
 
-def set_ip(ip, DEVICE="eth0", DEBUG=False):
+def set_ip(ip, restart=False, DEVICE="eth0", DEBUG=False):
     """
     Set static ip in interfaces file (need sudo).
 
+    :param restart : restart flag
+    :type restart : bool
     :param DEVICE: network device name
     :type DEVICE:str
     :param ip: static ip
@@ -118,6 +121,8 @@ iface device inet static
         file.close()
         sub.Popen(["ifdown", DEVICE, "&&", "ifup", DEVICE],
                   stderr=sub.PIPE, stdin=sub.PIPE, stdout=sub.PIPE)
+        if restart == True :
+            restart_func()
         return True
     except Exception as e:
         if DEBUG:
