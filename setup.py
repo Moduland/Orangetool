@@ -32,6 +32,7 @@ setup(
     version='0.3',
     description='Some useful script for Orangepi/Raspberrypi boards',
     long_description=read_description(),
+    long_description_content_type='text/markdown',
     author='Moduland Co',
     author_email='info@moduland.ir',
     url='https://github.com/Moduland/Orangetool',
