@@ -87,14 +87,14 @@ def global_ip(DEBUG=False):
         return "Error"
 
 
-def set_ip(ip, restart=False, DEVICE="eth0", DEBUG=False):
+def set_ip(ip, restart=False, device="eth0", DEBUG=False):
     """
     Set static ip in interfaces file (need sudo).
 
     :param restart : restart flag
     :type restart : bool
-    :param DEVICE: network device name
-    :type DEVICE:str
+    :param device: network device name
+    :type device:str
     :param ip: static ip
     :type ip :str
     :param DEBUG: flag for using Debug mode
@@ -112,14 +112,14 @@ iface device inet static
     '''
     try:
         if bool(re.match(ip_pattern, ip)) == False or ip.find(
-                "192.168.") == -1 or DEVICE not in mac().keys():
+                "192.168.") == -1 or device not in mac().keys():
             raise Exception("IP Formation Error")
         static_string = static_string.replace("ip", ip)
-        static_string = static_string.replace("device", DEVICE)
+        static_string = static_string.replace("device", device)
         file = open("/etc/network/interfaces", "w")
         file.write(static_string)
         file.close()
-        sub.Popen(["ifdown", DEVICE, "&&", "ifup", DEVICE],
+        sub.Popen(["ifdown", device, "&&", "ifup", device],
                   stderr=sub.PIPE, stdin=sub.PIPE, stdout=sub.PIPE)
         if restart == True :
             restart_func()
