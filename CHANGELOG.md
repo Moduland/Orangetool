@@ -5,7 +5,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
-## [0.30] - 2019-06-01
+## [0.35] - 2019-06-01
 ### Added
 - `version_check.py`
 - `CODE_OF_CONDUCT.md`
@@ -64,8 +64,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 - Some useful scripts for Orangepi/Raspberrypi boards
 
-[Unreleased]: https://github.com/Moduland/Orangetool/compare/v0.30...dev
-[0.30]: https://github.com/Moduland/Orangetool/compare/v0.25...v0.30
+[Unreleased]: https://github.com/Moduland/Orangetool/compare/v0.35...dev
+[0.35]: https://github.com/Moduland/Orangetool/compare/v0.25...v0.35
 [0.25]: https://github.com/Moduland/Orangetool/compare/v0.24...v0.25
 [0.24]: https://github.com/Moduland/Orangetool/compare/v0.23...v0.24
 [0.23]: https://github.com/Moduland/Orangetool/compare/v0.22...v0.23
