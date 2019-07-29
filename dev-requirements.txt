@@ -3,6 +3,6 @@ requests==2.22.0
 setuptools==41.0.1
 vulture==1.0
 bandit==1.6.2
-pydocstyle==3.0.0
+pydocstyle==4.0.0
 art==3.7
 
