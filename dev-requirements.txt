@@ -1,8 +1,9 @@
 psutil==5.6.3
 requests==2.22.0
-setuptools==41.0.1
-vulture==1.0
-bandit==1.6.2
-pydocstyle==3.0.0
 art==3.7
+setuptools>=40.8.0
+vulture>=1.0
+bandit>=1.5.1
+pydocstyle>=3.0.0
+
 
