@@ -245,7 +245,7 @@ orangetool.version() # return orangetool version for test
 
 #9- check_update
 
-orangetool.check_update # Return True if new version is available
+orangetool.check_update() # Return True if new version is available
 
 ```
 
