@@ -1,6 +1,6 @@
 psutil==5.7.2
 requests==2.24.0
-art==4.7
+art==4.8
 setuptools>=40.8.0
 vulture>=1.0
 bandit>=1.5.1
