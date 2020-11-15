@@ -1,4 +1,4 @@
-psutil==5.7.2
+psutil==5.7.3
 requests==2.24.0
 art==4.9
 setuptools>=40.8.0
