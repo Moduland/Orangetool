@@ -200,6 +200,16 @@ def sleep(DEBUG=False):
     """
     power_control("pm-suspend", DEBUG)
 
+def hibernate(DEBUG=False):
+    """
+    Shortcut for hibernate command (need sudo).
+
+    :param DEBUG: flag for using Debug mode
+    :type DEBUG:bool
+    :return: None
+    """
+    power_control("pm-hibernate", DEBUG)
+
 
 def halt(DEBUG=False):
     """

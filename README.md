@@ -214,38 +214,42 @@ orangetool.hdmi_size(1280,720) # this function change hdmi display resolution
 
 orangetool.sleep() # put system in sleep mode
 
-#2- halt
+#2- hibernate
+
+orangetool.hibernate() # put system in hibernate mode
+
+#3- halt
 
 orangetool.halt() # poweroff system
 
-#3- restart
+#4- restart
 
 orangetool.restart() # restart system
 
-#4- wakeup
+#5- wakeup
 
 orangetool.wakeup(day=1,hour=0,minute=1) # set rtc wakeuptime
 
-#5- get_temp
+#6- get_temp
 
 temp=orangetool.get_temp() # this function return cpu temperature as string
 
-#6- uptime
+#7- uptime
 
 time=orangetool.uptime() # this function return uptime of system
 
-#7- idletime
+#8- idletime
 
 time=orangetool.idletime() # this function return idle of system ( all cores)
 
 
-#8- version
+#9- version
 
 orangetool.version() # return orangetool version for test
 
-#9- check_update
+#10- check_update
 
-orangetool.check_update # Return True if new version is available
+orangetool.check_update() # Return True if new version is available
 
 ```
 
@@ -255,7 +259,7 @@ orangetool.check_update # Return True if new version is available
 - `local_ip` and `global_ip` originally are available in ipz package [Link](http://github.com/sepandhaghighi/ipz)
 - RAM functions in this version need psutil package
 - Running `set_ip` function remotely will freeze your terminal so it's better to set `restart` parameter to True
-- Running `halt`,`restart` & `sleep` functions remotely will freeze your terminal
+- Running `halt`,`restart`,`hibernate` & `sleep` functions remotely will freeze your terminal
 - Some of funtions need root access so it's better to run ```sudo -s``` before use this tool
 
 
