@@ -6,12 +6,12 @@ import string
 import random
 
 
-def mount_status(device_name, DEBUG=False):
+def mount_status(device_name, debug=False):
     """
     Return addresses of mounted memory devices in dev by device name.
 
-    :param DEBUG: flag for using Debug mode
-    :type DEBUG:bool
+    :param debug: flag for using Debug mode
+    :type debug:bool
     :return: list of memory devices
     """
     try:
@@ -27,17 +27,17 @@ def mount_status(device_name, DEBUG=False):
         else:
             return memory_list
     except Exception as e:
-        if DEBUG:
+        if debug:
             print(str(e))
         return "Error"
 
 
-def storage_status(DEBUG=False):
+def storage_status(debug=False):
     """
     Return all of the inserted memory and their status.
 
-    :param DEBUG: flag for using Debug mode
-    :type DEBUG:bool
+    :param debug: flag for using Debug mode
+    :type debug:bool
     :return: all of the inserted memory and their status as dictionary ( device name as keys and mount status (mounted_addresses as list and u --> unmounted) as values
     """
     try:
@@ -51,19 +51,19 @@ def storage_status(DEBUG=False):
             memory_status.append(mount_status(item))
         return dict(zip(memory_items, memory_status))
     except Exception as e:
-        if DEBUG:
+        if debug:
             print(str(e))
         return "Error"
 
 
-def unmount(ADDRESS, DEBUG=False):
+def unmount(ADDRESS, debug=False):
     """
     Unmount memory devices by addresses.
 
     :param ADDRESS: address of that device mount on
     :type ADDRESS:str
-    :param DEBUG: flag for using Debug mode
-    :type DEBUG:bool
+    :param debug: flag for using Debug mode
+    :type debug:bool
     :return: True if device unmount correctly and False other wise
     """
     try:
@@ -74,17 +74,17 @@ def unmount(ADDRESS, DEBUG=False):
             return True
         return False
     except Exception as e:
-        if DEBUG:
+        if debug:
             print(str(e))
         return "Error"
 
 
-def unmount_all(DEBUG=False):
+def unmount_all(debug=False):
     """
     Unmount all of the mounted devices.
 
-    :param DEBUG: flag for using Debug mode
-    :type DEBUG:bool
+    :param debug: flag for using Debug mode
+    :type debug:bool
     :return: return True if all of the mounted devices unmount correctly
     """
     try:
@@ -98,7 +98,7 @@ def unmount_all(DEBUG=False):
                     unmount(j)
         return True
     except Exception as e:
-        if DEBUG:
+        if debug:
             print(str(e))
         return "Error"
 
@@ -119,16 +119,16 @@ def random_generator(number):
     return response
 
 
-def mount(device_name, mount_address=None, DEBUG=False):
+def mount(device_name, mount_address=None, debug=False):
     """
     Mount memory devices by addresses.
 
     :param device_name: name of device for mounted example = sda1
     :param mount_address: address for mounting device example = /mnt/usb , default value is None in this case function generate random number for mount folder name
-    :param DEBUG: flag for using Debug mode
+    :param debug: flag for using Debug mode
     :type device_name:str
     :type mount_address:str
-    :type DEBUG:bool
+    :type debug:bool
     :return: True if device mount correctly and False other wise
     """
     try:
@@ -148,6 +148,6 @@ def mount(device_name, mount_address=None, DEBUG=False):
             return True
         return False
     except Exception as e:
-        if DEBUG:
+        if debug:
             print(str(e))
         return "Error"
