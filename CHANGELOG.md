@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Changed
 - `dev-requirements.txt` modified
 - Test system modified
+- `DEBUG` parameter renamed to `debug`
 ## [0.35] - 2019-06-01
 ### Added
 - `version_check.py`
