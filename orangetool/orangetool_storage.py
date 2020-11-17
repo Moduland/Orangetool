@@ -10,7 +10,7 @@ def mount_status(device_name, debug=False):
     """
     Return addresses of mounted memory devices in dev by device name.
 
-    :param debug: flag for using Debug mode
+    :param debug: flag for using debug mode
     :type debug:bool
     :return: list of memory devices
     """
@@ -36,7 +36,7 @@ def storage_status(debug=False):
     """
     Return all of the inserted memory and their status.
 
-    :param debug: flag for using Debug mode
+    :param debug: flag for using debug mode
     :type debug:bool
     :return: all of the inserted memory and their status as dictionary ( device name as keys and mount status (mounted_addresses as list and u --> unmounted) as values
     """
@@ -62,7 +62,7 @@ def unmount(ADDRESS, debug=False):
 
     :param ADDRESS: address of that device mount on
     :type ADDRESS:str
-    :param debug: flag for using Debug mode
+    :param debug: flag for using debug mode
     :type debug:bool
     :return: True if device unmount correctly and False other wise
     """
@@ -83,7 +83,7 @@ def unmount_all(debug=False):
     """
     Unmount all of the mounted devices.
 
-    :param debug: flag for using Debug mode
+    :param debug: flag for using debug mode
     :type debug:bool
     :return: return True if all of the mounted devices unmount correctly
     """
@@ -125,7 +125,7 @@ def mount(device_name, mount_address=None, debug=False):
 
     :param device_name: name of device for mounted example = sda1
     :param mount_address: address for mounting device example = /mnt/usb , default value is None in this case function generate random number for mount folder name
-    :param debug: flag for using Debug mode
+    :param debug: flag for using debug mode
     :type device_name:str
     :type mount_address:str
     :type debug:bool

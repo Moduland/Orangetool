@@ -40,7 +40,7 @@ def local_ip(debug=False):
     """
     Return local ip of computer in windows by socket module and in unix with hostname command in shell.
 
-    :param debug:flag for using Debug Mode
+    :param debug:flag for using debug Mode
     :type debug:bool
     :return: local ip as string
     """
@@ -71,7 +71,7 @@ def global_ip(debug=False):
     """
     Return ip with by http://ipinfo.io/ip api.
 
-    :param debug:flag for using Debug mode
+    :param debug:flag for using debug mode
     :type debug:bool
     :return: global ip as string
     """
@@ -97,7 +97,7 @@ def set_ip(ip, restart=False, device="eth0", debug=False):
     :type device:str
     :param ip: static ip
     :type ip :str
-    :param debug: flag for using Debug mode
+    :param debug: flag for using debug mode
     :type debug:bool
     :return: True in successful
     """
@@ -136,7 +136,7 @@ def ping(ip, packet_number=3, debug=False):
 
     :param ip: target ip
     :param packet_number: number of packet to size
-    :param debug: flag for using Debug mode
+    :param debug: flag for using debug mode
     :type ip :str
     :type packet_number:int
     :type debug:bool
@@ -164,7 +164,7 @@ def mac(debug=False):
     """
     Return mac addresses of net devices.
 
-    :param debug: flag for using Debug mode
+    :param debug: flag for using debug mode
     :type debug:bool
     :return: return mac addresses as dict with name as keys and mac addresses as values
     """

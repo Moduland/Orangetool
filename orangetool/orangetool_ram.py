@@ -79,7 +79,7 @@ def freeup(debug=False):
     """
     To free pagecache, dentries and inodes.
 
-    :param debug: flag for using Debug mode
+    :param debug: flag for using debug mode
     :type debug:bool
     :return: Amount of freeuped ram as string and converted by convert_bytes()
     """

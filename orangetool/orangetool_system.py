@@ -14,7 +14,7 @@ def check_update(debug=False):
     """
     Check orangetool site for new version.
 
-    :param debug: flag for using Debug mode
+    :param debug: flag for using debug mode
     :type debug:bool
     :return: True if new version is available
     """
@@ -35,7 +35,7 @@ def get_temp(Zone=0, debug=False):
     """
     Read cpu temperature.
 
-    :param debug : flag for using Debug mode
+    :param debug : flag for using debug mode
     :param Zone : thermal Zone Index
     :type debug:bool
     :type Zone:int
@@ -93,7 +93,7 @@ def uptime(debug=False):
     """
     Return system uptime.
 
-    :param debug: flag for using Debug mode
+    :param debug: flag for using debug mode
     :type debug:bool
     :return: system uptime as string
     """
@@ -111,7 +111,7 @@ def idletime(debug=False):
     """
     Return system idletime.
 
-    :param debug: flag for using Debug mode
+    :param debug: flag for using debug mode
     :type debug:bool
     :return: system idle as string
     """
@@ -142,7 +142,7 @@ def wakeup(day=0, hour=0, minute=0, debug=False):
     :param day: days for wakeup
     :param hour: hout for wakeup
     :param minute: minute for wakeup
-    :param debug: flag for using Debug mode
+    :param debug: flag for using debug mode
     :type day:int
     :type hour:int
     :type minute:int
@@ -171,7 +171,7 @@ def power_control(command, debug=False):
 
     :param command: input command
     :type command: str
-    :param debug: flag for using Debug mode
+    :param debug: flag for using debug mode
     :type debug: bool
     :return: None
     """
@@ -194,7 +194,7 @@ def sleep(debug=False):
     """
     Shortcut for sleep command (need sudo).
 
-    :param debug: flag for using Debug mode
+    :param debug: flag for using debug mode
     :type debug:bool
     :return: None
     """
@@ -204,7 +204,7 @@ def hibernate(debug=False):
     """
     Shortcut for hibernate command (need sudo).
 
-    :param debug: flag for using Debug mode
+    :param debug: flag for using debug mode
     :type debug:bool
     :return: None
     """
@@ -215,7 +215,7 @@ def halt(debug=False):
     """
     Shortcut for poweroff (need sudo).
 
-    :param debug: flag for using Debug mode
+    :param debug: flag for using debug mode
     :type debug:bool
     :return: None
     """
@@ -226,7 +226,7 @@ def restart(debug=False):
     """
     Shortcut for reboot (need sudo).
 
-    :param debug: flag for using Debug mode
+    :param debug: flag for using debug mode
     :type debug:bool
     :return: None
     """

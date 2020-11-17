@@ -8,7 +8,7 @@ def hdmi_controller(command, debug=False):
 
     :param command: inpurt command
     :type command: bool
-    :param debug: flag for using Debug mode
+    :param debug: flag for using debug mode
     :type debug: bool
     :return: bool
     """
@@ -30,7 +30,7 @@ def hdmi_on(debug=False):
     """
     Turn on hdmi port (need sudo -s).
 
-    :param debug: flag for using Debug mode
+    :param debug: flag for using debug mode
     :type debug:bool
     :return: bool
     """
@@ -41,7 +41,7 @@ def hdmi_off(debug=False):
     """
     Turn off hdmi port (need sudo -s).
 
-    :param debug: flag for using Debug mode
+    :param debug: flag for using debug mode
     :type debug:bool
     :return: bool
     """
@@ -54,7 +54,7 @@ def hdmi_size(v=None, h=None, debug=False):
 
     :param v: vertical line
     :param h: horizental line
-    :param debug: flag for using Debug mode
+    :param debug: flag for using debug mode
     :type v : int
     :type h:int
     :type debug:bool
