@@ -6,7 +6,7 @@ import requests
 from art import tprint
 ip_pattern = r"(?:[0-9]{1,3}\.){3}[0-9]{1,3}"
 api_1 = "http://ipinfo.io/ip"
-VERSION = "0.35"
+ORANGETOOL_VERSION = "0.35"
 UPDATE_URL = "http://www.orangetool.ir/version"
 
 
@@ -20,7 +20,7 @@ def check_update(debug=False):
     """
     try:
         new_version = requests.get(UPDATE_URL).text
-        if float(new_version) > float(VERSION):
+        if float(new_version) > float(ORANGETOOL_VERSION):
             print("New Version (" + new_version + ") Of Orangetool Is Available")
             return True
         print("Update!")
@@ -132,7 +132,7 @@ def version():
     :return: return orangetool-version number as string
     """
     tprint("orangetool", font="bulbhead")
-    tprint("v"+VERSION,font="bulbhead")
+    tprint("v"+ORANGETOOL_VERSION,font="bulbhead")
 
 
 def wakeup(day=0, hour=0, minute=0, debug=False):
