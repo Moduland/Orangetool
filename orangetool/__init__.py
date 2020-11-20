@@ -7,4 +7,4 @@ from .orangetool_system import *
 from .orangetool_ram import *
 from .orangetool_storage import *
 
-__version__ = VERSION
+__version__ = ORANGETOOL_VERSION
