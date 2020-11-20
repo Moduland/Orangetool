@@ -4,8 +4,7 @@ import subprocess as sub
 import time
 import requests
 from art import tprint
-ip_pattern = r"(?:[0-9]{1,3}\.){3}[0-9]{1,3}"
-api_1 = "http://ipinfo.io/ip"
+
 ORANGETOOL_VERSION = "0.35"
 UPDATE_URL = "http://www.orangetool.ir/version"
 

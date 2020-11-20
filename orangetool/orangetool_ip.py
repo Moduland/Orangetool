@@ -7,8 +7,8 @@ import os
 import requests
 import re
 import platform
-ip_pattern = r"(?:[0-9]{1,3}\.){3}[0-9]{1,3}"
-api_1 = "http://ipinfo.io/ip"
+IP_PATTERN = r"(?:[0-9]{1,3}\.){3}[0-9]{1,3}"
+GLOBAL_IP_API_1 = "http://ipinfo.io/ip"
 
 
 def internet(host="8.8.8.8", port=53, timeout=3):
@@ -77,8 +77,8 @@ def global_ip(debug=False):
     """
     try:
         new_session = requests.session()
-        response = new_session.get(api_1)
-        ip_list = re.findall(ip_pattern, response.text)
+        response = new_session.get(GLOBAL_IP_API_1)
+        ip_list = re.findall(IP_PATTERN, response.text)
         new_session.close()
         return ip_list[0]
     except Exception as e:
@@ -111,7 +111,7 @@ iface device inet static
         dns-nameservers 8.8.8.8 8.8.4.4
     '''
     try:
-        if bool(re.match(ip_pattern, ip)) == False or ip.find(
+        if bool(re.match(IP_PATTERN, ip)) == False or ip.find(
                 "192.168.") == -1 or device not in mac().keys():
             raise Exception("IP Formation Error")
         static_string = static_string.replace("ip", ip)
@@ -143,7 +143,7 @@ def ping(ip, packet_number=3, debug=False):
     :return: a boolean value (True if ip is available and False otherwise)
     """
     try:
-        if re.match(ip_pattern, ip) == False:
+        if re.match(IP_PATTERN, ip) == False:
             raise Exception("IP Formation Error")
         output = str(list(sub.Popen(["ping",
                                      ip,
