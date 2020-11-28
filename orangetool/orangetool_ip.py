@@ -7,8 +7,8 @@ import os
 import requests
 import re
 import platform
-ip_pattern = r"(?:[0-9]{1,3}\.){3}[0-9]{1,3}"
-api_1 = "http://ipinfo.io/ip"
+IP_PATTERN = r"(?:[0-9]{1,3}\.){3}[0-9]{1,3}"
+GLOBAL_IP_API_1 = "http://ipinfo.io/ip"
 
 
 def internet(host="8.8.8.8", port=53, timeout=3):
@@ -36,12 +36,12 @@ def internet(host="8.8.8.8", port=53, timeout=3):
         return False
 
 
-def local_ip(DEBUG=False):
+def local_ip(debug=False):
     """
     Return local ip of computer in windows by socket module and in unix with hostname command in shell.
 
-    :param DEBUG:flag for using Debug Mode
-    :type DEBUG:bool
+    :param debug:flag for using debug Mode
+    :type debug:bool
     :return: local ip as string
     """
     try:
@@ -62,32 +62,32 @@ def local_ip(DEBUG=False):
         return "Error"
 
     except Exception as e:
-        if DEBUG:
+        if debug:
             print(str(e))
         return "Error"
 
 
-def global_ip(DEBUG=False):
+def global_ip(debug=False):
     """
     Return ip with by http://ipinfo.io/ip api.
 
-    :param DEBUG:flag for using Debug mode
-    :type DEBUG:bool
+    :param debug:flag for using debug mode
+    :type debug:bool
     :return: global ip as string
     """
     try:
         new_session = requests.session()
-        response = new_session.get(api_1)
-        ip_list = re.findall(ip_pattern, response.text)
+        response = new_session.get(GLOBAL_IP_API_1)
+        ip_list = re.findall(IP_PATTERN, response.text)
         new_session.close()
         return ip_list[0]
     except Exception as e:
-        if DEBUG:
+        if debug:
             print(str(e))
         return "Error"
 
 
-def set_ip(ip, restart=False, device="eth0", DEBUG=False):
+def set_ip(ip, restart=False, device="eth0", debug=False):
     """
     Set static ip in interfaces file (need sudo).
 
@@ -97,8 +97,8 @@ def set_ip(ip, restart=False, device="eth0", DEBUG=False):
     :type device:str
     :param ip: static ip
     :type ip :str
-    :param DEBUG: flag for using Debug mode
-    :type DEBUG:bool
+    :param debug: flag for using debug mode
+    :type debug:bool
     :return: True in successful
     """
     static_string = '''
@@ -111,7 +111,7 @@ iface device inet static
         dns-nameservers 8.8.8.8 8.8.4.4
     '''
     try:
-        if bool(re.match(ip_pattern, ip)) == False or ip.find(
+        if bool(re.match(IP_PATTERN, ip)) == False or ip.find(
                 "192.168.") == -1 or device not in mac().keys():
             raise Exception("IP Formation Error")
         static_string = static_string.replace("ip", ip)
@@ -125,25 +125,25 @@ iface device inet static
             restart_func()
         return True
     except Exception as e:
-        if DEBUG:
+        if debug:
             print(str(e))
         return "Error"
 
 
-def ping(ip, packet_number=3, DEBUG=False):
+def ping(ip, packet_number=3, debug=False):
     """
     Ping ip and return True if this ip is available and False otherwise.
 
     :param ip: target ip
     :param packet_number: number of packet to size
-    :param DEBUG: flag for using Debug mode
+    :param debug: flag for using debug mode
     :type ip :str
     :type packet_number:int
-    :type DEBUG:bool
+    :type debug:bool
     :return: a boolean value (True if ip is available and False otherwise)
     """
     try:
-        if re.match(ip_pattern, ip) == False:
+        if re.match(IP_PATTERN, ip) == False:
             raise Exception("IP Formation Error")
         output = str(list(sub.Popen(["ping",
                                      ip,
@@ -155,17 +155,17 @@ def ping(ip, packet_number=3, DEBUG=False):
             return True
         return False
     except Exception as e:
-        if DEBUG:
+        if debug:
             print(str(e))
         return "Error"
 
 
-def mac(DEBUG=False):
+def mac(debug=False):
     """
     Return mac addresses of net devices.
 
-    :param DEBUG: flag for using Debug mode
-    :type DEBUG:bool
+    :param debug: flag for using debug mode
+    :type debug:bool
     :return: return mac addresses as dict with name as keys and mac addresses as values
     """
     try:
@@ -178,6 +178,6 @@ def mac(DEBUG=False):
             mac_addr.close()
         return dict(zip(dir_list, mac_list))
     except Exception as e:
-        if DEBUG:
+        if debug:
             print(str(e))
         return "Error"

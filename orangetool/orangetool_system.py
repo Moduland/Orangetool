@@ -4,40 +4,39 @@ import subprocess as sub
 import time
 import requests
 from art import tprint
-ip_pattern = r"(?:[0-9]{1,3}\.){3}[0-9]{1,3}"
-api_1 = "http://ipinfo.io/ip"
-VERSION = "0.35"
+
+ORANGETOOL_VERSION = "0.35"
 UPDATE_URL = "http://www.orangetool.ir/version"
 
 
-def check_update(DEBUG=False):
+def check_update(debug=False):
     """
     Check orangetool site for new version.
 
-    :param DEBUG: flag for using Debug mode
-    :type DEBUG:bool
+    :param debug: flag for using debug mode
+    :type debug:bool
     :return: True if new version is available
     """
     try:
         new_version = requests.get(UPDATE_URL).text
-        if float(new_version) > float(VERSION):
+        if float(new_version) > float(ORANGETOOL_VERSION):
             print("New Version (" + new_version + ") Of Orangetool Is Available")
             return True
         print("Update!")
         return False
     except Exception as e:
-        if DEBUG:
+        if debug:
             print(str(e))
         return "Error"
 
 
-def get_temp(Zone=0, DEBUG=False):
+def get_temp(Zone=0, debug=False):
     """
     Read cpu temperature.
 
-    :param DEBUG : flag for using Debug mode
+    :param debug : flag for using debug mode
     :param Zone : thermal Zone Index
-    :type DEBUG:bool
+    :type debug:bool
     :type Zone:int
     :return: board temp as string in celsius
     """
@@ -52,7 +51,7 @@ def get_temp(Zone=0, DEBUG=False):
         # else:
         # return "Error"
     except Exception as e:
-        if DEBUG:
+        if debug:
             print(str(e))
         return "Error"
 
@@ -89,12 +88,12 @@ def time_convert(input_string):
         zero_insert(str(input_minute)) + " minutes, " + zero_insert(str(input_sec)) + " seconds"
 
 
-def uptime(DEBUG=False):
+def uptime(debug=False):
     """
     Return system uptime.
 
-    :param DEBUG: flag for using Debug mode
-    :type DEBUG:bool
+    :param debug: flag for using debug mode
+    :type debug:bool
     :return: system uptime as string
     """
     try:
@@ -102,17 +101,17 @@ def uptime(DEBUG=False):
         response = command.read()
         return time_convert(response[:-1].split(" ")[0])
     except Exception as e:
-        if DEBUG:
+        if debug:
             print(str(e))
         return "Error"
 
 
-def idletime(DEBUG=False):
+def idletime(debug=False):
     """
     Return system idletime.
 
-    :param DEBUG: flag for using Debug mode
-    :type DEBUG:bool
+    :param debug: flag for using debug mode
+    :type debug:bool
     :return: system idle as string
     """
     try:
@@ -120,7 +119,7 @@ def idletime(DEBUG=False):
         response = command.read()
         return time_convert(response[:-1].split(" ")[1])
     except Exception as e:
-        if DEBUG:
+        if debug:
             print(str(e))
         return "Error"
 
@@ -132,21 +131,21 @@ def version():
     :return: return orangetool-version number as string
     """
     tprint("orangetool", font="bulbhead")
-    tprint("v"+VERSION,font="bulbhead")
+    tprint("v"+ORANGETOOL_VERSION,font="bulbhead")
 
 
-def wakeup(day=0, hour=0, minute=0, DEBUG=False):
+def wakeup(day=0, hour=0, minute=0, debug=False):
     """
     Set wakeup time for kernel RTC (need sudo).
 
     :param day: days for wakeup
     :param hour: hout for wakeup
     :param minute: minute for wakeup
-    :param DEBUG: flag for using Debug mode
+    :param debug: flag for using debug mode
     :type day:int
     :type hour:int
     :type minute:int
-    :type DEBUG:bool
+    :type debug:bool
     :return: bool
     """
     try:
@@ -160,19 +159,19 @@ def wakeup(day=0, hour=0, minute=0, DEBUG=False):
         file.close()
         return True
     except Exception as e:
-        if DEBUG:
+        if debug:
             print(str(e))
         return "Error"
 
 
-def power_control(command, DEBUG=False):
+def power_control(command, debug=False):
     """
     Control different power options.
 
     :param command: input command
     :type command: str
-    :param DEBUG: flag for using Debug mode
-    :type DEBUG: bool
+    :param debug: flag for using debug mode
+    :type debug: bool
     :return: None
     """
     try:
@@ -185,49 +184,49 @@ def power_control(command, DEBUG=False):
         if len(response[1]) > 0:
             raise Exception('Root Error')
     except Exception as e:
-        if DEBUG:
+        if debug:
             print(str(e))
         return "Error"
 
 
-def sleep(DEBUG=False):
+def sleep(debug=False):
     """
     Shortcut for sleep command (need sudo).
 
-    :param DEBUG: flag for using Debug mode
-    :type DEBUG:bool
+    :param debug: flag for using debug mode
+    :type debug:bool
     :return: None
     """
-    power_control("pm-suspend", DEBUG)
+    power_control("pm-suspend", debug)
 
-def hibernate(DEBUG=False):
+def hibernate(debug=False):
     """
     Shortcut for hibernate command (need sudo).
 
-    :param DEBUG: flag for using Debug mode
-    :type DEBUG:bool
+    :param debug: flag for using debug mode
+    :type debug:bool
     :return: None
     """
-    power_control("pm-hibernate", DEBUG)
+    power_control("pm-hibernate", debug)
 
 
-def halt(DEBUG=False):
+def halt(debug=False):
     """
     Shortcut for poweroff (need sudo).
 
-    :param DEBUG: flag for using Debug mode
-    :type DEBUG:bool
+    :param debug: flag for using debug mode
+    :type debug:bool
     :return: None
     """
-    power_control("poweroff", DEBUG)
+    power_control("poweroff", debug)
 
 
-def restart(DEBUG=False):
+def restart(debug=False):
     """
     Shortcut for reboot (need sudo).
 
-    :param DEBUG: flag for using Debug mode
-    :type DEBUG:bool
+    :param debug: flag for using debug mode
+    :type debug:bool
     :return: None
     """
-    power_control("reboot", DEBUG)
+    power_control("reboot", debug)

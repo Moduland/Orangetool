@@ -75,12 +75,12 @@ def ram_percent():
     return str(response[2]) + " %"
 
 
-def freeup(DEBUG=False):
+def freeup(debug=False):
     """
     To free pagecache, dentries and inodes.
 
-    :param DEBUG: flag for using Debug mode
-    :type DEBUG:bool
+    :param debug: flag for using debug mode
+    :type debug:bool
     :return: Amount of freeuped ram as string and converted by convert_bytes()
     """
     try:
@@ -94,6 +94,6 @@ def freeup(DEBUG=False):
             return convert_bytes(freeuped_ram)
         return convert_bytes(0)
     except Exception as e:
-        if DEBUG:
+        if debug:
             print(str(e))
         return "Error"
