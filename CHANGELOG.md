@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - `FUNDING.yml`
 - `__version__` variable
 - `hibernate` function
+- `usb_control`, `usb_on` and `usb_off` functions
 ### Changed
 - `dev-requirements.txt` modified
 - Test system modified
