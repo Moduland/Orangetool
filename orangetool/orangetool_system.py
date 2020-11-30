@@ -131,7 +131,7 @@ def version():
     :return: return orangetool-version number as string
     """
     tprint("orangetool", font="bulbhead")
-    tprint("v"+ORANGETOOL_VERSION,font="bulbhead")
+    tprint("v" + ORANGETOOL_VERSION, font="bulbhead")
 
 
 def wakeup(day=0, hour=0, minute=0, debug=False):
@@ -199,6 +199,7 @@ def sleep(debug=False):
     """
     power_control("pm-suspend", debug)
 
+
 def hibernate(debug=False):
     """
     Shortcut for hibernate command (need sudo).
@@ -230,4 +231,3 @@ def restart(debug=False):
     :return: None
     """
     power_control("reboot", debug)
-

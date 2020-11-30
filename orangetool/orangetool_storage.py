@@ -152,6 +152,7 @@ def mount(device_name, mount_address=None, debug=False):
             print(str(e))
         return "Error"
 
+
 def usb_control(code, debug=False):
     """
     Control different usb options.
@@ -176,6 +177,7 @@ def usb_control(code, debug=False):
             print(str(e))
         return "Error"
 
+
 def usb_on(debug=False):
     """
     Shortcut for enable usb (need sudo).
@@ -184,7 +186,8 @@ def usb_on(debug=False):
     :type debug:bool
     :return: None
     """
-    usb_control("777",debug)
+    usb_control("777", debug)
+
 
 def usb_off(debug=False):
     """
