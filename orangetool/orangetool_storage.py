@@ -165,7 +165,7 @@ def usb_control(code, debug=False):
     """
     try:
         command = sub.Popen(
-            "chmod {0} /media/".format(code),
+            ["chmod", code ,"/media/"],
             stderr=sub.PIPE,
             stdout=sub.PIPE,
             stdin=sub.PIPE)
