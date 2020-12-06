@@ -151,3 +151,50 @@ def mount(device_name, mount_address=None, debug=False):
         if debug:
             print(str(e))
         return "Error"
+
+
+def usb_control(code, debug=False):
+    """
+    Control different usb options.
+
+    :param code: permission code
+    :type code: str
+    :param debug: flag for using debug mode
+    :type debug: bool
+    :return: None
+    """
+    try:
+        command = sub.Popen(
+            ["chmod", "-R", code,"/media/"],
+            stderr=sub.PIPE,
+            stdout=sub.PIPE,
+            stdin=sub.PIPE)
+        response = list(command.communicate())
+        if len(response[1]) > 0:
+            raise Exception('Root Error')
+    except Exception as e:
+        if debug:
+            print(str(e))
+        return "Error"
+
+
+def usb_on(debug=False):
+    """
+    Shortcut for enable usb (need sudo).
+
+    :param debug: flag for using debug mode
+    :type debug:bool
+    :return: None
+    """
+    usb_control("777", debug)
+
+
+def usb_off(debug=False):
+    """
+    Shortcut for disable usb (need sudo).
+
+    :param debug: flag for using debug mode
+    :type debug:bool
+    :return: None
+    """
+    usb_control("000", debug)

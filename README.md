@@ -188,6 +188,14 @@ orangetool.unmount_all() #This function unmount all of the mounted devices
 
 orangetool.mount("sda1","/mnt/usb1") # This function mount input device in input addresses
 
+#6- usb_on
+
+orangetool.usb_on() # This function enable USB
+
+#7- usb_off
+
+orangetool.usb_off() # This function disable USB
+
 ```
 
 ### Display Functions				
