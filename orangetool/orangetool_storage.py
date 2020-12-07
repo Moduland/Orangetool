@@ -3,8 +3,8 @@
 import subprocess as sub
 import os
 import string
-import random
 from .orangetool_params import GENERAL_ERROR_MESSAGE, ROOT_ERROR_MESSAGE
+from .orangetool_utils import random_generator
 
 
 def mount_status(device_name, debug=False):
@@ -104,23 +104,6 @@ def unmount_all(debug=False):
         if debug:
             print(str(e))
         return GENERAL_ERROR_MESSAGE
-
-
-def random_generator(number):
-    """
-    Generate random number.
-
-    :param number: random number digits
-    :type number: int
-    :return: random number as str
-    """
-    response = ""
-    i = 0
-    while(i < number):
-        i += 1
-        response += str(random.randint(0, 9))
-    return response
-
 
 def mount(device_name, mount_address=None, debug=False):
     """

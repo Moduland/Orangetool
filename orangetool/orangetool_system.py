@@ -2,6 +2,7 @@
 """Orangetool system functions."""
 import subprocess as sub
 from .orangetool_params import ORANGETOOL_VERSION, UPDATE_URL, GENERAL_ERROR_MESSAGE, ROOT_ERROR_MESSAGE
+from .orangetool_utils import time_convert
 import time
 import requests
 from art import tprint
@@ -52,38 +53,6 @@ def get_temp(zone=0, debug=False):
         if debug:
             print(str(e))
         return GENERAL_ERROR_MESSAGE
-
-
-def zero_insert(input_string):
-    """
-    Get a string as input if input is one digit add a zero.
-
-    :param input_string: input digit az string
-    :type input_string:str
-    :return: modified output as str
-    """
-    if len(input_string) == 1:
-        return "0" + input_string
-    return input_string
-
-
-def time_convert(input_string):
-    """
-    Convert input_string from sec to DD,HH,MM,SS Format.
-
-    :param input_string: input time string  in sec
-    :type input_string:str
-    :return: converted time as string
-    """
-    input_sec = float(input_string)
-    input_minute = input_sec // 60
-    input_sec = int(input_sec - input_minute * 60)
-    input_hour = input_minute // 60
-    input_minute = int(input_minute - input_hour * 60)
-    input_day = int(input_hour // 24)
-    input_hour = int(input_hour - input_day * 24)
-    return zero_insert(str(input_day)) + " days, " + zero_insert(str(input_hour)) + " hour, " + \
-        zero_insert(str(input_minute)) + " minutes, " + zero_insert(str(input_sec)) + " seconds"
 
 def time_control(mode="uptime",debug=False):
     """

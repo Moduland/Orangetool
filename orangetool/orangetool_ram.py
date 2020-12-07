@@ -2,27 +2,7 @@
 """Orangetool RAM functions."""
 import psutil
 from .orangetool_params import GENERAL_ERROR_MESSAGE
-
-
-def convert_bytes(num):
-    """
-    Convert num to idiomatic byte unit.
-
-    :param num: the input number.
-    :type num:int
-    :return: str
-    >>> convert_bytes(200)
-    '200.0 bytes'
-    >>> convert_bytes(6000)
-    '5.9 KB'
-    >>> convert_bytes(80000)
-    '78.1 KB'
-    """
-    for x in ['bytes', 'KB', 'MB', 'GB', 'TB']:
-        if num < 1024.0:
-            return "%3.1f %s" % (num, x)
-        num /= 1024.0
-
+from .orangetool_utils import convert_bytes
 
 def ram_total(convert=True):
     """
