@@ -17,6 +17,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - All parameters moved to `orangetool_params.py`
 - `ADDRESS` parameter renamed to `address`
 - `Zone` parameter renamed to `zone`
+- `uptime` and `idletime` functions updated
 - Docstrings updated
 ## [0.35] - 2019-06-01
 ### Added
