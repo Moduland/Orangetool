@@ -1,15 +1,13 @@
 # -*- coding: utf-8 -*-
 """Orangetool IP functions."""
 from .orangetool_system import restart as restart_func
+from .orangetool_params import IP_PATTERN, GLOBAL_IP_API_1
 import subprocess as sub
 import socket
 import os
 import requests
 import re
 import platform
-IP_PATTERN = r"(?:[0-9]{1,3}\.){3}[0-9]{1,3}"
-GLOBAL_IP_API_1 = "http://ipinfo.io/ip"
-
 
 def internet(host="8.8.8.8", port=53, timeout=3):
     """

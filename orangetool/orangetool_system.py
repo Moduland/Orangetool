@@ -1,12 +1,10 @@
 # -*- coding: utf-8 -*-
 """Orangetool system functions."""
 import subprocess as sub
+from .orangetool_params import ORANGETOOL_VERSION, UPDATE_URL
 import time
 import requests
 from art import tprint
-
-ORANGETOOL_VERSION = "0.35"
-UPDATE_URL = "http://www.orangetool.ir/version"
 
 
 def check_update(debug=False):
