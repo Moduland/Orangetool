@@ -69,7 +69,7 @@ def zero_insert(input_string):
 
 def time_convert(input_string):
     """
-    Convert input_string from uptime from sec to DD,HH,MM,SS Format.
+    Convert input_string from sec to DD,HH,MM,SS Format.
 
     :param input_string: input time string  in sec
     :type input_string:str
