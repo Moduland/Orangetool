@@ -30,19 +30,19 @@ def check_update(debug=False):
         return "Error"
 
 
-def get_temp(Zone=0, debug=False):
+def get_temp(zone=0, debug=False):
     """
     Read cpu temperature.
 
     :param debug : flag for using debug mode
-    :param Zone : thermal Zone Index
+    :param zone : thermal zone index
     :type debug:bool
-    :type Zone:int
+    :type zone:int
     :return: board temp as string in celsius
     """
     try:
-        command = open("/sys/class/thermal/thermal_zone" + str(Zone) + "/temp")
-        # command=sub.Popen(["cat","/sys/class/thermal/thermal_zone"+str(Zone)+"/temp"],stderr=sub.PIPE,stdin=sub.PIPE,stdout=sub.PIPE)
+        command = open("/sys/class/thermal/thermal_zone" + str(zone) + "/temp")
+        # command=sub.Popen(["cat","/sys/class/thermal/thermal_zone"+str(zone)+"/temp"],stderr=sub.PIPE,stdin=sub.PIPE,stdout=sub.PIPE)
         # response=list(command.communicate())
         response = command.read()
         return response[:-1]
