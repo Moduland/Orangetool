@@ -56,18 +56,18 @@ def storage_status(debug=False):
         return "Error"
 
 
-def unmount(ADDRESS, debug=False):
+def unmount(address, debug=False):
     """
     Unmount memory devices by addresses.
 
-    :param ADDRESS: address of that device mount on
-    :type ADDRESS:str
+    :param address: address of that device mount on
+    :type address:str
     :param debug: flag for using debug mode
     :type debug:bool
     :return: True if device unmount correctly and False other wise
     """
     try:
-        command = sub.Popen(["umount", ADDRESS],
+        command = sub.Popen(["umount", address],
                             stdout=sub.PIPE, stderr=sub.PIPE)
         output = list(command.communicate())
         if len(output[0]) == 0 and len(output[1]) == 0:
