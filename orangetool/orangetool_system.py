@@ -85,6 +85,27 @@ def time_convert(input_string):
     return zero_insert(str(input_day)) + " days, " + zero_insert(str(input_hour)) + " hour, " + \
         zero_insert(str(input_minute)) + " minutes, " + zero_insert(str(input_sec)) + " seconds"
 
+def time_control(mode="uptime",debug=False):
+    """
+    Return system time.
+
+    :param mode: time mode (uptime / idle)
+    :type mode: str
+    :param debug: flag for using debug mode
+    :type debug:bool
+    :return: system time as string
+    """
+    index = 0
+    if mode  in ["idle","idletime"]:
+        index = 1
+    try:
+        command = open("/proc/uptime")
+        response = command.read()
+        return time_convert(response[:-1].split(" ")[index])
+    except Exception as e:
+        if debug:
+            print(str(e))
+        return GENERAL_ERROR_MESSAGE
 
 def uptime(debug=False):
     """
@@ -94,14 +115,7 @@ def uptime(debug=False):
     :type debug:bool
     :return: system uptime as string
     """
-    try:
-        command = open("/proc/uptime")
-        response = command.read()
-        return time_convert(response[:-1].split(" ")[0])
-    except Exception as e:
-        if debug:
-            print(str(e))
-        return GENERAL_ERROR_MESSAGE
+    time_control(mode="uptime",debug=debug)
 
 
 def idletime(debug=False):
@@ -112,14 +126,7 @@ def idletime(debug=False):
     :type debug:bool
     :return: system idle as string
     """
-    try:
-        command = open("/proc/uptime")
-        response = command.read()
-        return time_convert(response[:-1].split(" ")[1])
-    except Exception as e:
-        if debug:
-            print(str(e))
-        return GENERAL_ERROR_MESSAGE
+    time_control(mode="idle", debug=debug)
 
 
 def version():
