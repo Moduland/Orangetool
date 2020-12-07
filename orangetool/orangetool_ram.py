@@ -69,7 +69,7 @@ def ram_percent():
     """
     Return available ram percentage.
 
-    :return: availabe ram percentage as string with %
+    :return: available ram percentage as string with %
     """
     response = list(psutil.virtual_memory())
     return str(response[2]) + " %"
@@ -81,7 +81,7 @@ def freeup(debug=False):
 
     :param debug: flag for using debug mode
     :type debug:bool
-    :return: Amount of freeuped ram as string and converted by convert_bytes()
+    :return: amount of freeuped ram as string and converted by convert_bytes()
     """
     try:
         RAM_before = int(ram_free(convert=False))

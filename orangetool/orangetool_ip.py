@@ -14,10 +14,10 @@ def internet(host="8.8.8.8", port=53, timeout=3):
     Check internet connections.
 
     :param  host: the host that check connection to
-    :param  port: port that check connection with
-    :param  timeout: times that check the connection
     :type host:str
+    :param  port: port that check connection with
     :type port:int
+    :param  timeout: times that check the connection
     :type timeout:int
     :return bool: True if Connection is Stable
     >>> internet() # if there is stable internet connection
@@ -89,12 +89,12 @@ def set_ip(ip, restart=False, device="eth0", debug=False):
     """
     Set static ip in interfaces file (need sudo).
 
+    :param ip: static ip
+    :type ip :str
     :param restart : restart flag
     :type restart : bool
     :param device: network device name
     :type device:str
-    :param ip: static ip
-    :type ip :str
     :param debug: flag for using debug mode
     :type debug:bool
     :return: True in successful
@@ -133,10 +133,10 @@ def ping(ip, packet_number=3, debug=False):
     Ping ip and return True if this ip is available and False otherwise.
 
     :param ip: target ip
-    :param packet_number: number of packet to size
-    :param debug: flag for using debug mode
     :type ip :str
+    :param packet_number: number of packet to size
     :type packet_number:int
+    :param debug: flag for using debug mode
     :type debug:bool
     :return: a boolean value (True if ip is available and False otherwise)
     """

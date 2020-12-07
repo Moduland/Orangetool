@@ -32,10 +32,10 @@ def get_temp(zone=0, debug=False):
     """
     Read cpu temperature.
 
-    :param debug : flag for using debug mode
     :param zone : thermal zone index
-    :type debug:bool
     :type zone:int
+    :param debug : flag for using debug mode
+    :type debug:bool
     :return: board temp as string in celsius
     """
     try:
@@ -137,12 +137,12 @@ def wakeup(day=0, hour=0, minute=0, debug=False):
     Set wakeup time for kernel RTC (need sudo).
 
     :param day: days for wakeup
-    :param hour: hout for wakeup
-    :param minute: minute for wakeup
-    :param debug: flag for using debug mode
     :type day:int
+    :param hour: hour for wakeup
     :type hour:int
+    :param minute: minute for wakeup
     :type minute:int
+    :param debug: flag for using debug mode
     :type debug:bool
     :return: bool
     """

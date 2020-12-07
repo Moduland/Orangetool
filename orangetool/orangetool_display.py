@@ -53,10 +53,10 @@ def hdmi_size(v=None, h=None, debug=False):
     Change hdmi display resolution (need sudo -s) (if call without any argument return current resolution).
 
     :param v: vertical line
-    :param h: horizontal line
-    :param debug: flag for using debug mode
     :type v : int
-    :type h:int
+    :param h: horizontal line
+    :type h: int
+    :param debug: flag for using debug mode
     :type debug:bool
     :return: bool
     """

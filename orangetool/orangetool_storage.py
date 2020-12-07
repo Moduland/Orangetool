@@ -10,6 +10,8 @@ def mount_status(device_name, debug=False):
     """
     Return addresses of mounted memory devices in dev by device name.
 
+    :param device_name: name of device
+    :type device_name: str
     :param debug: flag for using debug mode
     :type debug:bool
     :return: list of memory devices
@@ -124,10 +126,10 @@ def mount(device_name, mount_address=None, debug=False):
     Mount memory devices by addresses.
 
     :param device_name: name of device for mounted example = sda1
-    :param mount_address: address for mounting device example = /mnt/usb , default value is None in this case function generate random number for mount folder name
-    :param debug: flag for using debug mode
     :type device_name:str
+    :param mount_address: address for mounting device example = /mnt/usb , default value is None in this case function generate random number for mount folder name
     :type mount_address:str
+    :param debug: flag for using debug mode
     :type debug:bool
     :return: True if device mount correctly and False other wise
     """
