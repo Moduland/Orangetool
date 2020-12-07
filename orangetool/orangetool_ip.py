@@ -9,6 +9,7 @@ import requests
 import re
 import platform
 
+
 def internet(host="8.8.8.8", port=53, timeout=3):
     """
     Check internet connections.

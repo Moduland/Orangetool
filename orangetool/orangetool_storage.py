@@ -6,6 +6,7 @@ import string
 import random
 from .orangetool_params import GENERAL_ERROR_MESSAGE, ROOT_ERROR_MESSAGE
 
+
 def mount_status(device_name, debug=False):
     """
     Return addresses of mounted memory devices in dev by device name.
@@ -167,7 +168,7 @@ def usb_control(code, debug=False):
     """
     try:
         command = sub.Popen(
-            ["chmod", "-R", code,"/media/"],
+            ["chmod", "-R", code, "/media/"],
             stderr=sub.PIPE,
             stdout=sub.PIPE,
             stdin=sub.PIPE)

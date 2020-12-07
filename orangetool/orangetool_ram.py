@@ -3,6 +3,7 @@
 import psutil
 from .orangetool_params import GENERAL_ERROR_MESSAGE
 
+
 def convert_bytes(num):
     """
     Convert num to idiomatic byte unit.

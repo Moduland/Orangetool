@@ -2,6 +2,7 @@
 """Orangetool display functions."""
 from .orangetool_params import GENERAL_ERROR_MESSAGE
 
+
 def hdmi_controller(command, debug=False):
     """
     Control hdmi port.
