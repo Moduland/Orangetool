@@ -4,7 +4,7 @@ import subprocess as sub
 import os
 import string
 import random
-from .orangetool_params import GENERAL_ERROR_MESSAGE
+from .orangetool_params import GENERAL_ERROR_MESSAGE, ROOT_ERROR_MESSAGE
 
 def mount_status(device_name, debug=False):
     """
@@ -171,7 +171,7 @@ def usb_control(code, debug=False):
             stdin=sub.PIPE)
         response = list(command.communicate())
         if len(response[1]) > 0:
-            raise Exception('Root Error')
+            raise Exception(ROOT_ERROR_MESSAGE)
     except Exception as e:
         if debug:
             print(str(e))

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Orangetool system functions."""
 import subprocess as sub
-from .orangetool_params import ORANGETOOL_VERSION, UPDATE_URL, GENERAL_ERROR_MESSAGE
+from .orangetool_params import ORANGETOOL_VERSION, UPDATE_URL, GENERAL_ERROR_MESSAGE, ROOT_ERROR_MESSAGE
 import time
 import requests
 from art import tprint
@@ -180,7 +180,7 @@ def power_control(command, debug=False):
             stdin=sub.PIPE)
         response = list(command.communicate())
         if len(response[1]) > 0:
-            raise Exception('Root Error')
+            raise Exception(ROOT_ERROR_MESSAGE)
     except Exception as e:
         if debug:
             print(str(e))
