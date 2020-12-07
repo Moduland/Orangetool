@@ -1,6 +1,7 @@
   set -e
   set -x
   python version_check.py
+  python orangetool/orangetool_test.py
   if [ "$TRAVIS_PYTHON_VERSION" = '3.6' ]
   then
 	python -m vulture orangetool/ setup.py version_check.py --min-confidence 65 --sort-by-size 
