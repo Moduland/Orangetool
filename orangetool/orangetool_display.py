@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """Orangetool display functions."""
-
+from .orangetool_params import GENERAL_ERROR_MESSAGE
 
 def hdmi_controller(command, debug=False):
     """
@@ -23,7 +23,7 @@ def hdmi_controller(command, debug=False):
     except Exception as e:
         if debug:
             print(str(e))
-        return "Error"
+        return GENERAL_ERROR_MESSAGE
 
 
 def hdmi_on(debug=False):
@@ -73,4 +73,4 @@ def hdmi_size(v=None, h=None, debug=False):
     except Exception as e:
         if debug:
             print(str(e))
-        return "Error"
+        return GENERAL_ERROR_MESSAGE

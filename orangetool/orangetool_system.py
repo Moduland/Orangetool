@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Orangetool system functions."""
 import subprocess as sub
-from .orangetool_params import ORANGETOOL_VERSION, UPDATE_URL
+from .orangetool_params import ORANGETOOL_VERSION, UPDATE_URL, GENERAL_ERROR_MESSAGE
 import time
 import requests
 from art import tprint
@@ -25,7 +25,7 @@ def check_update(debug=False):
     except Exception as e:
         if debug:
             print(str(e))
-        return "Error"
+        return GENERAL_ERROR_MESSAGE
 
 
 def get_temp(zone=0, debug=False):
@@ -47,11 +47,11 @@ def get_temp(zone=0, debug=False):
         # if len(response[0])!=0:
         # return str(response[0])[2:-3]
         # else:
-        # return "Error"
+        # return GENERAL_ERROR_MESSAGE
     except Exception as e:
         if debug:
             print(str(e))
-        return "Error"
+        return GENERAL_ERROR_MESSAGE
 
 
 def zero_insert(input_string):
@@ -101,7 +101,7 @@ def uptime(debug=False):
     except Exception as e:
         if debug:
             print(str(e))
-        return "Error"
+        return GENERAL_ERROR_MESSAGE
 
 
 def idletime(debug=False):
@@ -119,7 +119,7 @@ def idletime(debug=False):
     except Exception as e:
         if debug:
             print(str(e))
-        return "Error"
+        return GENERAL_ERROR_MESSAGE
 
 
 def version():
@@ -159,7 +159,7 @@ def wakeup(day=0, hour=0, minute=0, debug=False):
     except Exception as e:
         if debug:
             print(str(e))
-        return "Error"
+        return GENERAL_ERROR_MESSAGE
 
 
 def power_control(command, debug=False):
@@ -184,7 +184,7 @@ def power_control(command, debug=False):
     except Exception as e:
         if debug:
             print(str(e))
-        return "Error"
+        return GENERAL_ERROR_MESSAGE
 
 
 def sleep(debug=False):

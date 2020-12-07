@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Orangetool RAM functions."""
 import psutil
-
+from .orangetool_params import GENERAL_ERROR_MESSAGE
 
 def convert_bytes(num):
     """
@@ -96,4 +96,4 @@ def freeup(debug=False):
     except Exception as e:
         if debug:
             print(str(e))
-        return "Error"
+        return GENERAL_ERROR_MESSAGE

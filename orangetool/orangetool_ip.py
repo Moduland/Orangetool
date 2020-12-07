@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Orangetool IP functions."""
 from .orangetool_system import restart as restart_func
-from .orangetool_params import IP_PATTERN, GLOBAL_IP_API_1
+from .orangetool_params import IP_PATTERN, GLOBAL_IP_API_1, GENERAL_ERROR_MESSAGE
 import subprocess as sub
 import socket
 import os
@@ -56,13 +56,13 @@ def local_ip(debug=False):
             response = list(command.communicate())
             if len(response[0]) > 0:
                 return str(response[0])[2:-4]
-            return "Error"
-        return "Error"
+            return GENERAL_ERROR_MESSAGE
+        return GENERAL_ERROR_MESSAGE
 
     except Exception as e:
         if debug:
             print(str(e))
-        return "Error"
+        return GENERAL_ERROR_MESSAGE
 
 
 def global_ip(debug=False):
@@ -82,7 +82,7 @@ def global_ip(debug=False):
     except Exception as e:
         if debug:
             print(str(e))
-        return "Error"
+        return GENERAL_ERROR_MESSAGE
 
 
 def set_ip(ip, restart=False, device="eth0", debug=False):
@@ -125,7 +125,7 @@ iface device inet static
     except Exception as e:
         if debug:
             print(str(e))
-        return "Error"
+        return GENERAL_ERROR_MESSAGE
 
 
 def ping(ip, packet_number=3, debug=False):
@@ -155,7 +155,7 @@ def ping(ip, packet_number=3, debug=False):
     except Exception as e:
         if debug:
             print(str(e))
-        return "Error"
+        return GENERAL_ERROR_MESSAGE
 
 
 def mac(debug=False):
@@ -178,4 +178,4 @@ def mac(debug=False):
     except Exception as e:
         if debug:
             print(str(e))
-        return "Error"
+        return GENERAL_ERROR_MESSAGE

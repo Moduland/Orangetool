@@ -4,7 +4,7 @@ import subprocess as sub
 import os
 import string
 import random
-
+from .orangetool_params import GENERAL_ERROR_MESSAGE
 
 def mount_status(device_name, debug=False):
     """
@@ -29,7 +29,7 @@ def mount_status(device_name, debug=False):
     except Exception as e:
         if debug:
             print(str(e))
-        return "Error"
+        return GENERAL_ERROR_MESSAGE
 
 
 def storage_status(debug=False):
@@ -53,7 +53,7 @@ def storage_status(debug=False):
     except Exception as e:
         if debug:
             print(str(e))
-        return "Error"
+        return GENERAL_ERROR_MESSAGE
 
 
 def unmount(address, debug=False):
@@ -76,7 +76,7 @@ def unmount(address, debug=False):
     except Exception as e:
         if debug:
             print(str(e))
-        return "Error"
+        return GENERAL_ERROR_MESSAGE
 
 
 def unmount_all(debug=False):
@@ -100,7 +100,7 @@ def unmount_all(debug=False):
     except Exception as e:
         if debug:
             print(str(e))
-        return "Error"
+        return GENERAL_ERROR_MESSAGE
 
 
 def random_generator(number):
@@ -150,7 +150,7 @@ def mount(device_name, mount_address=None, debug=False):
     except Exception as e:
         if debug:
             print(str(e))
-        return "Error"
+        return GENERAL_ERROR_MESSAGE
 
 
 def usb_control(code, debug=False):
@@ -175,7 +175,7 @@ def usb_control(code, debug=False):
     except Exception as e:
         if debug:
             print(str(e))
-        return "Error"
+        return GENERAL_ERROR_MESSAGE
 
 
 def usb_on(debug=False):
