@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
 ### Added
 - `FUNDING.yml`
+- `__main__.py`
 - `__version__` variable
 - `hibernate` function
 - `usb_control`, `usb_on` and `usb_off` functions
