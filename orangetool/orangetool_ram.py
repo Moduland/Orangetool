@@ -1,27 +1,8 @@
 # -*- coding: utf-8 -*-
 """Orangetool RAM functions."""
 import psutil
-
-
-def convert_bytes(num):
-    """
-    Convert num to idiomatic byte unit.
-
-    :param num: the input number.
-    :type num:int
-    :return: str
-    >>> convert_bytes(200)
-    '200.0 bytes'
-    >>> convert_bytes(6000)
-    '5.9 KB'
-    >>> convert_bytes(80000)
-    '78.1 KB'
-    """
-    for x in ['bytes', 'KB', 'MB', 'GB', 'TB']:
-        if num < 1024.0:
-            return "%3.1f %s" % (num, x)
-        num /= 1024.0
-
+from .orangetool_params import GENERAL_ERROR_MESSAGE
+from .orangetool_utils import convert_bytes
 
 def ram_total(convert=True):
     """
@@ -69,7 +50,7 @@ def ram_percent():
     """
     Return available ram percentage.
 
-    :return: availabe ram percentage as string with %
+    :return: available ram percentage as string with %
     """
     response = list(psutil.virtual_memory())
     return str(response[2]) + " %"
@@ -81,7 +62,7 @@ def freeup(debug=False):
 
     :param debug: flag for using debug mode
     :type debug:bool
-    :return: Amount of freeuped ram as string and converted by convert_bytes()
+    :return: amount of freeuped ram as string and converted by convert_bytes()
     """
     try:
         RAM_before = int(ram_free(convert=False))
@@ -96,4 +77,4 @@ def freeup(debug=False):
     except Exception as e:
         if debug:
             print(str(e))
-        return "Error"
+        return GENERAL_ERROR_MESSAGE

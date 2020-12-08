@@ -25,7 +25,7 @@ FILES = {
     "CHANGELOG.md": CHANGELOG_ITEMS,
     os.path.join(
         "orangetool",
-        "orangetool_system.py"): PARAMS_ITEMS}
+        "orangetool_params.py"): PARAMS_ITEMS}
 
 TEST_NUMBER = len(FILES.keys())
 

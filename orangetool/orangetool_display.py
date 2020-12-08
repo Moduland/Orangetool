@@ -1,12 +1,13 @@
 # -*- coding: utf-8 -*-
 """Orangetool display functions."""
+from .orangetool_params import GENERAL_ERROR_MESSAGE
 
 
 def hdmi_controller(command, debug=False):
     """
     Control hdmi port.
 
-    :param command: inpurt command
+    :param command: input command
     :type command: bool
     :param debug: flag for using debug mode
     :type debug: bool
@@ -23,7 +24,7 @@ def hdmi_controller(command, debug=False):
     except Exception as e:
         if debug:
             print(str(e))
-        return "Error"
+        return GENERAL_ERROR_MESSAGE
 
 
 def hdmi_on(debug=False):
@@ -53,10 +54,10 @@ def hdmi_size(v=None, h=None, debug=False):
     Change hdmi display resolution (need sudo -s) (if call without any argument return current resolution).
 
     :param v: vertical line
-    :param h: horizental line
-    :param debug: flag for using debug mode
     :type v : int
-    :type h:int
+    :param h: horizontal line
+    :type h: int
+    :param debug: flag for using debug mode
     :type debug:bool
     :return: bool
     """
@@ -73,4 +74,4 @@ def hdmi_size(v=None, h=None, debug=False):
     except Exception as e:
         if debug:
             print(str(e))
-        return "Error"
+        return GENERAL_ERROR_MESSAGE

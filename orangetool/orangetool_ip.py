@@ -1,14 +1,13 @@
 # -*- coding: utf-8 -*-
 """Orangetool IP functions."""
 from .orangetool_system import restart as restart_func
+from .orangetool_params import IP_PATTERN, GLOBAL_IP_API_1, GENERAL_ERROR_MESSAGE
 import subprocess as sub
 import socket
 import os
 import requests
 import re
 import platform
-IP_PATTERN = r"(?:[0-9]{1,3}\.){3}[0-9]{1,3}"
-GLOBAL_IP_API_1 = "http://ipinfo.io/ip"
 
 
 def internet(host="8.8.8.8", port=53, timeout=3):
@@ -16,10 +15,10 @@ def internet(host="8.8.8.8", port=53, timeout=3):
     Check internet connections.
 
     :param  host: the host that check connection to
-    :param  port: port that check connection with
-    :param  timeout: times that check the connection
     :type host:str
+    :param  port: port that check connection with
     :type port:int
+    :param  timeout: times that check the connection
     :type timeout:int
     :return bool: True if Connection is Stable
     >>> internet() # if there is stable internet connection
@@ -58,13 +57,13 @@ def local_ip(debug=False):
             response = list(command.communicate())
             if len(response[0]) > 0:
                 return str(response[0])[2:-4]
-            return "Error"
-        return "Error"
+            return GENERAL_ERROR_MESSAGE
+        return GENERAL_ERROR_MESSAGE
 
     except Exception as e:
         if debug:
             print(str(e))
-        return "Error"
+        return GENERAL_ERROR_MESSAGE
 
 
 def global_ip(debug=False):
@@ -84,19 +83,19 @@ def global_ip(debug=False):
     except Exception as e:
         if debug:
             print(str(e))
-        return "Error"
+        return GENERAL_ERROR_MESSAGE
 
 
 def set_ip(ip, restart=False, device="eth0", debug=False):
     """
     Set static ip in interfaces file (need sudo).
 
+    :param ip: static ip
+    :type ip :str
     :param restart : restart flag
     :type restart : bool
     :param device: network device name
     :type device:str
-    :param ip: static ip
-    :type ip :str
     :param debug: flag for using debug mode
     :type debug:bool
     :return: True in successful
@@ -127,7 +126,7 @@ iface device inet static
     except Exception as e:
         if debug:
             print(str(e))
-        return "Error"
+        return GENERAL_ERROR_MESSAGE
 
 
 def ping(ip, packet_number=3, debug=False):
@@ -135,10 +134,10 @@ def ping(ip, packet_number=3, debug=False):
     Ping ip and return True if this ip is available and False otherwise.
 
     :param ip: target ip
-    :param packet_number: number of packet to size
-    :param debug: flag for using debug mode
     :type ip :str
+    :param packet_number: number of packet to size
     :type packet_number:int
+    :param debug: flag for using debug mode
     :type debug:bool
     :return: a boolean value (True if ip is available and False otherwise)
     """
@@ -157,7 +156,7 @@ def ping(ip, packet_number=3, debug=False):
     except Exception as e:
         if debug:
             print(str(e))
-        return "Error"
+        return GENERAL_ERROR_MESSAGE
 
 
 def mac(debug=False):
@@ -180,4 +179,4 @@ def mac(debug=False):
     except Exception as e:
         if debug:
             print(str(e))
-        return "Error"
+        return GENERAL_ERROR_MESSAGE
