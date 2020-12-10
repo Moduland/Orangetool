@@ -18,7 +18,7 @@ CHANGELOG_ITEMS = [
     "## [{0}]",
     "https://github.com/Moduland/Orangetool/compare/v{0}...dev",
     "[{0}]:"]
-PARAMS_ITEMS = ['VERSION = "{0}"']
+PARAMS_ITEMS = ['ORANGETOOL_VERSION = "{0}"']
 FILES = {
     "setup.py": SETUP_ITEMS,
     "README.md": README_ITEMS,
