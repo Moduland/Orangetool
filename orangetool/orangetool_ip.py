@@ -47,7 +47,7 @@ def local_ip(debug=False):
         ip = socket.gethostbyname(socket.gethostname())
         if ip != "127.0.0.1":
             return ip
-        elif platform.system() != "Windows":
+        if platform.system() != "Windows":
             command = sub.Popen(["hostname",
                                  "-I"],
                                 stdout=sub.PIPE,
