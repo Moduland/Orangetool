@@ -275,7 +275,7 @@ orangetool.check_update() # Return True if new version is available
 ## Issues & Bug Reports			
 
 Just fill an issue and describe it. We'll check it ASAP!							
-or send an email to [info@moduland.ir](mailto:info@moduland.ir "info@moduland.ir"). 
+or send an email to [info@orangetool.ir](mailto:info@orangetool.ir "info@orangetool.ir"). 
 
 ## Dependencies
 
