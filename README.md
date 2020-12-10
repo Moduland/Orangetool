@@ -71,7 +71,8 @@ Tested on [Lubuntu](http://lubuntu.me/)
 <table>
 	<tr> 
 		<td align="center">Code Quality</td>
-		<td align="center"><a href="https://www.codacy.com/app/sepand-haghighi/Orangetool?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Moduland/Orangetool&amp;utm_campaign=Badge_Grade"><img src="https://api.codacy.com/project/badge/Grade/ad9374e6e7b24a63b34d6a4f419497ac"/></a></td>	
+		<td align="center"><a href="https://www.codacy.com/app/sepand-haghighi/Orangetool?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Moduland/Orangetool&amp;utm_campaign=Badge_Grade"><img src="https://api.codacy.com/project/badge/Grade/ad9374e6e7b24a63b34d6a4f419497ac"/></a></td>
+		<td align="center"><a href="https://codebeat.co/projects/github-com-moduland-orangetool-dev"><img alt="codebeat badge" src="https://codebeat.co/badges/78f987a9-d504-4d29-b98d-21dd1f2d319e" /></a></td>
 		<td align="center"><a href="https://www.codefactor.io/repository/github/moduland/orangetool"><img src="https://www.codefactor.io/repository/github/moduland/orangetool/badge" alt="CodeFactor" /></a></td>		
 	</tr>
 </table>
