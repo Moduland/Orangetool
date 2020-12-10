@@ -110,7 +110,7 @@ iface device inet static
         dns-nameservers 8.8.8.8 8.8.4.4
     '''
     try:
-        if bool(re.match(IP_PATTERN, ip)) == False or ip.find(
+        if not bool(re.match(IP_PATTERN, ip)) or ip.find(
                 "192.168.") == -1 or device not in mac().keys():
             raise Exception("IP Formation Error")
         static_string = static_string.replace("ip", ip)
@@ -142,7 +142,7 @@ def ping(ip, packet_number=3, debug=False):
     :return: a boolean value (True if ip is available and False otherwise)
     """
     try:
-        if re.match(IP_PATTERN, ip) == False:
+        if not re.match(IP_PATTERN, ip):
             raise Exception("IP Formation Error")
         output = str(list(sub.Popen(["ping",
                                      ip,
