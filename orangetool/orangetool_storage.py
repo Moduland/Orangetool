@@ -27,8 +27,7 @@ def mount_status(device_name, debug=False):
                 memory_list.append(temp[1])
         if len(memory_list) == 0:
             return "u"
-        else:
-            return memory_list
+        return memory_list
     except Exception as e:
         if debug:
             print(str(e))
