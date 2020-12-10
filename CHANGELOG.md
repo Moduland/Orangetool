@@ -21,6 +21,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - `Zone` parameter renamed to `zone`
 - `uptime` and `idletime` functions updated
 - Docstrings updated
+- `README.md` modified
 ## [0.35] - 2019-06-01
 ### Added
 - `version_check.py`
