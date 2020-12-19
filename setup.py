@@ -34,7 +34,7 @@ setup(
     long_description=read_description(),
     long_description_content_type='text/markdown',
     author='Moduland Co',
-    author_email='info@moduland.ir',
+    author_email='info@orangetool.ir',
     url='https://github.com/Moduland/Orangetool',
     download_url='https://github.com/Moduland/Orangetool/tarball/v0.35',
     keywords="orangepi raspberrypi embedded-systems python",

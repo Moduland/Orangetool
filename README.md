@@ -71,7 +71,8 @@ Tested on [Lubuntu](http://lubuntu.me/)
 <table>
 	<tr> 
 		<td align="center">Code Quality</td>
-		<td align="center"><a href="https://www.codacy.com/app/sepand-haghighi/Orangetool?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Moduland/Orangetool&amp;utm_campaign=Badge_Grade"><img src="https://api.codacy.com/project/badge/Grade/ad9374e6e7b24a63b34d6a4f419497ac"/></a></td>	
+		<td align="center"><a href="https://www.codacy.com/app/sepand-haghighi/Orangetool?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Moduland/Orangetool&amp;utm_campaign=Badge_Grade"><img src="https://api.codacy.com/project/badge/Grade/ad9374e6e7b24a63b34d6a4f419497ac"/></a></td>
+		<td align="center"><a href="https://codebeat.co/projects/github-com-moduland-orangetool-dev"><img alt="codebeat badge" src="https://codebeat.co/badges/78f987a9-d504-4d29-b98d-21dd1f2d319e" /></a></td>
 		<td align="center"><a href="https://www.codefactor.io/repository/github/moduland/orangetool"><img src="https://www.codefactor.io/repository/github/moduland/orangetool/badge" alt="CodeFactor" /></a></td>		
 	</tr>
 </table>
@@ -128,7 +129,7 @@ ip_status=orangetool.ping(ip_address) #this function check ip and return True if
 
 #5- set_ip
 
-set_ip("192.168.1.46","eth0")  #this function set static ip for system
+orangetool.set_ip("192.168.1.46","eth0")  #this function set static ip for system
 
 #6- mac
 
@@ -275,7 +276,7 @@ orangetool.check_update() # Return True if new version is available
 ## Issues & Bug Reports			
 
 Just fill an issue and describe it. We'll check it ASAP!							
-or send an email to [info@moduland.ir](mailto:info@moduland.ir "info@moduland.ir"). 
+or send an email to [info@orangetool.ir](mailto:info@orangetool.ir "info@orangetool.ir"). 
 
 ## Dependencies
 
