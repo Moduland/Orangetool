@@ -84,7 +84,7 @@ def uptime(debug=False):
     :type debug:bool
     :return: system uptime as string
     """
-    time_control(mode="uptime",debug=debug)
+    return time_control(mode="uptime",debug=debug)
 
 
 def idletime(debug=False):
@@ -95,7 +95,7 @@ def idletime(debug=False):
     :type debug:bool
     :return: system idle as string
     """
-    time_control(mode="idle", debug=debug)
+    return time_control(mode="idle", debug=debug)
 
 
 def version():
