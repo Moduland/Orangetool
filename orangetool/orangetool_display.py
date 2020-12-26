@@ -1,15 +1,16 @@
 # -*- coding: utf-8 -*-
 """Orangetool display functions."""
+from .orangetool_params import GENERAL_ERROR_MESSAGE
 
 
-def hdmi_controller(command, DEBUG=False):
+def hdmi_controller(command, debug=False):
     """
     Control hdmi port.
 
-    :param command: inpurt command
+    :param command: input command
     :type command: bool
-    :param DEBUG: flag for using Debug mode
-    :type DEBUG: bool
+    :param debug: flag for using debug mode
+    :type debug: bool
     :return: bool
     """
     try:
@@ -21,43 +22,43 @@ def hdmi_controller(command, DEBUG=False):
         hdmi_control.close()
         return True
     except Exception as e:
-        if DEBUG:
+        if debug:
             print(str(e))
-        return "Error"
+        return GENERAL_ERROR_MESSAGE
 
 
-def hdmi_on(DEBUG=False):
+def hdmi_on(debug=False):
     """
     Turn on hdmi port (need sudo -s).
 
-    :param DEBUG: flag for using Debug mode
-    :type DEBUG:bool
+    :param debug: flag for using debug mode
+    :type debug:bool
     :return: bool
     """
-    hdmi_controller(True, DEBUG)
+    hdmi_controller(True, debug)
 
 
-def hdmi_off(DEBUG=False):
+def hdmi_off(debug=False):
     """
     Turn off hdmi port (need sudo -s).
 
-    :param DEBUG: flag for using Debug mode
-    :type DEBUG:bool
+    :param debug: flag for using debug mode
+    :type debug:bool
     :return: bool
     """
-    hdmi_controller(False, DEBUG)
+    hdmi_controller(False, debug)
 
 
-def hdmi_size(v=None, h=None, DEBUG=False):
+def hdmi_size(v=None, h=None, debug=False):
     """
     Change hdmi display resolution (need sudo -s) (if call without any argument return current resolution).
 
     :param v: vertical line
-    :param h: horizental line
-    :param DEBUG: flag for using Debug mode
     :type v : int
-    :type h:int
-    :type DEBUG:bool
+    :param h: horizontal line
+    :type h: int
+    :param debug: flag for using debug mode
+    :type debug:bool
     :return: bool
     """
     try:
@@ -71,6 +72,6 @@ def hdmi_size(v=None, h=None, DEBUG=False):
         hdmi_control.close()
         return True
     except Exception as e:
-        if DEBUG:
+        if debug:
             print(str(e))
-        return "Error"
+        return GENERAL_ERROR_MESSAGE

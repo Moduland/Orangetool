@@ -71,7 +71,8 @@ Tested on [Lubuntu](http://lubuntu.me/)
 <table>
 	<tr> 
 		<td align="center">Code Quality</td>
-		<td align="center"><a href="https://www.codacy.com/app/sepand-haghighi/Orangetool?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Moduland/Orangetool&amp;utm_campaign=Badge_Grade"><img src="https://api.codacy.com/project/badge/Grade/ad9374e6e7b24a63b34d6a4f419497ac"/></a></td>	
+		<td align="center"><a href="https://www.codacy.com/app/sepand-haghighi/Orangetool?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Moduland/Orangetool&amp;utm_campaign=Badge_Grade"><img src="https://api.codacy.com/project/badge/Grade/ad9374e6e7b24a63b34d6a4f419497ac"/></a></td>
+		<td align="center"><a href="https://codebeat.co/projects/github-com-moduland-orangetool-dev"><img alt="codebeat badge" src="https://codebeat.co/badges/78f987a9-d504-4d29-b98d-21dd1f2d319e" /></a></td>
 		<td align="center"><a href="https://www.codefactor.io/repository/github/moduland/orangetool"><img src="https://www.codefactor.io/repository/github/moduland/orangetool/badge" alt="CodeFactor" /></a></td>		
 	</tr>
 </table>
@@ -83,13 +84,13 @@ By [Moduland Co](http://www.moduland.ir)
 
 ## Installation
 ### Source Code
-- Download [Version 0.35](https://github.com/moduland/Orangetool/archive/v0.35.zip) or [Latest Source ](https://github.com/Moduland/Orangetool/archive/dev.zip)
+- Download [Version 0.45](https://github.com/moduland/Orangetool/archive/v0.45.zip) or [Latest Source ](https://github.com/Moduland/Orangetool/archive/dev.zip)
 - `pip3 install -r requirements.txt` or `pip install -r requirements.txt` (Need root access)	
 - `python3 setup.py install` or `python setup.py install`
 ### PyPI
 
 - Check [Python Packaging User Guide](https://packaging.python.org/installing/)     
-- `pip3 install orangetool==0.35` or `pip install orangetool==0.35` (Need root access)	
+- `pip3 install orangetool==0.45` or `pip install orangetool==0.45` (Need root access)	
 <div align="center">
 <a href="https://asciinema.org/a/141548" target="_blank"><img src="https://asciinema.org/a/141548.png" /></a>
 </div>
@@ -128,7 +129,7 @@ ip_status=orangetool.ping(ip_address) #this function check ip and return True if
 
 #5- set_ip
 
-set_ip("192.168.1.46","eth0")  #this function set static ip for system
+orangetool.set_ip("192.168.1.46","eth0")  #this function set static ip for system
 
 #6- mac
 
@@ -188,6 +189,14 @@ orangetool.unmount_all() #This function unmount all of the mounted devices
 
 orangetool.mount("sda1","/mnt/usb1") # This function mount input device in input addresses
 
+#6- usb_on
+
+orangetool.usb_on() # This function enable USB
+
+#7- usb_off
+
+orangetool.usb_off() # This function disable USB
+
 ```
 
 ### Display Functions				
@@ -214,38 +223,42 @@ orangetool.hdmi_size(1280,720) # this function change hdmi display resolution
 
 orangetool.sleep() # put system in sleep mode
 
-#2- halt
+#2- hibernate
+
+orangetool.hibernate() # put system in hibernate mode
+
+#3- halt
 
 orangetool.halt() # poweroff system
 
-#3- restart
+#4- restart
 
 orangetool.restart() # restart system
 
-#4- wakeup
+#5- wakeup
 
 orangetool.wakeup(day=1,hour=0,minute=1) # set rtc wakeuptime
 
-#5- get_temp
+#6- get_temp
 
 temp=orangetool.get_temp() # this function return cpu temperature as string
 
-#6- uptime
+#7- uptime
 
 time=orangetool.uptime() # this function return uptime of system
 
-#7- idletime
+#8- idletime
 
 time=orangetool.idletime() # this function return idle of system ( all cores)
 
 
-#8- version
+#9- version
 
 orangetool.version() # return orangetool version for test
 
-#9- check_update
+#10- check_update
 
-orangetool.check_update # Return True if new version is available
+orangetool.check_update() # Return True if new version is available
 
 ```
 
@@ -255,7 +268,7 @@ orangetool.check_update # Return True if new version is available
 - `local_ip` and `global_ip` originally are available in ipz package [Link](http://github.com/sepandhaghighi/ipz)
 - RAM functions in this version need psutil package
 - Running `set_ip` function remotely will freeze your terminal so it's better to set `restart` parameter to True
-- Running `halt`,`restart` & `sleep` functions remotely will freeze your terminal
+- Running `halt`,`restart`,`hibernate` & `sleep` functions remotely will freeze your terminal
 - Some of funtions need root access so it's better to run ```sudo -s``` before use this tool
 
 
@@ -263,7 +276,7 @@ orangetool.check_update # Return True if new version is available
 ## Issues & Bug Reports			
 
 Just fill an issue and describe it. We'll check it ASAP!							
-or send an email to [info@moduland.ir](mailto:info@moduland.ir "info@moduland.ir"). 
+or send an email to [info@orangetool.ir](mailto:info@orangetool.ir "info@orangetool.ir"). 
 
 ## Dependencies
 

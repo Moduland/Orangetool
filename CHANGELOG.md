@@ -5,11 +5,23 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+## [0.45] - 2020-12-26
 ### Added
-- `FUNDING.yml`
+- `__main__.py`
+- `__version__` variable
+- `hibernate` function
+- `usb_control`, `usb_on` and `usb_off` functions
 ### Changed
 - `dev-requirements.txt` modified
 - Test system modified
+- `DEBUG` parameter renamed to `debug`
+- All parameters moved to `orangetool_params.py`
+- Some functions moved to `orangetool_utils.py`
+- `ADDRESS` parameter renamed to `address`
+- `Zone` parameter renamed to `zone`
+- `uptime` and `idletime` functions updated
+- Docstrings updated
+- `README.md` modified
 ## [0.35] - 2019-06-01
 ### Added
 - `version_check.py`
@@ -69,7 +81,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 - Some useful scripts for Orangepi/Raspberrypi boards
 
-[Unreleased]: https://github.com/Moduland/Orangetool/compare/v0.35...dev
+[Unreleased]: https://github.com/Moduland/Orangetool/compare/v0.45...dev
+[0.45]: https://github.com/Moduland/Orangetool/compare/v0.35...v0.45
 [0.35]: https://github.com/Moduland/Orangetool/compare/v0.25...v0.35
 [0.25]: https://github.com/Moduland/Orangetool/compare/v0.24...v0.25
 [0.24]: https://github.com/Moduland/Orangetool/compare/v0.23...v0.24

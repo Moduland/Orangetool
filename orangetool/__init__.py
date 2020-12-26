@@ -1,31 +1,11 @@
 # -*- coding: utf-8 -*-
 """Orangetool modules."""
-"""
-MIT License
 
-Copyright (c) 2017 Moduland Co
+from .orangetool_display import hdmi_on, hdmi_off, hdmi_size
+from .orangetool_ip import internet, local_ip, global_ip, set_ip, ping, mac
+from .orangetool_system import check_update, get_temp, uptime, idletime, wakeup, version, sleep, hibernate, halt, restart
+from .orangetool_ram import ram_total, ram_used, ram_free, ram_percent, freeup
+from .orangetool_storage import mount_status, storage_status, unmount, unmount_all, mount, usb_on, usb_off
+from .orangetool_params import ORANGETOOL_VERSION
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-"""
-
-from .orangetool_display import *
-from .orangetool_ip import *
-from .orangetool_system import *
-from .orangetool_ram import *
-from .orangetool_storage import *
+__version__ = ORANGETOOL_VERSION

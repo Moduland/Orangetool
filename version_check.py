@@ -4,7 +4,7 @@ import os
 import sys
 import codecs
 Failed = 0
-VERSION = "0.35"
+VERSION = "0.45"
 
 
 SETUP_ITEMS = [
@@ -18,14 +18,14 @@ CHANGELOG_ITEMS = [
     "## [{0}]",
     "https://github.com/Moduland/Orangetool/compare/v{0}...dev",
     "[{0}]:"]
-PARAMS_ITEMS = ['VERSION = "{0}"']
+PARAMS_ITEMS = ['ORANGETOOL_VERSION = "{0}"']
 FILES = {
     "setup.py": SETUP_ITEMS,
     "README.md": README_ITEMS,
     "CHANGELOG.md": CHANGELOG_ITEMS,
     os.path.join(
         "orangetool",
-        "orangetool_system.py"): PARAMS_ITEMS}
+        "orangetool_params.py"): PARAMS_ITEMS}
 
 TEST_NUMBER = len(FILES.keys())
 
