@@ -4,6 +4,7 @@ import psutil
 from .orangetool_params import GENERAL_ERROR_MESSAGE
 from .orangetool_utils import convert_bytes
 
+
 def ram_total(convert=True):
     """
     Return total ram of board.
