@@ -237,7 +237,7 @@ orangetool.restart() # restart system
 
 #5- wakeup
 
-orangetool.wakeup(day=1,hour=0,minute=1) # set rtc wakeuptime
+orangetool.wakeup(day=1,hour=0,minute=1,sync=True) # set rtc wakeuptime
 
 #6- get_temp
 
