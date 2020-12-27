@@ -108,7 +108,7 @@ def version():
     tprint("v" + ORANGETOOL_VERSION, font="bulbhead")
 
 
-def wakeup(day=0, hour=0, minute=0, debug=False):
+def wakeup(day=0, hour=0, minute=0, sync=True, debug=False):
     """
     Set wakeup time for kernel RTC (need sudo).
 
@@ -118,11 +118,15 @@ def wakeup(day=0, hour=0, minute=0, debug=False):
     :type hour:int
     :param minute: minute for wakeup
     :type minute:int
+    :param sync: RTC sync flag
+    :type sync: bool
     :param debug: flag for using debug mode
     :type debug:bool
     :return: bool
     """
     try:
+        if sync:
+            _ = sub.Popen("hwclock -w",stderr=sub.PIPE,stdout=sub.PIPE,stdin=sub.PIPE)
         total_time = day * 24 * 60 + hour * 60 + minute
         epoch = time.time() + total_time * 60
         file = open("/sys/class/rtc/rtc0/wakealarm", "w")
