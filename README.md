@@ -135,7 +135,13 @@ orangetool.set_ip("192.168.1.46","eth0")  #this function set static ip for syste
 
 mac_dic=orangetool.mac() # return dict of all system net devices mac addresses
 
+#7- network_enable
 
+status=network_enable("eth0") # enable network device
+
+#8- network_disable
+
+status=network_disable("eth0") # disable network device
 
 ```
 
