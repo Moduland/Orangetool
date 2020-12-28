@@ -191,15 +191,17 @@ def network_control(command, device="eth0", debug=False):
     :type device:str
     :param debug: flag for using debug mode
     :type debug:bool
-    :return: True in successful
+    :return: True in successful and False otherwise
     """
     try:
         cmd = "up"
         if command == "down":
             cmd = "down"
-        sub.Popen(["ifconfig", device, cmd],
+        output = sub.Popen(["ifconfig", device, cmd],
                   stderr=sub.PIPE, stdin=sub.PIPE, stdout=sub.PIPE)
-        return True
+        if len(output[0]) == 0 and len(output[1]) == 0:
+            return True
+        return False
     except Exception as e:
         if debug:
             print(str(e))
@@ -213,7 +215,7 @@ def network_enable(device="eth0", debug=False):
     :type device:str
     :param debug: flag for using debug mode
     :type debug:bool
-    :return: True in successful
+    :return: True in successful and False otherwise
     """
     return network_control("up",device=device,debug=debug)
 
@@ -225,6 +227,6 @@ def network_disable(device="eth0", debug=False):
     :type device:str
     :param debug: flag for using debug mode
     :type debug:bool
-    :return: True in successful
+    :return: True in successful and False otherwise
     """
     return network_control("down", device=device, debug=debug)
