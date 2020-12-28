@@ -217,7 +217,7 @@ def network_enable(device="eth0", debug=False):
     """
     return network_control("up",device=device,debug=debug)
 
-def netowrk_disable(device="eth0", debug=False):
+def network_disable(device="eth0", debug=False):
     """
     Shortcut to disable network adaptor.
 
