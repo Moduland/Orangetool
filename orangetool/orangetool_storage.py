@@ -104,6 +104,7 @@ def unmount_all(debug=False):
             print(str(e))
         return GENERAL_ERROR_MESSAGE
 
+
 def mount(device_name, mount_address=None, debug=False):
     """
     Mount memory devices by addresses.

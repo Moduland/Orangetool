@@ -54,7 +54,8 @@ def get_temp(zone=0, debug=False):
             print(str(e))
         return GENERAL_ERROR_MESSAGE
 
-def time_control(mode="uptime",debug=False):
+
+def time_control(mode="uptime", debug=False):
     """
     Return system time.
 
@@ -65,7 +66,7 @@ def time_control(mode="uptime",debug=False):
     :return: system time as string
     """
     index = 0
-    if mode  in ["idle","idletime"]:
+    if mode in ["idle", "idletime"]:
         index = 1
     try:
         command = open("/proc/uptime")
@@ -76,6 +77,7 @@ def time_control(mode="uptime",debug=False):
             print(str(e))
         return GENERAL_ERROR_MESSAGE
 
+
 def uptime(debug=False):
     """
     Return system uptime.
@@ -84,7 +86,7 @@ def uptime(debug=False):
     :type debug:bool
     :return: system uptime as string
     """
-    return time_control(mode="uptime",debug=debug)
+    return time_control(mode="uptime", debug=debug)
 
 
 def idletime(debug=False):
@@ -108,7 +110,7 @@ def version():
     tprint("v" + ORANGETOOL_VERSION, font="bulbhead")
 
 
-def wakeup(day=0, hour=0, minute=0, debug=False):
+def wakeup(day=0, hour=0, minute=0, sync=True, debug=False):
     """
     Set wakeup time for kernel RTC (need sudo).
 
@@ -118,11 +120,19 @@ def wakeup(day=0, hour=0, minute=0, debug=False):
     :type hour:int
     :param minute: minute for wakeup
     :type minute:int
+    :param sync: RTC sync flag
+    :type sync: bool
     :param debug: flag for using debug mode
     :type debug:bool
     :return: bool
     """
     try:
+        if sync:
+            _ = sub.Popen(
+                ["hwclock","-w"],
+                stderr=sub.PIPE,
+                stdout=sub.PIPE,
+                stdin=sub.PIPE)
         total_time = day * 24 * 60 + hour * 60 + minute
         epoch = time.time() + total_time * 60
         file = open("/sys/class/rtc/rtc0/wakealarm", "w")
