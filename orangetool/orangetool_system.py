@@ -129,7 +129,7 @@ def wakeup(day=0, hour=0, minute=0, sync=True, debug=False):
     try:
         if sync:
             _ = sub.Popen(
-                "hwclock -w",
+                ["hwclock","-w"],
                 stderr=sub.PIPE,
                 stdout=sub.PIPE,
                 stdin=sub.PIPE)
