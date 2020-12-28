@@ -180,3 +180,51 @@ def mac(debug=False):
         if debug:
             print(str(e))
         return GENERAL_ERROR_MESSAGE
+
+def network_control(command, device="eth0", debug=False):
+    """
+    Control network adaptor.
+
+    :param command: input command
+    :type command: str
+    :param device: network device name
+    :type device:str
+    :param debug: flag for using debug mode
+    :type debug:bool
+    :return: True in successful
+    """
+    try:
+        cmd = "up"
+        if command == "down":
+            cmd = "down"
+        sub.Popen(["ifconfig", device, cmd],
+                  stderr=sub.PIPE, stdin=sub.PIPE, stdout=sub.PIPE)
+        return True
+    except Exception as e:
+        if debug:
+            print(str(e))
+        return GENERAL_ERROR_MESSAGE
+
+def network_enable(device="eth0", debug=False):
+    """
+    Shortcut to enable network adaptor.
+
+    :param device: network device name
+    :type device:str
+    :param debug: flag for using debug mode
+    :type debug:bool
+    :return: True in successful
+    """
+    return network_control("up",device=device,debug=debug)
+
+def netowrk_disable(device="eth0", debug=False):
+    """
+    Shortcut to disable network adaptor.
+
+    :param device: network device name
+    :type device:str
+    :param debug: flag for using debug mode
+    :type debug:bool
+    :return: True in successful
+    """
+    return network_control("down", device=device, debug=debug)
