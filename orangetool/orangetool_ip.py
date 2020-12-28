@@ -181,6 +181,7 @@ def mac(debug=False):
             print(str(e))
         return GENERAL_ERROR_MESSAGE
 
+
 def network_control(command, device="eth0", debug=False):
     """
     Control network adaptor.
@@ -198,7 +199,7 @@ def network_control(command, device="eth0", debug=False):
         if command == "down":
             cmd = "down"
         output = sub.Popen(["ifconfig", device, cmd],
-                  stderr=sub.PIPE, stdin=sub.PIPE, stdout=sub.PIPE)
+                           stderr=sub.PIPE, stdin=sub.PIPE, stdout=sub.PIPE)
         if len(output[0]) == 0 and len(output[1]) == 0:
             return True
         return False
@@ -206,6 +207,7 @@ def network_control(command, device="eth0", debug=False):
         if debug:
             print(str(e))
         return GENERAL_ERROR_MESSAGE
+
 
 def network_enable(device="eth0", debug=False):
     """
@@ -217,7 +219,8 @@ def network_enable(device="eth0", debug=False):
     :type debug:bool
     :return: True in successful and False otherwise
     """
-    return network_control("up",device=device,debug=debug)
+    return network_control("up", device=device, debug=debug)
+
 
 def network_disable(device="eth0", debug=False):
     """
