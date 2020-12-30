@@ -198,8 +198,9 @@ def network_control(command, device="eth0", debug=False):
         cmd = "up"
         if command == "down":
             cmd = "down"
-        output = sub.Popen(["ifconfig", device, cmd],
+        cmd_out = sub.Popen(["ifconfig", device, cmd],
                            stderr=sub.PIPE, stdin=sub.PIPE, stdout=sub.PIPE)
+        output = list(cmd_out.communicate())
         if len(output[0]) == 0 and len(output[1]) == 0:
             return True
         return False
