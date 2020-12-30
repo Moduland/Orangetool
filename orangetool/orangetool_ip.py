@@ -10,7 +10,7 @@ import re
 import platform
 
 
-def internet(host="8.8.8.8", port=53, timeout=3):
+def internet(host="8.8.8.8", port=53, timeout=3, debug=False):
     """
     Check internet connections.
 
@@ -20,6 +20,8 @@ def internet(host="8.8.8.8", port=53, timeout=3):
     :type port:int
     :param  timeout: times that check the connection
     :type timeout:int
+    :param debug:flag for using debug Mode
+    :type debug:bool
     :return bool: True if Connection is Stable
     >>> internet() # if there is stable internet connection
     True
@@ -30,8 +32,9 @@ def internet(host="8.8.8.8", port=53, timeout=3):
         socket.setdefaulttimeout(timeout)
         socket.socket(socket.AF_INET, socket.SOCK_STREAM).connect((host, port))
         return True
-    except Exception as ex:
-        print(str(ex))
+    except Exception as e:
+        if debug:
+            print(str(e))
         return False
 
 
