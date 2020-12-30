@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - `network_control`, `network_enable` and `network_disable` functions
 ### Changed
 - `sync` parameter added to `wakeup` function
+- `debug` parameter added to `internet` function
 ## [0.45] - 2020-12-26
 ### Added
 - `__main__.py`
