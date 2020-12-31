@@ -14,15 +14,15 @@ def internet(host="8.8.8.8", port=53, timeout=3, debug=False):
     """
     Check internet connections.
 
-    :param  host: the host that check connection to
+    :param host: the host that check connection to
     :type host:str
-    :param  port: port that check connection with
+    :param port: port that check connection with
     :type port:int
-    :param  timeout: times that check the connection
+    :param timeout: times that check the connection
     :type timeout:int
-    :param debug:flag for using debug Mode
+    :param debug:flag for using debug mode
     :type debug:bool
-    :return bool: True if Connection is Stable
+    :return bool: True if connection is stable
     >>> internet() # if there is stable internet connection
     True
     >>> internet() # if there is no stable internet connection
@@ -42,7 +42,7 @@ def local_ip(debug=False):
     """
     Return local ip of computer in windows by socket module and in unix with hostname command in shell.
 
-    :param debug:flag for using debug Mode
+    :param debug:flag for using debug mode
     :type debug:bool
     :return: local ip as string
     """
