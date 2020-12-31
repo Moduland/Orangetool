@@ -5,6 +5,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+## [0.50] - 2021-01-01
 ### Added
 - `network_control`, `network_enable` and `network_disable` functions
 ### Changed
@@ -86,7 +87,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 - Some useful scripts for Orangepi/Raspberrypi boards
 
-[Unreleased]: https://github.com/Moduland/Orangetool/compare/v0.45...dev
+[Unreleased]: https://github.com/Moduland/Orangetool/compare/v0.50...dev
+[0.50]: https://github.com/Moduland/Orangetool/compare/v0.45...v0.50
 [0.45]: https://github.com/Moduland/Orangetool/compare/v0.35...v0.45
 [0.35]: https://github.com/Moduland/Orangetool/compare/v0.25...v0.35
 [0.25]: https://github.com/Moduland/Orangetool/compare/v0.24...v0.25

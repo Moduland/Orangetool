@@ -84,13 +84,13 @@ By [Moduland Co](http://www.moduland.ir)
 
 ## Installation
 ### Source Code
-- Download [Version 0.45](https://github.com/moduland/Orangetool/archive/v0.45.zip) or [Latest Source ](https://github.com/Moduland/Orangetool/archive/dev.zip)
+- Download [Version 0.50](https://github.com/moduland/Orangetool/archive/v0.50.zip) or [Latest Source ](https://github.com/Moduland/Orangetool/archive/dev.zip)
 - `pip3 install -r requirements.txt` or `pip install -r requirements.txt` (Need root access)	
 - `python3 setup.py install` or `python setup.py install`
 ### PyPI
 
 - Check [Python Packaging User Guide](https://packaging.python.org/installing/)     
-- `pip3 install orangetool==0.45` or `pip install orangetool==0.45` (Need root access)	
+- `pip3 install orangetool==0.50` or `pip install orangetool==0.50` (Need root access)	
 <div align="center">
 <a href="https://asciinema.org/a/141548" target="_blank"><img src="https://asciinema.org/a/141548.png" /></a>
 </div>
