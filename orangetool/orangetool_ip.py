@@ -10,17 +10,19 @@ import re
 import platform
 
 
-def internet(host="8.8.8.8", port=53, timeout=3):
+def internet(host="8.8.8.8", port=53, timeout=3, debug=False):
     """
     Check internet connections.
 
-    :param  host: the host that check connection to
+    :param host: the host that check connection to
     :type host:str
-    :param  port: port that check connection with
+    :param port: port that check connection with
     :type port:int
-    :param  timeout: times that check the connection
+    :param timeout: times that check the connection
     :type timeout:int
-    :return bool: True if Connection is Stable
+    :param debug:flag for using debug mode
+    :type debug:bool
+    :return bool: True if connection is stable
     >>> internet() # if there is stable internet connection
     True
     >>> internet() # if there is no stable internet connection
@@ -30,8 +32,9 @@ def internet(host="8.8.8.8", port=53, timeout=3):
         socket.setdefaulttimeout(timeout)
         socket.socket(socket.AF_INET, socket.SOCK_STREAM).connect((host, port))
         return True
-    except Exception as ex:
-        print(str(ex))
+    except Exception as e:
+        if debug:
+            print(str(e))
         return False
 
 
@@ -39,7 +42,7 @@ def local_ip(debug=False):
     """
     Return local ip of computer in windows by socket module and in unix with hostname command in shell.
 
-    :param debug:flag for using debug Mode
+    :param debug:flag for using debug mode
     :type debug:bool
     :return: local ip as string
     """
@@ -180,3 +183,57 @@ def mac(debug=False):
         if debug:
             print(str(e))
         return GENERAL_ERROR_MESSAGE
+
+
+def network_control(command, device="eth0", debug=False):
+    """
+    Control network adaptor.
+
+    :param command: input command
+    :type command: str
+    :param device: network device name
+    :type device:str
+    :param debug: flag for using debug mode
+    :type debug:bool
+    :return: True in successful and False otherwise
+    """
+    try:
+        cmd = "up"
+        if command == "down":
+            cmd = "down"
+        cmd_out = sub.Popen(["ifconfig", device, cmd],
+                           stderr=sub.PIPE, stdin=sub.PIPE, stdout=sub.PIPE)
+        output = list(cmd_out.communicate())
+        if len(output[0]) == 0 and len(output[1]) == 0:
+            return True
+        return False
+    except Exception as e:
+        if debug:
+            print(str(e))
+        return GENERAL_ERROR_MESSAGE
+
+
+def network_enable(device="eth0", debug=False):
+    """
+    Shortcut to enable network adaptor.
+
+    :param device: network device name
+    :type device:str
+    :param debug: flag for using debug mode
+    :type debug:bool
+    :return: True in successful and False otherwise
+    """
+    return network_control("up", device=device, debug=debug)
+
+
+def network_disable(device="eth0", debug=False):
+    """
+    Shortcut to disable network adaptor.
+
+    :param device: network device name
+    :type device:str
+    :param debug: flag for using debug mode
+    :type debug:bool
+    :return: True in successful and False otherwise
+    """
+    return network_control("down", device=device, debug=debug)

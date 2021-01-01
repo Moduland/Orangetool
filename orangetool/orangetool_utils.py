@@ -2,6 +2,7 @@
 """Orangetool utils."""
 import random
 
+
 def zero_insert(input_string):
     """
     Get a string as input if input is one digit add a zero.
@@ -48,6 +49,7 @@ def random_generator(number):
         i += 1
         response += str(random.randint(0, 9))
     return response
+
 
 def convert_bytes(num):
     """
