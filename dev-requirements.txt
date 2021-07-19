@@ -1,5 +1,5 @@
 psutil==5.8.0
-requests==2.25.1
+requests==2.26.0
 art==5.1
 setuptools>=40.8.0
 vulture>=1.0
