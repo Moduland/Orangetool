@@ -1,3 +1,4 @@
 psutil>=5.2.1
 requests>=2.14.0
 art>=0.9
+pickle
